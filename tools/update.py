@@ -138,6 +138,62 @@ def fetch_api(key, everything=False):
             return out
 
 
+def fetch_details(key, ids):
+    """Full description and the YouTube location tag (the pin Hatz set when uploading) for these video ids."""
+    out = {}
+    ids = list(ids)
+    for i in range(0, len(ids), 50):
+        q = {"part": "snippet,recordingDetails", "id": ",".join(ids[i:i + 50]), "key": key}
+        payload = json.loads(http_get("https://www.googleapis.com/youtube/v3/videos?" + urllib.parse.urlencode(q)))
+        for it in payload.get("items", []):
+            sn, rd = it.get("snippet", {}), it.get("recordingDetails", {})
+            loc = rd.get("location") or {}
+            tag = None
+            if loc.get("latitude") is not None:
+                tag = {"lat": round(loc["latitude"], 5), "lng": round(loc["longitude"], 5),
+                       "label": (rd.get("locationDescription") or "").strip()}
+            out[it["id"]] = {"desc": sn.get("description", ""), "tag": tag}
+    return out
+
+
+def dist_m(a, b):
+    r = 6371000.0
+    p1, p2 = math.radians(a[0]), math.radians(b[0])
+    dp, dl = math.radians(b[0] - a[0]), math.radians(b[1] - a[1])
+    h = math.sin(dp / 2) ** 2 + math.cos(p1) * math.cos(p2) * math.sin(dl / 2) ** 2
+    return 2 * r * math.asin(math.sqrt(h))
+
+
+def place_from_tags(videos, places, key):
+    """For queued videos not yet checked: read the YouTube tag; a tag within 150 m of a known place maps the video."""
+    todo = [v["id"] for v in videos if v["status"] == "pending" and "tag" not in v]
+    if not todo or not key:
+        return 0, 0
+    try:
+        details = fetch_details(key, todo)
+    except Exception as e:
+        print("WARNING: could not read location tags (%s)." % e)
+        return 0, 0
+    pinned = [p for p in places if p.get("lat") is not None]
+    placed, tagged = 0, 0
+    for v in videos:
+        if v["id"] not in details:
+            continue
+        d = details[v["id"]]
+        if len(d["desc"]) > len(v.get("desc", "")):
+            v["desc"] = d["desc"][:2000]
+        v["tag"] = d["tag"]
+        if not d["tag"]:
+            continue
+        tagged += 1
+        here = (d["tag"]["lat"], d["tag"]["lng"])
+        near = sorted(pinned, key=lambda p: dist_m(here, (p["lat"], p["lng"])))
+        if near and dist_m(here, (near[0]["lat"], near[0]["lng"])) <= 150 and v["status"] == "pending":
+            v.update(place=near[0]["slug"], status="mapped", by="auto")
+            placed += 1
+    return tagged, placed
+
+
 def fetch_videos(backfill):
     key = os.environ.get("YOUTUBE_API_KEY", "").strip()
     errors = []
@@ -417,7 +473,8 @@ def build(videos, places):
         "generated": datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds"),
         "places": out_places,
         "videos": [{"id": v["id"], "title": v["title"], "published": v["published"], "place": v["place"], "status": v["status"],
-                    "by": v.get("by"), "suggest": v.get("suggest", []), "home": bool(v.get("home"))} for v in sorted(videos, key=lambda v: v["published"], reverse=True)],
+                    "by": v.get("by"), "suggest": v.get("suggest", []), "home": bool(v.get("home")),
+                    "tag": v.get("tag") if v["status"] == "pending" else None} for v in sorted(videos, key=lambda v: v["published"], reverse=True)],
     }
     (DATA / "data.js").write_text("window.HATZ_DATA = " + json.dumps(payload, ensure_ascii=False) + ";\n", encoding="utf-8")
 
@@ -477,6 +534,8 @@ def notify(videos):
     lines = ["%d video%s need a location before %s on the map." % (len(pending), "" if len(pending) == 1 else "s", "they show up" if len(pending) != 1 else "it shows up"), ""]
     for v in pending[:20]:
         sug = (" (looks like: %s)" % ", ".join(v["suggest"])) if v.get("suggest") else ""
+        if v.get("tag") and v["tag"].get("label"):
+            sug += " (location tag: %s)" % v["tag"]["label"]
         lines.append("- [%s](https://www.youtube.com/watch?v=%s) — %s%s" % (v["title"].replace("]", ")").replace("[", "("), v["id"], fmt_date(v["published"]), sug))
     lines += ["", "Open the review page on your site (`/review/`), pick the place for each video, and follow the two steps at the bottom of the page."]
     body = "\n".join(lines)
@@ -497,15 +556,17 @@ def main():
         notify(videos)
         return
 
-    added = 0
+    added, tagged, placed = 0, 0, 0
     if "--offline" not in args:
         added = merge(videos, places, fetch_videos("--backfill" in args))
+        tagged, placed = place_from_tags(videos, places, os.environ.get("YOUTUBE_API_KEY", "").strip())
     apply_decisions(videos, places, decisions)
     save("places.json", places)
     save("videos.json", sorted(videos, key=lambda v: v["published"], reverse=True))
     mapped, public_places = build(videos, places)
     pending = sum(1 for v in videos if v["status"] == "pending")
-    print("New videos: %d | on the map: %d videos at %d places | waiting for review: %d" % (added, len(mapped), len(public_places), pending))
+    print("New videos: %d | location tags read: %d, placed by tag: %d | on the map: %d videos at %d places | waiting for review: %d"
+          % (added, tagged, placed, len(mapped), len(public_places), pending))
 
 
 if __name__ == "__main__":

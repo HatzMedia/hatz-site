@@ -63,7 +63,8 @@ On the map, every place card has a small **Fix** link, and every place page has 
 
 ## Your day-to-day
 
-- **Nothing to do** when a new video names a known place. It just appears.
+- **Nothing to do** when a new video names a known place, or carries a YouTube location tag within 150 m of one. It just appears. (Set the location on every upload; it's the surest way onto the map.)
+- When a new video has a tag but the place is new, the review card arrives pre-filled: name and pin from the tag. Add the address if you know it and press **Put on the map**.
 - When a video can't be placed, GitHub emails you an issue called **Videos waiting for a location**. Open `/review/` on your site, choose the place (or add a new one), press **Put on the map**, then follow the two save steps at the bottom of the page.
 - **Not a place video** (family clips, gaming) takes it out of the queue. It still shows in "Latest from Hatz."
 
