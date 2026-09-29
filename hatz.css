@@ -142,3 +142,53 @@ html.hatz-admin .xp-card .acts a.fix{display:inline}
 .auto-place{background:#f1f7fb;border-radius:6px;padding:.8rem 1rem;margin-bottom:.8rem;font-size:.95rem;line-height:1.5}
 .auto-place strong{display:block;font-size:1.05rem}
 .rv-save ol{padding-left:1.2rem}
+
+/* ===== polish pass ===== */
+/* collaborate: the map promise and real results */
+.collab-map{font-size:1.05rem;color:#dfe4ee;max-width:650px;margin:0 0 2.2rem;padding-left:1rem;border-left:3px solid var(--pink);line-height:1.6}
+.results{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:0 0 .6rem}
+.results div{border-top:1px solid #393c49;padding-top:1rem}
+.results b{display:block;font-size:2rem;letter-spacing:-.04em;line-height:1;color:#74d3ff;margin-bottom:.35rem}
+.results span{font-size:.9rem;color:#bbc3d1}
+.results-note{font-size:.8rem;color:#8a93a6;margin:0 0 2.2rem}
+@media(max-width:760px){.results{grid-template-columns:1fr 1fr}.results b{font-size:1.6rem}}
+/* Hatz Top Five */
+.top5{background:#fff0fc;border-top:1px solid #f2c9ea;padding:4rem 6%}
+.top5 .eyebrow{color:#a10983}
+.top5 .section-heading>p{color:#6d5a68}
+.top5-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem}
+.top5-grid a{display:block;text-decoration:none;color:var(--ink)}
+.top5-grid .rank{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--ink);color:#ffc83d;font-weight:900;margin-bottom:.6rem}
+.top5-grid img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:6px;display:block;background:#11141b}
+.top5-grid h3{font-size:1.1rem;margin:.6rem 0 .2rem;letter-spacing:-.03em;line-height:1.25}
+.top5-grid p{margin:0;font-size:.85rem;color:var(--muted)}
+.top5-grid a:hover h3{color:#a10983}
+@media(max-width:900px){.top5-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:400px){.top5-grid{grid-template-columns:1fr}}
+.chip.gold{border-color:#7a6a2a;color:#ffd966}
+.chip.gold[aria-pressed="true"]{background:#ffc83d;color:var(--ink);border-color:#ffc83d}
+.pin.top span{background:#ffc83d;color:var(--ink)}
+.top-badge{display:inline-block;background:#ffc83d;color:var(--ink);font-weight:900;font-size:.72rem;letter-spacing:.06em;padding:.3rem .55rem;border-radius:4px;vertical-align:middle;white-space:nowrap}
+h1 .top-badge{margin-left:.6rem;font-size:.9rem;vertical-align:.35em}
+/* Near me */
+.near{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center}
+.near .or{color:#8a93a6;font-size:.9rem}
+.near input{min-height:44px;background:#1a1d29;color:#fff;border:1px solid #393c49;border-radius:6px;padding:.6rem .9rem;width:8.5rem;font-size:1rem}
+.near .button{min-height:44px;padding:.55rem 1rem;font-size:.9rem;gap:.6rem}
+.near .button.ghost{background:transparent;color:#fff;border-color:#74d3ff}
+.near .button.ghost:hover{background:#1a1d29}
+.near .status{font-size:.85rem;color:#aab5c9;flex-basis:100%}
+.near .linkbtn{color:#74d3ff}
+.xp-card .dist{color:#74d3ff;font-weight:700}
+.you-pin{background:none;border:0}
+.you-pin span{display:block;width:18px;height:18px;border-radius:50%;background:var(--accent);border:3px solid #fff;box-shadow:0 0 0 4px rgba(0,174,255,.35)}
+.xp-updated{font-size:.85rem;color:#aab5c9;margin:1rem 0 0}
+/* share a place */
+.share-btn{display:inline-flex;align-items:center;gap:.5rem;background:#fff;border:1px solid #b5c0cc;border-radius:4px;padding:.55rem .9rem;font-weight:700;cursor:pointer;color:var(--ink);min-height:44px;font:inherit;font-weight:700}
+.share-btn:hover{border-color:var(--ink)}
+.share-msg{font-size:.85rem;color:var(--muted);margin-left:.5rem;overflow-wrap:anywhere}
+/* 404 */
+.nf{max-width:760px;margin:0 auto;padding:5rem 6% 6rem;text-align:center}
+.nf h1{font-size:clamp(2.5rem,6vw,4.5rem);line-height:1.05;margin:0 0 1rem}
+.nf p{color:var(--muted);font-size:1.1rem}
+.nf .acts{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:2rem}

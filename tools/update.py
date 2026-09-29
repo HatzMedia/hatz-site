@@ -21,6 +21,7 @@ Run by hand:
 import datetime
 import html
 import json
+import math
 import os
 import re
 import subprocess
@@ -201,6 +202,13 @@ def apply_decisions(videos, places, decisions):
                 if k in d:
                     p[k] = d[k]
             continue
+        if act == "top5":  # Hatz's five favorite places, in order; the newest list wins
+            for p in places:
+                p.pop("top", None)
+            for i, s in enumerate(d.get("slugs", [])[:5]):
+                if s in by_slug:
+                    by_slug[s]["top"] = i + 1
+            continue
         v = vids.get(d.get("video"))
         if not v:
             continue
@@ -263,13 +271,24 @@ def directions(p):
     return "https://www.google.com/maps/dir/?api=1&destination=" + urllib.parse.quote(dest)
 
 
+def dist_mi(a, b):
+    """Miles between two places (each with lat/lng), or None if either has no pin."""
+    if a.get("lat") is None or b.get("lat") is None:
+        return None
+    r = 3958.8
+    p1, p2 = math.radians(a["lat"]), math.radians(b["lat"])
+    dp, dl = math.radians(b["lat"] - a["lat"]), math.radians(b["lng"] - a["lng"])
+    h = math.sin(dp / 2) ** 2 + math.cos(p1) * math.cos(p2) * math.sin(dl / 2) ** 2
+    return 2 * r * math.asin(math.sqrt(h))
+
+
 def video_card(v, label, sub="", href=None, rp="", place_name=None):
     href = href or yt_url(v)
     external = href.startswith("http")
     tgt = ' target="_blank" rel="noopener noreferrer"' if external else ""
     return ('<article class="video-card"><a href="%s"%s><div class="card-image"><img src="%s" width="480" height="360" alt="" loading="lazy">'
             '<span class="card-category">%s</span></div><div class="card-text"><p class="card-location">%s</p><h3>%s</h3></div></a></article>') % (
-        esc(href), tgt, thumb(v), esc(label), esc(sub), esc(v["title"]))
+        esc(href), tgt, thumb(v), esc(label), esc(sub), esc(place_name or v["title"]))
 
 
 def render_latest(videos, places):
@@ -279,7 +298,7 @@ def render_latest(videos, places):
     for v in recent:
         p = by.get(v["place"]) if v["status"] == "mapped" else None
         label = ("On the map · " + p["name"]) if p else "Watch on YouTube ↗"
-        cards.append(video_card(v, label, fmt_date(v["published"])))
+        cards.append(video_card(v, label, fmt_date(v["published"]), href=("places/%s/" % p["slug"]) if p else None))
     return ('<!--LATEST_START--><section class="latest section" id="watch" aria-labelledby="latest-title"><div class="section-heading"><div>'
             '<p class="eyebrow">THE ADVENTURE KEEPS GOING</p><h2 id="latest-title">Latest from Hatz.</h2></div>'
             '<p>Food stops, family adventures, and whatever we get into next.</p></div>'
@@ -301,14 +320,19 @@ def render_place_page(p, vids, all_places, all_vids):
     if n > 1:
         more = ('<section class="related section" aria-labelledby="more-title"><p class="eyebrow">MORE FROM THIS PLACE</p><h2 id="more-title">Every visit.</h2><div class="video-grid">%s</div></section>'
                 % "".join(video_card(v, "Watch on YouTube ↗", fmt_date(v["published"])) for v in vids))
-    others = [q for q in all_places if q["slug"] != p["slug"] and any(v["place"] == q["slug"] and v["status"] == "mapped" for v in all_vids)][:3]
+    # the three closest places that have a video
+    near = []
+    if p.get("lat") is not None:
+        cands = [(dist_mi(p, q), q) for q in all_places if q["slug"] != p["slug"] and q.get("lat") is not None]
+        near = sorted([c for c in cands if c[0] is not None], key=lambda c: c[0])[:3]
     keep = ""
-    if others:
+    if near:
         cards = []
-        for q in others:
+        for dm, q in near:
             qv = sorted([v for v in all_vids if v["place"] == q["slug"] and v["status"] == "mapped"], key=lambda v: v["published"], reverse=True)[0]
-            cards.append(video_card(qv, CAT_LABELS.get(q.get("cat"), "Local stop"), q.get("area", ""), href="../%s/" % q["slug"]))
-        keep = ('<section class="related section" aria-labelledby="related-title"><p class="eyebrow">KEEP EXPLORING</p><h2 id="related-title">One more before you go?</h2><div class="video-grid">%s</div></section>'
+            label = ("%.1f mi away" % dm) if dm < 10 else ("%.0f mi away" % dm)
+            cards.append(video_card(qv, label, q.get("area", ""), href="../%s/" % q["slug"], place_name=q["name"]))
+        keep = ('<section class="related section" aria-labelledby="related-title"><p class="eyebrow">NEARBY</p><h2 id="related-title">Also close by.</h2><div class="video-grid">%s</div></section>'
                 % "".join(cards))
     approx = ""
     if p.get("precision") != "exact":
@@ -323,10 +347,10 @@ def render_place_page(p, vids, all_places, all_vids):
             '<title>%(name)s | Watch with Hatz</title><meta name="description" content="%(desc)s">'
             '<link rel="canonical" href="%(site)s/places/%(slug)s/"><meta property="og:title" content="%(name)s | Watch with Hatz">'
             '<meta property="og:description" content="%(desc)s"><meta property="og:type" content="website"><meta property="og:image" content="%(thumb)s">'
-            '<link rel="icon" type="image/svg+xml" href="%(fav)s"><link rel="stylesheet" href="%(rp)shatz.css">'
-            '<script>try{if(localStorage.getItem("hatz-admin"))document.documentElement.classList.add("hatz-admin")}catch(e){}</script></head><body>%(header)s'
+            '<link rel="icon" type="image/svg+xml" href="%(fav)s"><link rel="apple-touch-icon" href="%(rp)sassets/apple-touch-icon.png"><link rel="stylesheet" href="%(rp)shatz.css">'
+            '<script>try{if(localStorage.getItem("hatz-admin"))document.documentElement.classList.add("hatz-admin")}catch(e){}</script><script src="%(rp)sanalytics.js" defer></script></head><body>%(header)s'
             '<main id="main" class="watch-page"><section class="watch-intro"><a class="back-link" href="%(rp)sexplore/">← Back to the map</a>'
-            '<p class="eyebrow">%(cat)s%(areaSep)s</p><h1>%(name)s</h1><p class="story-meta">%(count)s <span aria-hidden="true">·</span> Latest visit %(date)s</p>'
+            '<p class="eyebrow">%(cat)s%(areaSep)s</p><h1>%(name)s%(top)s</h1><p class="story-meta">%(count)s <span aria-hidden="true">·</span> Latest visit %(date)s</p>'
             '<p class="watch-description">%(desc)s</p></section>'
             '<div class="watch-layout"><div><div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/%(vid)s?rel=0" title="%(name)s — Hatz video" width="960" height="540" '
             'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>'
@@ -334,16 +358,35 @@ def render_place_page(p, vids, all_places, all_vids):
             '<aside class="visit-notes"><p class="eyebrow">THE STOP</p><h2>Plan your visit.</h2><ul><li><strong>%(name)s</strong>%(where)s</li>%(approx)s</ul>'
             '<p class="visit-note">Check with the business for current hours, menus, and availability.</p>'
             '<p><a class="button button-small" href="%(dir)s" target="_blank" rel="noopener noreferrer">Get directions <span aria-hidden="true">↗</span></a></p>'
+            '<p><button type="button" class="share-btn" id="share" data-url="%(site)s/places/%(slug)s/" data-title="%(name)s on the Hatz map">Share this place</button><span class="share-msg" id="shareMsg" role="status"></span></p>'
             '<p><a class="text-link" href="%(suggest)s">Suggest the next stop <span aria-hidden="true">↗</span></a></p>'
             '<p class="fix-link"><a href="%(rp)sreview/#fix-%(slug)s">Something off? Send this place to review</a></p></aside></div>'
             '%(more)s%(keep)s<div class="small-collab"><p>Own a local business like this one?</p><a class="text-link" href="%(collab)s">Let’s start a conversation <span aria-hidden="true">↗</span></a></div></main>'
+            '<script>(function(){var b=document.getElementById("share");if(!b)return;b.addEventListener("click",function(){var u=b.dataset.url,t=b.dataset.title,m=document.getElementById("shareMsg");'
+            'if(navigator.share){navigator.share({title:t,url:u}).catch(function(){});}else if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(u).then(function(){m.textContent="Link copied."},function(){m.textContent=u})}else{m.textContent=u}})})();</script>'
             '<script type="application/ld+json">%(ld)s</script>%(footer)s</body></html>') % {
         "name": esc(p["name"]), "desc": esc(desc), "site": SITE, "slug": esc(p["slug"]), "thumb": thumb(latest), "fav": FAVICON, "rp": rp,
+        "top": ('<span class="top-badge">Hatz Top Five · #%d</span>' % p["top"]) if p.get("top") else "",
         "header": header(rp), "cat": esc(cat), "areaSep": (" / " + esc(p["area"])) if p.get("area") else "",
         "count": "%d video%s" % (n, "" if n == 1 else "s"), "date": esc(fmt_date(latest["published"])), "vid": latest["id"],
         "title": esc(latest["title"]), "yt": yt_url(latest), "where": (" · " + where) if where else "", "approx": approx,
         "dir": esc(directions(p)), "suggest": SUGGEST, "more": more, "keep": keep, "collab": COLLAB,
         "ld": ld.replace("</", "<\\/"), "footer": footer(rp)}
+
+
+def render_top5(public_places, mapped):
+    tops = sorted([p for p in public_places if p.get("top")], key=lambda p: p["top"])
+    if not tops:
+        return "<!--TOP5_START--><!--TOP5_END-->"
+    cards = []
+    for p in tops:
+        pv = sorted([v for v in mapped if v["place"] == p["slug"]], key=lambda v: v["published"], reverse=True)
+        img = thumb(pv[0]) if pv else ""
+        cards.append('<a href="places/%s/"><span class="rank">%d</span><img src="%s" alt="" width="480" height="300" loading="lazy"><h3>%s</h3><p>%s</p></a>'
+                     % (esc(p["slug"]), p["top"], img, esc(p["name"]), esc(p.get("area", ""))))
+    return ('<!--TOP5_START--><section class="top5" id="top5" aria-labelledby="top5-title"><div class="section-heading"><div>'
+            '<p class="eyebrow">HATZ TOP FIVE</p><h2 id="top5-title">If you only go five places.</h2></div>'
+            '<p>Hatz’s picks, in order. Tap one for the video and directions.</p></div><div class="top5-grid">%s</div></section><!--TOP5_END-->' % "".join(cards))
 
 
 def replace_block(text, start, end, block):
@@ -393,6 +436,7 @@ def build(videos, places):
     if idx.exists():
         t = idx.read_text(encoding="utf-8")
         t = replace_block(t, "<!--LATEST_START-->", "<!--LATEST_END-->", render_latest(videos, places))
+        t = replace_block(t, "<!--TOP5_START-->", "<!--TOP5_END-->", render_top5(public_places, mapped))
         stats = "<!--STATS_START-->%d videos across %d places<!--STATS_END-->" % (len(mapped), len(public_places))
         t = replace_block(t, "<!--STATS_START-->", "<!--STATS_END-->", stats)
         idx.write_text(t, encoding="utf-8")

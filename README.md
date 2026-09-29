@@ -20,14 +20,14 @@ GitHub does two jobs, both free: it serves the site's files (GitHub Pages), and 
 
 1. Make a free account at github.com and create a **new public repository** called `hatz-site`. (Public is required for free hosting; everything in it is already on the public website anyway. Your API key is never in the repository.)
 2. Click **Add file, then Upload files**, drag in everything from this folder (including the hidden `.github` folder), and press **Commit changes**.
-3. In the repository go to **Settings, then Pages**. Under "Build and deployment" choose **Deploy from a branch**, pick `main` and `/ (root)`, and save. After a minute your site is at `https://YOUR-NAME.github.io/hatz-site/`. Open it and check it over.
+3. In the repository go to **Settings, then Pages**. Under "Build and deployment" choose **Deploy from a branch**, pick `main` and `/ (root)`, and save. After a minute your site is at `https://hatzmedia.github.io/hatz-site/`. Open it and check it over.
 4. In **Settings, then Secrets and variables, then Actions**, press **New repository secret**, name it `YOUTUBE_API_KEY`, and paste the key you already made.
 5. Go to **Actions**, open "Update Hatz videos and map", and press **Run workflow**. Watch it turn green. That's the daily job proving itself.
 6. Go live on your own address, last, because it replaces the current site:
    - In **Settings, then Pages**, type `hatzmedia.com` under **Custom domain** and save.
    - At Northwest, open **Domains, hatzmedia.com, DNS Settings** and make exactly these changes:
      - **A Records:** delete the two `@` rows whose values are `162.159.143.30` and `172.66.3.26` (those are ChatGPT's). Add four `@` rows with values `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`. Leave the `*` and `mail` rows alone.
-     - **CNAME Records:** edit the `www` row and change its value from `custom-domains.chatgpt.site.` to `YOUR-NAME.github.io.` Leave `psrp` alone.
+     - **CNAME Records:** edit the `www` row and change its value from `custom-domains.chatgpt.site.` to `hatzmedia.github.io.` Leave `psrp` alone.
      - **Leave everything else alone:** MX, the `@` TXT (SPF), `_dmarc`, `postal-…_domainkey`, and NS are your email and domain plumbing.
      - **Optional tidy-up, a week later:** the `_cf-custom-hostname`, `_openai-site-verification` and `_acme-challenge` TXT rows belonged to the ChatGPT site and can be deleted.
    - The records use a 1-minute TTL, so the switch takes effect within minutes.
@@ -35,7 +35,7 @@ GitHub does two jobs, both free: it serves the site's files (GitHub Pages), and 
 
 ## If Northwest ever gives you FTP access
 
-The daily job can also copy the finished site to Northwest by FTP. Add secrets named `FTP_HOST`, `FTP_USER` and `FTP_PASSWORD` (and `FTP_DIR` if the folder isn't `public_html/`) and it starts doing so automatically. The `.htaccess` file here makes our home page win over WordPress's if WordPress is still installed there.
+The daily job can also copy the finished site to Northwest by FTP; ask Claude to add that step (it's a few lines using SamKirkland/FTP-Deploy-Action, with secrets `FTP_HOST`, `FTP_USER`, `FTP_PASSWORD`). The `.htaccess` file here makes our home page win over WordPress's if WordPress is still installed there.
 
 ## Getting the full video archive (optional, recommended)
 
@@ -48,6 +48,14 @@ YouTube's public feed only shows the newest 15 videos. To bring in your whole ar
 ## Sorting the archive (one time)
 
 The review page has a **Quick confirm** section built from your whole archive. Each card is one place with all its videos, a pin already looked up, and a **Confirm** button. Tap **Check it** next to the pin if you want to be sure, then **Confirm**. Below that, **Probably not place videos** lists gaming, Elf on the Shelf, Red Bull and family clips; untick any that should stay, then **Skip the checked videos**. What's left is a short list to sort by hand.
+
+## Hatz Top Five
+
+On the review page, pick up to five places in order and save. They get a gold pin and a "★ Hatz Top Five" filter on the map, a strip on the home page, and a badge on their pages.
+
+## Visitor counter (off until you switch it on)
+
+`analytics.js` is empty on purpose. To count visitors without cookies: sign in at dash.cloudflare.com, open **Web Analytics**, add hatzmedia.com, copy the token from the snippet it shows, paste it into `analytics.js`, and update the "Website operation" paragraph on `/privacy/`.
 
 ## Fixing a place from the map
 
@@ -63,7 +71,7 @@ On the map, every place card has a small **Fix** link, and every place page has 
 
 | File or folder | What it is |
 |---|---|
-| `index.html`, `styles.css` | Home page and design |
+| `index.html`, `hatz.css` | Home page and design (`styles.css` is an older copy kept only so old links keep working) |
 | `explore/` | The map |
 | `places/` | One page per place. Built automatically, do not edit |
 | `review/` | Your review page |

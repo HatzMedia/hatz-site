@@ -1,23 +1,26 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#0b0c11"><meta name="referrer" content="strict-origin-when-cross-origin"><title>Explore the Hatz Map | Cincinnati Food &amp; Places</title><meta name="description" content="Every place Hatz has visited around Cincinnati and Ohio, on one map. Watch the video, get directions, and find your next stop."><link rel="canonical" href="https://hatzmedia.com/explore/"><meta property="og:title" content="Explore the Hatz Map"><meta property="og:description" content="Every place Hatz has visited around Cincinnati and Ohio, on one map."><meta property="og:type" content="website"><meta property="og:url" content="https://hatzmedia.com/explore/"><link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230b0c11'/%3E%3Cpath d='M8 7h5v7h6V7h5v18h-5v-7h-6v7H8z' fill='%2300aeff'/%3E%3Cpath d='M8 27h16v2H8z' fill='%23ff39d5'/%3E%3C/svg%3E"><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"><link rel="stylesheet" href="../hatz.css"><script>try{if(localStorage.getItem("hatz-admin"))document.documentElement.classList.add("hatz-admin")}catch(e){}</script></head><body>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#0b0c11"><meta name="referrer" content="strict-origin-when-cross-origin"><title>Explore the Hatz Map | Cincinnati Food &amp; Places</title><meta name="description" content="Every place Hatz has visited around Cincinnati and Ohio, on one map. Watch the video, get directions, and find your next stop."><link rel="canonical" href="https://hatzmedia.com/explore/"><meta property="og:title" content="Explore the Hatz Map"><meta property="og:description" content="Every place Hatz has visited around Cincinnati and Ohio, on one map."><meta property="og:type" content="website"><meta property="og:url" content="https://hatzmedia.com/explore/"><meta property="og:image" content="https://hatzmedia.com/assets/og-home.jpg"><meta name="twitter:card" content="summary_large_image"><link rel="apple-touch-icon" href="../assets/apple-touch-icon.png"><link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230b0c11'/%3E%3Cpath d='M8 7h5v7h6V7h5v18h-5v-7h-6v7H8z' fill='%2300aeff'/%3E%3Cpath d='M8 27h16v2H8z' fill='%23ff39d5'/%3E%3C/svg%3E"><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"><link rel="stylesheet" href="../hatz.css"><script>try{if(localStorage.getItem("hatz-admin"))document.documentElement.classList.add("hatz-admin")}catch(e){}</script><script src="../analytics.js" defer></script></head><body>
 <a class="skip-link" href="#main">Skip to content</a><header class="header"><a class="wordmark" href="../" aria-label="Hatz home"><img src="../assets/hatz-brand.webp" alt="" width="56" height="56"><span><strong>HATZ</strong><small>CINCINNATI &amp; BEYOND</small></span></a><nav aria-label="Main navigation"><a href="../#watch">Watch</a><a href="./" aria-current="page">Explore the map</a><a href="../#about">Meet Hatz</a><a href="../#follow">Join the crew</a></nav><a class="button button-small" href="mailto:Hatz@hatzmedia.com?subject=Collaboration%20with%20Hatz%20Media%20Works">Let’s collab <span aria-hidden="true">↗</span></a></header>
 <main id="main" class="xp">
   <section class="xp-intro">
     <p class="eyebrow"><span class="tiny-line"></span> THE HATZ MAP</p>
     <h1>Find your next<br><span>stop.</span></h1>
-    <p class="hero-intro">Every place we’ve filmed. Pick a pin, watch the visit, get directions. Cincinnati first, with Ohio road trips one tap away.</p>
+    <p class="hero-intro">Every place we’ve filmed. Pick a pin, watch the visit, get directions. Narrow it to the Cincinnati area or just the Ohio road trips.</p>
+    <p class="xp-updated" id="updated"></p>
   </section>
 
   <section class="xp-tool" aria-label="Map of places">
     <div class="xp-controls">
       <div class="xp-row">
         <div class="seg" role="group" aria-label="Where">
-          <button type="button" data-scope="local" aria-pressed="true">Cincinnati area</button>
+          <button type="button" data-scope="all" aria-pressed="true">All places</button>
+          <button type="button" data-scope="local" aria-pressed="false">Cincinnati area</button>
           <button type="button" data-scope="trips" aria-pressed="false">Ohio road trips</button>
-          <button type="button" data-scope="all" aria-pressed="false">All places</button>
         </div>
         <label class="xp-search"><span class="sr-only">Search places and videos</span><input id="q" type="search" placeholder="Search a place or video" autocomplete="off"></label>
       </div>
       <div class="xp-chips" id="cats" role="group" aria-label="Type of place"></div>
+      <div class="xp-chips"><button type="button" class="chip gold" id="topChip" aria-pressed="false" hidden>★ Hatz Top Five</button></div>
+      <div class="near" id="near"><button type="button" class="button button-small" id="nearBtn">Near me</button><span class="or">or</span><input id="zip" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="5" placeholder="ZIP code" aria-label="ZIP code"><button type="button" class="button button-small ghost" id="zipBtn">Go</button><button type="button" class="linkbtn" id="nearClear" hidden>Clear</button><span class="status" id="nearStatus" role="status"></span></div>
       <div class="view-toggle" role="group" aria-label="Show">
         <button type="button" data-view="map" aria-pressed="true">Map</button>
         <button type="button" data-view="list" aria-pressed="false">List</button>
@@ -43,7 +46,11 @@
   var CATS = [["all","All types"],["eats","Eats"],["sweets","Sweets"],["shopping","Markets & shopping"],["family","Family outings"],["events","Events"]];
   var vids = {}; D.videos.forEach(function(v){vids[v.id]=v});
   var places = D.places.filter(function(p){return p.videos && p.videos.length && p.lat!=null && p.lng!=null});
-  var st = {scope:"local", cat:"all", q:"", view:"map"};
+  var st = {scope:"all", cat:"all", q:"", view:"map", top:false, center:null};
+  var youMarker=null;
+  function distMi(a,b){var R=3958.8,p1=a[0]*Math.PI/180,p2=b[0]*Math.PI/180,dp=(b[0]-a[0])*Math.PI/180,dl=(b[1]-a[1])*Math.PI/180;var h=Math.sin(dp/2)*Math.sin(dp/2)+Math.cos(p1)*Math.cos(p2)*Math.sin(dl/2)*Math.sin(dl/2);return 2*R*Math.asin(Math.sqrt(h))}
+  function miOf(p){return st.center?distMi(st.center,[p.lat,p.lng]):null}
+  function fmtMi(m){return m<10?m.toFixed(1)+" mi":Math.round(m)+" mi"}
   var map=null, layer=null;
   function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
   function thumb(id){return "https://i.ytimg.com/vi/"+id+"/hqdefault.jpg"}
@@ -56,6 +63,7 @@
     if(st.scope==="local" && p.trip) return false;
     if(st.scope==="trips" && !p.trip) return false;
     if(st.cat!=="all" && p.cat!==st.cat) return false;
+    if(st.top && !p.top) return false;
     if(st.q){
       var hay=(p.name+" "+(p.area||"")+" "+p.videos.map(function(id){return vids[id]?vids[id].title:""}).join(" ")).toLowerCase();
       if(hay.indexOf(st.q)===-1) return false;
@@ -70,7 +78,7 @@
   }
   function card(p){
     var v=vids[p.videos[0]];
-    return '<article class="xp-card" data-slug="'+esc(p.slug)+'"><img src="'+thumb(v.id)+'" alt="" width="160" height="90" loading="lazy"><div><h3><a href="'+placeUrl(p)+'">'+esc(p.name)+'</a></h3><p class="meta">'+esc(p.area||"")+' · '+p.videos.length+' video'+(p.videos.length>1?'s':'')+(p.precision!=="exact"?' · approx. pin':'')+'</p>'+
+    return '<article class="xp-card" data-slug="'+esc(p.slug)+'"><img src="'+thumb(v.id)+'" alt="" width="160" height="90" loading="lazy"><div><h3><a href="'+placeUrl(p)+'">'+esc(p.name)+'</a>'+(p.top?' <span class="top-badge">#'+p.top+'</span>':'')+'</h3><p class="meta">'+(st.center?'<span class="dist">'+fmtMi(miOf(p))+'</span> · ':'')+esc(p.area||"")+' · '+p.videos.length+' video'+(p.videos.length>1?'s':'')+(p.precision!=="exact"?' · approx. pin':'')+'</p>'+
       '<div class="acts"><a href="https://www.youtube.com/watch?v='+v.id+'" target="_blank" rel="noopener noreferrer">Watch</a><a href="'+esc(dir(p))+'" target="_blank" rel="noopener noreferrer">Directions</a><a class="fix" href="../review/#fix-'+encodeURIComponent(p.slug)+'" title="Send this place to the review page">Fix</a></div></div></article>';
   }
   function renderCats(){
@@ -79,17 +87,19 @@
   var markerBySlug={};
   function render(){
     var shown=places.filter(visible);
+    if(st.center){ shown.sort(function(a,b){return miOf(a)-miOf(b)}); }
+    else if(st.top){ shown.sort(function(a,b){return a.top-b.top}); }
     var list=document.getElementById("list");
     list.innerHTML = shown.length ? shown.map(card).join("") : '<p class="xp-empty">No places match yet. Try another filter, or explore <button type="button" class="linkbtn" data-scope="all">all places</button>.</p>';
     document.getElementById("count").textContent = shown.length+" place"+(shown.length===1?"":"s")+" shown";
     if(map){
       layer.clearLayers(); markerBySlug={};
       shown.forEach(function(p){
-        var icon=L.divIcon({className:"pin",html:"<span>"+p.videos.length+"</span>",iconSize:[34,34],iconAnchor:[17,17],popupAnchor:[0,-16]});
+        var icon=L.divIcon({className:"pin"+(p.top?" top":""),html:"<span>"+(p.top?"★":p.videos.length)+"</span>",iconSize:[34,34],iconAnchor:[17,17],popupAnchor:[0,-16]});
         var m=L.marker([p.lat,p.lng],{icon:icon,title:p.name,keyboard:true}).bindPopup(popup(p),{maxWidth:260});
         m.addTo(layer); markerBySlug[p.slug]=m;
       });
-      if(shown.length){ map.fitBounds(L.latLngBounds(shown.map(function(p){return [p.lat,p.lng]})).pad(0.3),{maxZoom:12}); }
+      if(shown.length && !st.center){ map.fitBounds(L.latLngBounds(shown.map(function(p){return [p.lat,p.lng]})).pad(0.3),{maxZoom:12}); }
     }
   }
   function setView(v){
@@ -104,6 +114,7 @@
     if(b.dataset.scope){ st.scope=b.dataset.scope; document.querySelectorAll(".seg button").forEach(function(x){x.setAttribute("aria-pressed",String(x.dataset.scope===st.scope))}); render(); }
     else if(b.dataset.cat){ st.cat=b.dataset.cat; renderCats(); render(); }
     else if(b.dataset.view){ setView(b.dataset.view); }
+    else if(b.id==="topChip"){ st.top=!st.top; b.setAttribute("aria-pressed",String(st.top)); render(); }
   });
   document.getElementById("q").addEventListener("input",function(e){st.q=e.target.value.trim().toLowerCase(); render();});
   document.getElementById("list").addEventListener("mouseover",function(e){
@@ -113,6 +124,37 @@
     var c=e.target.closest(".xp-card"); if(!c) return; var m=markerBySlug[c.dataset.slug]; if(m && m.getElement()){ m.getElement().classList.remove("hot"); }
   });
   renderCats();
+  document.getElementById("topChip").hidden = !places.some(function(p){return p.top});
+  (function(){ var u=document.getElementById("updated"); if(D.generated){ var d=new Date(D.generated); u.textContent="Updated "+d.toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"})+" · refreshed daily from Hatz’s YouTube"; } })();
+
+  /* Near me: your location stays in this browser; a ZIP code goes to OpenStreetMap's search to find its spot */
+  function setCenter(lat,lng,label){
+    st.center=[lat,lng]; document.getElementById("nearClear").hidden=false; document.getElementById("nearStatus").textContent=label;
+    if(map){ if(youMarker){map.removeLayer(youMarker)} youMarker=L.marker([lat,lng],{icon:L.divIcon({className:"you-pin",html:"<span></span>",iconSize:[18,18],iconAnchor:[9,9]}),interactive:false}).addTo(map); map.setView([lat,lng],11); }
+    render();
+  }
+  document.getElementById("nearBtn").addEventListener("click",function(){
+    var s=document.getElementById("nearStatus");
+    if(!navigator.geolocation){ s.textContent="This browser can’t share location. Try a ZIP code."; return; }
+    s.textContent="Finding you…";
+    navigator.geolocation.getCurrentPosition(function(pos){ setCenter(pos.coords.latitude,pos.coords.longitude,"Sorted by distance from you. Your location never leaves your device."); },
+      function(){ s.textContent="Couldn’t get your location. Try a ZIP code instead."; },{timeout:10000,maximumAge:300000});
+  });
+  function goZip(){
+    var z=document.getElementById("zip").value.trim(), s=document.getElementById("nearStatus");
+    if(!/^\d{5}$/.test(z)){ s.textContent="Type a 5-digit ZIP code."; return; }
+    s.textContent="Looking up "+z+"…";
+    fetch("https://nominatim.openstreetmap.org/search?format=json&limit=1&country=USA&postalcode="+z).then(function(r){return r.json()}).then(function(j){
+      if(!j.length){ s.textContent="Couldn’t find that ZIP code."; return; }
+      setCenter(parseFloat(j[0].lat),parseFloat(j[0].lon),"Sorted by distance from "+z+".");
+    }).catch(function(){ s.textContent="The ZIP lookup didn’t answer. Try again in a moment."; });
+  }
+  document.getElementById("zipBtn").addEventListener("click",goZip);
+  document.getElementById("zip").addEventListener("keydown",function(e){ if(e.key==="Enter"){ e.preventDefault(); goZip(); } });
+  document.getElementById("nearClear").addEventListener("click",function(){
+    st.center=null; this.hidden=true; document.getElementById("nearStatus").textContent=""; document.getElementById("zip").value="";
+    if(map&&youMarker){ map.removeLayer(youMarker); youMarker=null; } render();
+  });
   try{
     if(typeof L==="undefined") throw new Error("no leaflet");
     map=L.map("map",{scrollWheelZoom:false}).setView([39.2,-84.35],9);

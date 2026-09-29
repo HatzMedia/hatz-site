@@ -16,6 +16,12 @@
   <section aria-labelledby="auto-h"><h2 id="auto-h">Placed automatically</h2><p class="rv-sub">The robot matched these to a place from the title, description or location tag. Each card shows where it landed. Press <strong>Looks right</strong> to confirm one, or confirm them all at once.</p><div class="rv-acts" id="autoActs" hidden style="margin-bottom:1rem"><button type="button" class="button button-small" id="autoAll">These all look right</button></div><div id="auto" class="rv-stack"></div></section>
   <section aria-labelledby="pins-h"><h2 id="pins-h">Pins to tighten up</h2><p class="rv-sub">These pins show the area, not the exact door. Enter the street address to fix them.</p><div id="pins" class="rv-stack"></div></section>
 
+  <section id="top5-sec" aria-labelledby="top5-h">
+    <h2 id="top5-h">Hatz Top Five</h2>
+    <p class="rv-sub">Your five favorite places, in order. They get a gold pin on the map, a strip on the home page, and a badge on their pages. Change them whenever you like.</p>
+    <div class="rv-card quick-card"><div class="rv-body-col"><div class="rv-form" id="top5form"></div><div class="rv-acts"><button type="button" class="button button-small" id="top5save">Save my top five</button><span class="found" id="top5msg" role="status"></span></div></div></div>
+  </section>
+
   <section aria-labelledby="choices-h" id="choices-sec">
     <h2 id="choices-h">Your choices</h2>
     <p class="rv-status" id="saveStatus">Checking what's saved…</p>
@@ -151,10 +157,25 @@
     document.getElementById("flag-sec").hidden=!cards.length;
   }
 
+  /* ---------- Hatz Top Five ---------- */
+  function renderTop5(){
+    var box=document.getElementById("top5form"); if(!box) return;
+    var current={}, haveLocal=false;
+    local.forEach(function(d){ if(d.action==="top5"){ haveLocal=true; current={}; d.slugs.forEach(function(s,i){current[s]=i+1}); } });
+    if(!haveLocal){ places.forEach(function(p){ if(p.top) current[p.slug]=p.top; }); }
+    var withVideos=places.filter(function(p){return p.videos&&p.videos.length}).sort(function(a,b){return a.name.localeCompare(b.name)});
+    var html="";
+    for(var i=1;i<=5;i++){
+      var sel=Object.keys(current).filter(function(s){return current[s]===i})[0]||"";
+      html+='<label>#'+i+'<select class="top5sel" data-rank="'+i+'"><option value="">— none —</option>'+withVideos.map(function(p){return '<option value="'+esc(p.slug)+'"'+(p.slug===sel?' selected':'')+'>'+esc(p.name)+'</option>'}).join("")+'</select></label>';
+    }
+    box.innerHTML=html;
+  }
+
   function render(){
     var sugg=suggestedIds();
     var pend=D.videos.filter(function(v){return v.status==="pending" && !decided(v.id) && !sugg[v.id]});
-    renderSuggestions(); renderFlagged();
+    renderSuggestions(); renderFlagged(); renderTop5();
     var auto=D.videos.filter(function(v){return v.status==="mapped" && v.by==="auto" && !decided(v.id)});
     var pins=places.filter(function(p){return p.precision!=="exact" && !local.some(function(d){return d.action==="editPlace" && d.slug===p.slug})});
     var total=D.videos.filter(function(v){return v.status==="pending" && !decided(v.id)}).length;
@@ -265,6 +286,11 @@
       persist(); render();
     }
     else if(b.classList.contains("undo-local")){ removeLocal(parseInt(b.dataset.i,10)); }
+    else if(b.id==="top5save"){
+      var slugs=[]; Array.prototype.forEach.call(document.querySelectorAll(".top5sel"),function(s){ if(s.value && slugs.indexOf(s.value)===-1) slugs.push(s.value); });
+      local=local.filter(function(d){return d.action!=="top5"}); local.push({action:"top5",slugs:slugs}); persist(); render();
+      document.getElementById("top5msg").textContent="Added to your choices. Save them below when you're ready.";
+    }
     else if(b.classList.contains("pfind")){
       var out2=card.querySelector(".found"), addr2=card.querySelector(".pa-addr").value.trim(); if(!addr2){out2.textContent="Type the street address first.";return}
       out2.textContent="Searching…";
@@ -289,6 +315,7 @@
     }
     if(d.action==="skip") return '<span class="tag skip">Not a place video</span>'+esc(t);
     if(d.action==="pending") return '<span class="tag skip">Back to the queue</span>'+esc(t);
+    if(d.action==="top5") return '<span class="tag new">Top five</span>'+esc((d.slugs||[]).map(function(s){return byslug[s]?byslug[s].name:s}).join(" · ")||"(none)");
     if(d.action==="editPlace"){ var q=byslug[d.slug]; return '<span class="tag pin">Pin / details</span>'+esc(d.name||(q?q.name:d.slug))+(d.lat!=null?' (new pin)':''); }
     return esc(JSON.stringify(d));
   }

@@ -329,9 +329,7 @@
     "place": null,
     "status": "skip",
     "by": "hatz",
-    "suggest": [
-      "friendship-kitchen"
-    ]
+    "suggest": []
   },
   {
     "id": "IpscC43pCrk",
@@ -962,8 +960,7 @@
     "status": "skip",
     "by": "hatz",
     "suggest": [
-      "kings-island",
-      "graeter-s"
+      "kings-island"
     ]
   },
   {
@@ -3392,9 +3389,7 @@
     "place": null,
     "status": "pending",
     "by": null,
-    "suggest": [
-      "the-food-pitt"
-    ]
+    "suggest": []
   },
   {
     "id": "J1SYtXL7PMU",

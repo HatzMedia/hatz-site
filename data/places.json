@@ -268,7 +268,8 @@
     "precision": "exact",
     "aliases": [
       "Corner Dumpling House"
-    ]
+    ],
+    "top": 1
   },
   {
     "slug": "sweets-geeks-sandusky-mall",
@@ -352,7 +353,8 @@
     "precision": "exact",
     "aliases": [
       "Diego's Street Tacos"
-    ]
+    ],
+    "top": 3
   },
   {
     "slug": "the-roost-latonia",
@@ -408,7 +410,8 @@
     "precision": "exact",
     "aliases": [
       "Fruit Land"
-    ]
+    ],
+    "top": 4
   },
   {
     "slug": "newtown-farm-market",
@@ -814,7 +817,8 @@
     "precision": "exact",
     "aliases": [
       "El Coyote"
-    ]
+    ],
+    "top": 2
   },
   {
     "slug": "the-porch",
@@ -1220,7 +1224,8 @@
     "precision": "exact",
     "aliases": [
       "Yummy Bowl"
-    ]
+    ],
+    "top": 5
   },
   {
     "slug": "clermont-county-fair",
