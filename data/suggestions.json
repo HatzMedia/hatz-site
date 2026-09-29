@@ -1,0 +1,2153 @@
+{
+  "places": [
+    {
+      "key": "webn-fireworks",
+      "name": "WEBN Fireworks at Sawyer Point",
+      "area": "Downtown Cincinnati, OH",
+      "cat": "events",
+      "trip": false,
+      "videos": [
+        "0WNlHhwWBN0",
+        "4abF0_bYLNE"
+      ],
+      "found": true,
+      "address": "705 E Pete Rose Way, Cincinnati, OH 45202",
+      "weak": false,
+      "precision": "exact",
+      "lat": 39.10115,
+      "lng": -84.50018,
+      "display": "Red Bike, 705, East Pete Rose Way, Lytle Park Historic District, Central Business District, Cincinnati, Hamilton County, Ohio, 45202, United States"
+    },
+    {
+      "key": "tickled-sweet",
+      "name": "Tickled Sweet & Harvest Market",
+      "area": "Milford, OH",
+      "cat": "sweets",
+      "trip": false,
+      "videos": [
+        "Gt-2LY3WIPo"
+      ],
+      "found": true,
+      "address": "",
+      "weak": false,
+      "precision": "exact",
+      "lat": 39.17543,
+      "lng": -84.29524,
+      "display": "Tickled Sweet, 317, Main Street, Milford, Clermont County, Ohio, 45150, United States"
+    },
+    {
+      "key": "st-bernadette",
+      "name": "St. Bernadette Festival",
+      "area": "Amelia, OH",
+      "cat": "events",
+      "trip": false,
+      "videos": [
+        "g-a1JcM9iV8",
+        "mARaaWNKags"
+      ],
+      "found": true,
+      "address": "1479 Locust Lake Rd, Amelia, OH 45102",
+      "weak": false,
+      "precision": "exact",
+      "lat": 39.02806,
+      "lng": -84.22659,
+      "display": "Saint Bernadette Catholic Church, 1479, Locust Lake Road, Locust Lake, Amelia, Pierce Township, Clermont County, Ohio, 45102, United States"
+    },
+    {
+      "key": "ollies-trolley",
+      "name": "Ollie's Trolley",
+      "area": "Cincinnati, OH",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "C6WBYeLjvuE"
+      ],
+      "found": true,
+      "address": "",
+      "weak": false,
+      "precision": "exact",
+      "lat": 39.11349,
+      "lng": -84.52289,
+      "display": "Ollie's Trolley, 1607, Central Avenue, Brighton, West End, Cincinnati, Hamilton County, Ohio, 45214, United States"
+    },
+    {
+      "key": "mt-washington-creamy-whip",
+      "name": "Mt. Washington Creamy Whip & Bakery",
+      "area": "Mount Washington, Cincinnati, OH",
+      "cat": "sweets",
+      "trip": false,
+      "videos": [
+        "p-nqIY34LY8"
+      ],
+      "found": true,
+      "address": "2069 Beechmont Ave, Cincinnati, OH 45230",
+      "weak": false,
+      "precision": "exact",
+      "lat": 39.09245,
+      "lng": -84.38732,
+      "display": "Mt Washington Creamy Whip, 2069, Beechmont Avenue, Mount Washington Business District, Stanbery Park, Mount Washington, Cincinnati, Hamilton County, Ohio, 45230, United States"
+    },
+    {
+      "key": "shaw-farms",
+      "name": "Shaw Farms",
+      "area": "Milford, OH",
+      "cat": "shopping",
+      "trip": false,
+      "videos": [
+        "YBOvxYg7Jzw"
+      ],
+      "found": true,
+      "address": "1737 State Route 131, Milford, OH 45150",
+      "weak": false,
+      "precision": "exact",
+      "lat": 39.17534,
+      "lng": -84.18527,
+      "display": "1737, SR 131, Elenor, Milford, Miami Township, Clermont County, Ohio, 45150, United States"
+    },
+    {
+      "key": "great-inland-seafood-festival",
+      "name": "Great Inland Seafood Festival",
+      "area": "Newport, KY",
+      "cat": "events",
+      "trip": false,
+      "videos": [
+        "PXetsaQn0L4"
+      ],
+      "found": true,
+      "address": "1 Levee Way, Newport, KY 41071",
+      "weak": false,
+      "precision": "exact",
+      "lat": 39.09434,
+      "lng": -84.49607,
+      "display": "Brio, 1, Levee Way, Newport on the Levee, Newport, Campbell County, Kentucky, 41071, United States"
+    },
+    {
+      "key": "kungfood-amerasia",
+      "name": "KungFood Chu's AmerAsia",
+      "area": "Covington, KY",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "gS3y1LWECQk"
+      ],
+      "found": true,
+      "address": "521 Madison Ave, Covington, KY 41011",
+      "weak": false,
+      "precision": "exact",
+      "lat": 39.08513,
+      "lng": -84.51092,
+      "display": "Kung Food Amerasia, 521, Madison Avenue, Covington, Kenton County, Kentucky, 41011, United States"
+    },
+    {
+      "key": "uncle-johns-place",
+      "name": "Uncle John's Place",
+      "area": "Mansfield, OH",
+      "cat": "eats",
+      "trip": true,
+      "videos": [
+        "cScpuxP_PkE"
+      ],
+      "found": true,
+      "address": "",
+      "weak": false,
+      "precision": "exact",
+      "lat": 40.75803,
+      "lng": -82.51585,
+      "display": "Uncle John's Place, 11, South Main Street, Mansfield Central Park District, Mansfield, Richland County, Ohio, 44902, United States"
+    },
+    {
+      "key": "mercer-social-house",
+      "name": "Mercer Social House",
+      "area": "Newtown, OH",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "IfGTYoYhEeA"
+      ],
+      "found": true,
+      "address": "",
+      "weak": false,
+      "precision": "exact",
+      "lat": 39.12411,
+      "lng": -84.36937,
+      "display": "Mercer Social House, 6623, Main Street, Cincinnati, Hamilton County, Ohio, 45244, United States"
+    },
+    {
+      "key": "kewpee-hamburgers-lima",
+      "name": "Kewpee Hamburgers",
+      "area": "Lima, OH",
+      "cat": "eats",
+      "trip": true,
+      "videos": [
+        "vRTYB7fxRTU"
+      ],
+      "found": true,
+      "address": "",
+      "weak": false,
+      "precision": "exact",
+      "lat": 40.74834,
+      "lng": -84.14804,
+      "display": "Kewpee Hamburgers, 2111, Allentown Road, Lima, American Township, Allen County, Ohio, 45805, United States"
+    },
+    {
+      "key": "corner-dumpling-house",
+      "name": "Corner Dumpling House",
+      "area": "Symmes Township, OH",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "xix1nHl7JhU",
+        "VVIXvopiqAg",
+        "E6Efp0f2LOA"
+      ],
+      "found": true,
+      "address": "11371 Montgomery Rd, Cincinnati, OH 45249",
+      "weak": false,
+      "precision": "area",
+      "lat": 39.18945,
+      "lng": -84.4117,
+      "display": "Montgomery Road, Kennedy Heights, Cincinnati, Hamilton County, Ohio, 45213, United States"
+    },
+    {
+      "key": "sweets-and-geeks",
+      "name": "Sweets & Geeks (Sandusky Mall)",
+      "area": "Sandusky, OH",
+      "cat": "sweets",
+      "trip": true,
+      "videos": [
+        "INA5zVtnzRg"
+      ],
+      "found": true,
+      "address": "4314 Milan Rd, Sandusky, OH 44870",
+      "weak": false,
+      "precision": "exact",
+      "lat": 41.4188,
+      "lng": -82.6698,
+      "display": "Sandusky Mall, 4314, Milan Road, Columbus Park, Sandusky, Perkins Township, Erie County, Ohio, 44870, United States"
+    },
+    {
+      "key": "local-producers-collective",
+      "name": "Local Producers Collective",
+      "area": "Batavia, OH",
+      "cat": "shopping",
+      "trip": false,
+      "videos": [
+        "0ApVfs4hhyc",
+        "_doFOmcnpVY",
+        "q86ozI9ciiA"
+      ],
+      "found": true,
+      "address": "95 W Main St, Batavia, OH 45103",
+      "weak": false,
+      "precision": "exact",
+      "lat": 39.07932,
+      "lng": -84.18052,
+      "display": "95, West Main Street, Batavia, Batavia Township, Clermont County, Ohio, 45103, United States"
+    },
+    {
+      "key": "st-veronica-festival",
+      "name": "St. Veronica Festival",
+      "area": "Mt. Carmel, OH",
+      "cat": "events",
+      "trip": false,
+      "videos": [
+        "VE7j8O90TYU"
+      ],
+      "found": true,
+      "address": "4473 Mt Carmel Tobasco Rd, Cincinnati, OH 45244",
+      "weak": false,
+      "precision": "exact",
+      "lat": 39.1008,
+      "lng": -84.30035,
+      "display": "Saint Veronica Catholic Church, 4473, Mount Carmel Tobasco Road, Mount Carmel, Cincinnati, Union Township, Clermont County, Ohio, 45244, United States"
+    },
+    {
+      "key": "old-dutch-tavern",
+      "name": "Old Dutch Tavern",
+      "area": "Sandusky, OH",
+      "cat": "eats",
+      "trip": true,
+      "videos": [
+        "PdZtZJM1uGo"
+      ],
+      "found": true,
+      "address": "2219 E Perkins Ave, Sandusky, OH 44870",
+      "weak": false,
+      "precision": "area",
+      "lat": 41.43331,
+      "lng": -82.72342,
+      "display": "West Perkins Avenue, Sandusky, Perkins Township, Erie County, Ohio, 44870, United States"
+    },
+    {
+      "key": "basil-1791",
+      "name": "Basil 1791",
+      "area": "Hamilton, OH",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "OfWBWIKw2eE"
+      ],
+      "found": true,
+      "address": "241 High St, Hamilton, OH 45011",
+      "weak": false,
+      "precision": "exact",
+      "lat": 39.39919,
+      "lng": -84.56083,
+      "display": "Basil 1791, 241, High Street, German Village Historic District, Rossville Historic District, South Hamilton, Hamilton, Butler County, Ohio, 45011, United States"
+    },
+    {
+      "key": "diegos-tacos",
+      "name": "Diego's Street Tacos",
+      "area": "Batavia, OH",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "L2-q4ku0-l4",
+        "tqHG42feslA"
+      ],
+      "found": true,
+      "address": "1006 Old State Route 74, Batavia, OH 45103",
+      "weak": false,
+      "precision": "exact",
+      "lat": 39.09938,
+      "lng": -84.25791,
+      "display": "1006, Old State Route 74, Glen Este, Batavia, Union Township, Clermont County, Ohio, 45103, United States"
+    },
+    {
+      "key": "the-roost",
+      "name": "The Roost Latonia",
+      "area": "Latonia, KY",
+      "cat": "shopping",
+      "trip": false,
+      "videos": [
+        "nkIZkj4zh9g"
+      ],
+      "found": true,
+      "address": "3616 Decoursey Ave, Covington, KY 41015",
+      "weak": false,
+      "precision": "area",
+      "lat": 39.04824,
+      "lng": -84.50311,
+      "display": "3616, Decoursey Avenue, Latonia, Covington, Kenton County, Kentucky, 41015, United States"
+    },
+    {
+      "key": "sandusky-pancake-house",
+      "name": "Sandusky Pancake House",
+      "area": "Sandusky, OH",
+      "cat": "eats",
+      "trip": true,
+      "videos": [
+        "ApQBviUosn4"
+      ],
+      "found": true,
+      "address": "",
+      "weak": false,
+      "precision": "exact",
+      "lat": 41.41057,
+      "lng": -82.66565,
+      "display": "Sandusky Bay Pancake House, Milan Road, Columbus Park, Perkins Township, Erie County, Ohio, 44870, United States"
+    },
+    {
+      "key": "heineman-winery",
+      "name": "Heineman Winery & Crystal Cave",
+      "area": "Put-in-Bay, OH",
+      "cat": "family",
+      "trip": true,
+      "videos": [
+        "r7-jBjDA1R0"
+      ],
+      "found": true,
+      "address": "",
+      "weak": false,
+      "precision": "area",
+      "lat": 41.64647,
+      "lng": -82.82668,
+      "display": "Heineman Winery, Thompson Road, Waters Edge, Put-in-Bay Township, Ottawa County, Ohio, 43456, United States"
+    },
+    {
+      "key": "fruit-land-newport",
+      "name": "Fruit Land",
+      "area": "Newport, KY",
+      "cat": "shopping",
+      "trip": false,
+      "videos": [
+        "qyHe5SKzs44",
+        "q6CdTI7bUrc"
+      ],
+      "found": true,
+      "address": "",
+      "weak": false,
+      "precision": "exact",
+      "lat": 39.0894,
+      "lng": -84.49177,
+      "display": "Fruit Land, East 8th Street, Monmouth Street Business District, The Estates at Wiedemann Mansion, Newport, Campbell County, Kentucky, 41071, United States"
+    },
+    {
+      "key": "newtown-farm-market",
+      "name": "Newtown Farm Market",
+      "area": "Newtown, OH",
+      "cat": "shopping",
+      "trip": false,
+      "videos": [
+        "KYCIw4iOXdg",
+        "RcxbmcQbAZ4"
+      ],
+      "found": true,
+      "address": "3950 Round Bottom Rd, Cincinnati, OH 45244",
+      "weak": false,
+      "lat": 39.13401,
+      "lng": -84.33714,
+      "precision": "exact",
+      "source": "youtube-tag",
+      "display": "from the video's YouTube location tag"
+    },
+    {
+      "key": "takumi-sushi-hibachi",
+      "name": "Takumi Steakhouse",
+      "area": "Mason, OH",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "fWmd9B0Ae_s"
+      ],
+      "found": true,
+      "address": "12071 Mason Montgomery Rd, Cincinnati, OH 45249",
+      "weak": false,
+      "lat": 39.29012,
+      "lng": -84.31663,
+      "precision": "exact",
+      "source": "youtube-tag",
+      "display": "from the video's YouTube location tag"
+    },
+    {
+      "key": "paradise-ice",
+      "name": "Paradise Ice",
+      "area": "Milford, OH",
+      "cat": "sweets",
+      "trip": false,
+      "videos": [
+        "L4pESLGcn7M",
+        "1UkTHOyh77Q"
+      ],
+      "found": true,
+      "address": "1313 State Route 131, Milford, OH 45150",
+      "weak": false,
+      "precision": "exact",
+      "lat": 39.17608,
+      "lng": -84.2208,
+      "display": "Day Heights Fireman’s Memorial Building, 1313, SR 131, Day Heights, Milford, Miami Township, Clermont County, Ohio, 45150, United States"
+    },
+    {
+      "key": "the-invention-restaurant",
+      "name": "The Invention Restaurant",
+      "area": "Milan, OH",
+      "cat": "eats",
+      "trip": true,
+      "videos": [
+        "WTwShAVeZuU"
+      ],
+      "found": true,
+      "address": "",
+      "weak": false,
+      "precision": "exact",
+      "lat": 41.29765,
+      "lng": -82.60598,
+      "display": "The Invention, 15, North Main Street, Milan Historic District, Milan, Milan Township, Erie County, Ohio, 44846, United States"
+    },
+    {
+      "key": "milkshake-factory",
+      "name": "MilkShake Factory",
+      "area": "Mason, OH",
+      "cat": "sweets",
+      "trip": false,
+      "videos": [
+        "WJTzv407vQc"
+      ],
+      "found": true,
+      "address": "2144 Kings Mills Rd, Mason, OH 45040",
+      "weak": false,
+      "precision": "area",
+      "lat": 39.35668,
+      "lng": -84.29151,
+      "display": "Kings Mills Road, Mason, Warren County, Ohio, 45040, United States"
+    },
+    {
+      "key": "cincy-gourmet-deli",
+      "name": "Cincy Gourmet Deli",
+      "area": "Clifton Heights, Cincinnati, OH",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "p3nDO2B6hD0"
+      ],
+      "found": true,
+      "address": "2832 Jefferson Ave, Cincinnati, OH 45219",
+      "weak": false,
+      "precision": "area",
+      "lat": 39.1322,
+      "lng": -84.51097,
+      "display": "2832, Jefferson Avenue, Uptown Cincinnati, University Heights, The Heights, Cincinnati, Hamilton County, Ohio, 45219, United States"
+    },
+    {
+      "key": "element-eatery",
+      "name": "Element Eatery",
+      "area": "Cincinnati area, OH",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "q1GVfhIImKM"
+      ],
+      "found": true,
+      "address": "",
+      "weak": false,
+      "precision": "exact",
+      "lat": 39.15978,
+      "lng": -84.4024,
+      "display": "Element Eatery, 5350, Medpace Way, Madison-Stewart Historic District, Madisonville, Cincinnati, Hamilton County, Ohio, 45227, United States"
+    },
+    {
+      "key": "big-daddys-amelia",
+      "name": "Big Daddy Marketplace",
+      "area": "Amelia, OH",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "EtEDalNHr24"
+      ],
+      "found": true,
+      "address": "14 W Main St, Amelia, OH 45102",
+      "weak": false,
+      "precision": "exact",
+      "lat": 39.02825,
+      "lng": -84.21872,
+      "display": "Big Daddy Marketplace, 14, West Main Street, Amelia, Pierce Township, Clermont County, Ohio, 45102, United States"
+    },
+    {
+      "key": "traders-world",
+      "name": "Traders World Flea Market",
+      "area": "Monroe, OH",
+      "cat": "shopping",
+      "trip": false,
+      "videos": [
+        "mioV3f9yahc",
+        "S7LFJbXykGw",
+        "WD-B2E7UZFI"
+      ],
+      "found": true,
+      "address": "601 Union Rd, Monroe, OH 45050",
+      "weak": false,
+      "precision": "area",
+      "lat": 39.44045,
+      "lng": -84.323,
+      "display": "601, Union Road, Trader’s World Flea Market, Monroe, Turtlecreek Township, Warren County, Ohio, 45036, United States"
+    },
+    {
+      "key": "padrino-milford",
+      "name": "Padrino",
+      "area": "Milford, OH",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "IVzaDcqNzSU"
+      ],
+      "found": true,
+      "address": "",
+      "weak": false,
+      "precision": "exact",
+      "lat": 39.17327,
+      "lng": -84.29625,
+      "display": "Padrino, 111, Main Street, Milford, Clermont County, Ohio, 45150, United States"
+    },
+    {
+      "key": "legendary-whip",
+      "name": "Legen-Dairy Whip",
+      "area": "Bethel, OH",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "047sXWdO1Yg"
+      ],
+      "found": true,
+      "address": "3376 State Route 125, Bethel, OH 45106",
+      "weak": false,
+      "precision": "exact",
+      "lat": 38.96295,
+      "lng": -84.06922,
+      "display": "Legen-Dairy Whip, 3376, SR 125, Bethel, Tate Township, Clermont County, Ohio, 45106, United States"
+    },
+    {
+      "key": "house-of-plastik",
+      "name": "House of Plastik",
+      "area": "Cincinnati, OH",
+      "cat": "shopping",
+      "trip": false,
+      "videos": [
+        "w5FOWXvpTZQ"
+      ],
+      "found": true,
+      "address": "",
+      "weak": false,
+      "precision": "exact",
+      "lat": 39.06483,
+      "lng": -84.27791,
+      "display": "House of Plastik, 834, Ohio Pike, Withamsville, Cincinnati, Union Township, Clermont County, Ohio, 45245, United States"
+    },
+    {
+      "key": "seoul-korean-bbq",
+      "name": "Seoul Korean BBQ & Hot Pot",
+      "area": "Mason, OH",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "JvTlWifMKK0",
+        "9sQvRQ95__Q"
+      ],
+      "found": true,
+      "address": "5113 Bowen Dr, Mason, OH 45040",
+      "weak": false,
+      "precision": "exact",
+      "lat": 39.31143,
+      "lng": -84.31432,
+      "display": "Seoul Korean BBQ & Hotpot, 5113, Bowen Drive, Mason, Deerfield Township, Warren County, Ohio, 45040, United States"
+    },
+    {
+      "key": "blue-ash-chili",
+      "name": "Blue Ash Chili",
+      "area": "Blue Ash, OH",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "_RcO18zraI8"
+      ],
+      "found": true,
+      "address": "",
+      "weak": false,
+      "precision": "exact",
+      "lat": 39.23113,
+      "lng": -84.37855,
+      "display": "Blue Ash Chili, 9525, Kenwood Road, Crossings of Blue Ash, Blue Ash, Hamilton County, Ohio, 45242, United States"
+    },
+    {
+      "key": "cincinnati-union-terminal",
+      "name": "Cincinnati Union Terminal",
+      "area": "Cincinnati, OH",
+      "cat": "family",
+      "trip": false,
+      "videos": [
+        "JWNr0BSteIA",
+        "-6bgSZsxYpo",
+        "ft2v-_8NknY"
+      ],
+      "found": true,
+      "address": "",
+      "weak": false,
+      "precision": "area",
+      "lat": 39.10995,
+      "lng": -84.53747,
+      "display": "Cincinnati Union Terminal, Ezzard Charles Drive, Cincinnati Museum Center at Union Terminal, Queensgate, Cincinnati, Hamilton County, Ohio, 45203, United States"
+    },
+    {
+      "key": "bells-grab-and-go",
+      "name": "Bell's Grab & Go",
+      "area": "Mount Healthy, OH",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "-Mlq0mfiGXI"
+      ],
+      "found": true,
+      "address": "1355 Compton Rd, Cincinnati, OH 45231",
+      "weak": false,
+      "precision": "area",
+      "lat": 39.21671,
+      "lng": -84.47781,
+      "display": "Compton Road, Valleydale, Cincinnati, Springfield Township, Hamilton County, Ohio, 45231, United States"
+    },
+    {
+      "key": "sugar-n-spice",
+      "name": "Sugar n' Spice",
+      "area": "Cincinnati, OH",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "AI_vpMO0R_Q"
+      ],
+      "found": true,
+      "address": "",
+      "weak": false,
+      "precision": "exact",
+      "lat": 39.1643,
+      "lng": -84.4721,
+      "display": "Sugar ’n’ Spice Restaurant, 4381, Reading Road, Paddock Hills, Cincinnati, Hamilton County, Ohio, 45229, United States"
+    },
+    {
+      "key": "goshen-grind",
+      "name": "Goshen Grind",
+      "area": "Goshen, OH",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "l0bTwb5XVzE"
+      ],
+      "found": true,
+      "address": "",
+      "weak": false,
+      "precision": "exact",
+      "lat": 39.23154,
+      "lng": -84.16338,
+      "display": "Goshen Grind, 6744, Dick Flynn Boulevard, Goshen, Goshen Township, Clermont County, Ohio, 45122, United States"
+    },
+    {
+      "key": "tokugawa",
+      "name": "Tokugawa Japan Steakhouse",
+      "area": "Milford, OH",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "HMZg2jS2dFY"
+      ],
+      "found": true,
+      "address": "5723 Signal Hill Ct, Milford, OH 45150",
+      "weak": false,
+      "precision": "exact",
+      "lat": 39.18562,
+      "lng": -84.26672,
+      "display": "5723, Signal Hill Court, Beverly Hills, Milford, Miami Township, Clermont County, Ohio, 45150, United States"
+    },
+    {
+      "key": "northside-yacht-club",
+      "name": "Northside Yacht Club",
+      "area": "Northside, Cincinnati, OH",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "j-cKDONquCA"
+      ],
+      "found": true,
+      "address": "",
+      "weak": false,
+      "precision": "exact",
+      "lat": 39.15984,
+      "lng": -84.53262,
+      "display": "Northside Yacht Club, 4231, Spring Grove Avenue, Northside, Cincinnati, Hamilton County, Ohio, 45223, United States"
+    },
+    {
+      "key": "layla-mediterranean",
+      "name": "Leyla Mediterranean",
+      "area": "Anderson Township, OH",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "ohZLZ5qQduk"
+      ],
+      "found": true,
+      "address": "7418 Beechmont Ave, Cincinnati, OH 45255",
+      "weak": false,
+      "precision": "exact",
+      "lat": 39.07416,
+      "lng": -84.35099,
+      "display": "LEYLA Mediterranean, 7418, Beechmont Avenue, Forestville, Cincinnati, Anderson Township, Hamilton County, Ohio, 45255, United States"
+    },
+    {
+      "key": "fountain-square",
+      "name": "Fountain Square",
+      "area": "Downtown Cincinnati, OH",
+      "cat": "events",
+      "trip": false,
+      "videos": [
+        "LItUuvlHE84"
+      ],
+      "found": true,
+      "address": "",
+      "weak": false,
+      "precision": "area",
+      "lat": 39.10148,
+      "lng": -84.5125,
+      "display": "Fountain Square, Main Street Historic District, Central Business District, Cincinnati, Hamilton County, Ohio, 45210, United States"
+    },
+    {
+      "key": "east-fork-lake",
+      "name": "East Fork State Park",
+      "area": "Bethel, OH",
+      "cat": "family",
+      "trip": false,
+      "videos": [
+        "mo0IOMzAvU8"
+      ],
+      "found": true,
+      "address": "3294 Elklick Rd, Bethel, OH 45106",
+      "weak": false,
+      "lat": 39.00433,
+      "lng": -84.14037,
+      "precision": "exact",
+      "source": "youtube-tag",
+      "display": "from the video's YouTube location tag"
+    },
+    {
+      "key": "cincinnati-christkindlmarkt",
+      "name": "Cincinnati Christkindlmarkt",
+      "area": "The Banks, Cincinnati, OH",
+      "cat": "events",
+      "trip": false,
+      "videos": [
+        "FPTFJEGnriA"
+      ],
+      "found": true,
+      "address": "115 Joe Nuxhall Way, Cincinnati, OH 45202",
+      "weak": false,
+      "precision": "exact",
+      "lat": 39.09629,
+      "lng": -84.5087,
+      "display": "Moerlein Lager House, 115, Joe Nuxhall Way, The Banks, Central Business District, Cincinnati, Hamilton County, Ohio, 45202, United States"
+    },
+    {
+      "key": "yuletide-village",
+      "name": "Yuletide Village",
+      "area": "Waynesville, OH",
+      "cat": "events",
+      "trip": false,
+      "videos": [
+        "sPQV8Wbj54I",
+        "LDki79ph3gA",
+        "YKAeiyCH6qA",
+        "wehGtYbGdek"
+      ],
+      "found": true,
+      "address": "10542 E State Route 73, Waynesville, OH 45068",
+      "weak": false,
+      "precision": "exact",
+      "lat": 39.50129,
+      "lng": -83.98681,
+      "display": "Reveler's Stage, 10542, SR 73, Waynesville, Massie Township, Warren County, Ohio, 45068, United States"
+    },
+    {
+      "key": "corsi-tree-farm",
+      "name": "Corsi Tree Farm",
+      "area": "Ohio",
+      "cat": "family",
+      "trip": false,
+      "videos": [
+        "26u1jeZq_PU",
+        "a4O-s8_Wi_0"
+      ],
+      "found": true,
+      "address": "",
+      "weak": false,
+      "precision": "exact",
+      "lat": 38.95508,
+      "lng": -83.99688,
+      "display": "Corsi Tree Farm, Bolender Road, Clark Township, Brown County, Ohio, 45130, United States"
+    },
+    {
+      "key": "loris-grill",
+      "name": "Lori's American Grille",
+      "area": "Goshen, OH",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "XxP6k4M38K0"
+      ],
+      "found": true,
+      "address": "1711 State Route 28, Goshen, OH 45122",
+      "weak": false,
+      "precision": "exact",
+      "lat": 39.22598,
+      "lng": -84.17843,
+      "display": "1711, State Route 28, Springvale, Goshen, Goshen Township, Clermont County, Ohio, 45122, United States"
+    },
+    {
+      "key": "masa-gyro",
+      "name": "Masa Gyro",
+      "area": "Amelia, OH",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "dM8hZWTSD3w"
+      ],
+      "found": true,
+      "address": "1310 Ohio Pike, Amelia, OH 45102",
+      "weak": false,
+      "precision": "exact",
+      "lat": 39.04293,
+      "lng": -84.23816,
+      "display": "1310, West Ohio Pike, Amelia, Batavia Township, Clermont County, Ohio, 45102, United States"
+    },
+    {
+      "key": "grant-garden-center",
+      "name": "Grant's Garden Center Christmas Market",
+      "area": "Batavia, OH",
+      "cat": "shopping",
+      "trip": false,
+      "videos": [
+        "qHjiu5kQGRQ"
+      ],
+      "found": true,
+      "address": "Grant's Garden Center, Batavia, OH",
+      "weak": true,
+      "precision": "exact",
+      "lat": 39.17376,
+      "lng": -84.27455,
+      "display": "Grant’s Greenhouse, 1025, Lila Avenue, Indian Knolls, Milford, Clermont County, Ohio, 45150, United States"
+    },
+    {
+      "key": "el-coyote",
+      "name": "El Coyote",
+      "area": "Anderson Township, OH",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "jccpj-7Swx8"
+      ],
+      "found": true,
+      "address": "",
+      "weak": false,
+      "precision": "exact",
+      "lat": 39.08591,
+      "lng": -84.35324,
+      "display": "El Coyote, 7404, State Road, Sherwood, Cincinnati, Anderson Township, Hamilton County, Ohio, 45230, United States"
+    },
+    {
+      "key": "the-porch",
+      "name": "The Porch",
+      "area": "Cincinnati area, OH",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "q8Xro7lpl5I"
+      ],
+      "found": true,
+      "address": "",
+      "weak": false,
+      "precision": "exact",
+      "lat": 39.10909,
+      "lng": -84.51782,
+      "display": "The Porch, Elm Street, Over-the-Rhine Historic District, Over-the-Rhine, Cincinnati, Hamilton County, Ohio, 45210, United States"
+    },
+    {
+      "key": "buttermilks-bakery",
+      "name": "ButterMilks Bakery",
+      "area": "Hillsboro, OH",
+      "cat": "sweets",
+      "trip": false,
+      "videos": [
+        "e4xc1nCP33g"
+      ],
+      "found": true,
+      "address": "142 W Main St, Hillsboro, OH 45133",
+      "weak": false,
+      "precision": "area",
+      "lat": 39.2025,
+      "lng": -83.61299,
+      "display": "142, West Main Street, Hillsboro Historic Business District, Hillsboro, Liberty Township, Highland County, Ohio, 45133, United States"
+    },
+    {
+      "key": "mi-cozumel",
+      "name": "Mi Cozumel",
+      "area": "Cincinnati area, OH",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "XgKHKX65Cj4"
+      ],
+      "found": true,
+      "address": "",
+      "weak": false,
+      "precision": "exact",
+      "lat": 39.15868,
+      "lng": -84.42901,
+      "display": "Mi Cozumel, 3100, Vandercar Way, The Boulevard at Oakley Station, Oakley, Cincinnati, Hamilton County, Ohio, 45209, United States"
+    },
+    {
+      "key": "the-arepa-place",
+      "name": "The Arepa Place",
+      "area": "Cincinnati area, OH",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "bf4r93UGKOg"
+      ],
+      "found": true,
+      "address": "",
+      "weak": false,
+      "precision": "exact",
+      "lat": 39.11501,
+      "lng": -84.51953,
+      "display": "The Arepa Place, 131, West Elder Street, Findlay Market, Over-the-Rhine, Cincinnati, Hamilton County, Ohio, 45202, United States"
+    },
+    {
+      "key": "birdies-coffee",
+      "name": "Birdie's Coffee Co.",
+      "area": "Norwood, OH",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "KlqAbxlHOIw"
+      ],
+      "found": true,
+      "address": "",
+      "weak": false,
+      "precision": "exact",
+      "lat": 39.1522,
+      "lng": -84.45398,
+      "display": "Birdie’s Coffee Co., 4030, Forest Avenue, Norwood, Hamilton County, Ohio, 45212, United States"
+    },
+    {
+      "key": "la-michoacana",
+      "name": "La Michoacana Y Sus Antojitos",
+      "area": "Norwood, OH",
+      "cat": "sweets",
+      "trip": false,
+      "videos": [
+        "SWuI8kyYwqM"
+      ],
+      "found": true,
+      "address": "5225 Montgomery Rd, Cincinnati, OH 45212",
+      "weak": false,
+      "precision": "area",
+      "lat": 39.17618,
+      "lng": -84.44044,
+      "display": "Montgomery Road, Norwood Heights, Pleasant Ridge, Cincinnati, Hamilton County, Ohio, 45212, United States"
+    },
+    {
+      "key": "swampwater-grill",
+      "name": "Swampwater Grill & Riverside Centre Antiques",
+      "area": "East End, Cincinnati, OH",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "zpG0KNrsmBs"
+      ],
+      "found": true,
+      "address": "3742 Kellogg Ave, Cincinnati, OH 45226",
+      "weak": false,
+      "precision": "exact",
+      "lat": 39.11196,
+      "lng": -84.43858,
+      "display": "3742, Kellogg Avenue, East End, Columbia-Tusculum, Cincinnati, Hamilton County, Ohio, 45226, United States"
+    },
+    {
+      "key": "parlor-doughnuts",
+      "name": "Parlor Doughnuts",
+      "area": "Anderson Township, OH",
+      "cat": "sweets",
+      "trip": false,
+      "videos": [
+        "OaNzhf3-w_E"
+      ],
+      "found": true,
+      "address": "",
+      "weak": false,
+      "precision": "exact",
+      "lat": 39.07242,
+      "lng": -84.33951,
+      "display": "Parlor Doughnuts, 7835, Beechmont Avenue, Beechmont Avenue Business District, Forestville, Cincinnati, Anderson Township, Hamilton County, Ohio, 45255, United States"
+    },
+    {
+      "key": "country-inn-withamsville",
+      "name": "Country Inn Withamsville",
+      "area": "Withamsville, OH",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "k8KQLcNNXM0"
+      ],
+      "found": true,
+      "address": "",
+      "weak": false,
+      "precision": "exact",
+      "lat": 39.06168,
+      "lng": -84.27141,
+      "display": "Country Inn, 910, Ohio Pike, Withamsville, Cincinnati, Union Township, Clermont County, Ohio, 45245, United States"
+    },
+    {
+      "key": "circuit-cafe",
+      "name": "Circuit Cafe / Cincinnati Cars & Coffee",
+      "area": "East End, Cincinnati, OH",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "fRY-VT9MM-Q"
+      ],
+      "found": true,
+      "address": "2726 Riverside Dr, Cincinnati, OH 45202",
+      "weak": false,
+      "precision": "exact",
+      "lat": 39.12277,
+      "lng": -84.45494,
+      "display": "Circuit Cafe, 2726, Riverside Drive, East End, O’Bryonville, Pendleton, Cincinnati, Hamilton County, Ohio, 45202, United States"
+    },
+    {
+      "key": "mocha-and-co",
+      "name": "Moka & Co.",
+      "area": "West Chester, OH",
+      "cat": "sweets",
+      "trip": false,
+      "videos": [
+        "2nb0edvim9o"
+      ],
+      "found": true,
+      "address": "7307 Tylers Corner Dr, West Chester, OH 45069",
+      "weak": false,
+      "precision": "area",
+      "lat": 39.35695,
+      "lng": -84.38331,
+      "display": "7307, Tylers Corner Drive, Wetherington, Maud, West Chester Township, Butler County, Ohio, 45069, United States"
+    },
+    {
+      "key": "fairborn-halloween",
+      "name": "Fairborn Halloween Festival",
+      "area": "Fairborn, OH",
+      "cat": "events",
+      "trip": true,
+      "videos": [
+        "pO69z8AhHg4",
+        "J1SYtXL7PMU",
+        "Bcs6PBh_oxk"
+      ],
+      "found": true,
+      "address": "Main St & Central Ave, Fairborn, OH 45324",
+      "weak": true,
+      "precision": "area",
+      "lat": 39.8209,
+      "lng": -84.01939,
+      "display": "Fairborn, Bath Township, Greene County, Ohio, United States"
+    },
+    {
+      "key": "the-food-pitt",
+      "name": "The Food Pitt",
+      "area": "Ohio",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "2OWrjLD94_c"
+      ],
+      "found": true,
+      "address": "",
+      "weak": false,
+      "lat": 39.82089,
+      "lng": -84.01938,
+      "precision": "exact",
+      "source": "youtube-tag",
+      "display": "from the video's YouTube location tag"
+    },
+    {
+      "key": "feel-good-food-stop",
+      "name": "Feel Good Food Stop",
+      "area": "Newtown, OH",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "5fIxG3RAtZA"
+      ],
+      "found": true,
+      "address": "6836 Main St, Cincinnati, OH 45244",
+      "weak": false,
+      "precision": "area",
+      "lat": 39.1003,
+      "lng": -84.50942,
+      "display": "Main Street, Main Street Historic District, Central Business District, Cincinnati, Hamilton County, Ohio, 45202, United States"
+    },
+    {
+      "key": "doschers-candies",
+      "name": "Doscher's Candies",
+      "area": "Newtown, OH",
+      "cat": "sweets",
+      "trip": false,
+      "videos": [
+        "ZYSZRhVGLyc"
+      ],
+      "found": true,
+      "address": "6926 Main St, Cincinnati, OH 45244",
+      "weak": false,
+      "precision": "area",
+      "lat": 39.1003,
+      "lng": -84.50942,
+      "display": "Main Street, Main Street Historic District, Central Business District, Cincinnati, Hamilton County, Ohio, 45202, United States"
+    },
+    {
+      "key": "newport-aquarium",
+      "name": "Newport Aquarium",
+      "area": "Newport, KY",
+      "cat": "family",
+      "trip": false,
+      "videos": [
+        "Ww0kIGQylTA",
+        "7IeMpHDO72M"
+      ],
+      "found": true,
+      "address": "",
+      "weak": false,
+      "precision": "exact",
+      "lat": 39.09437,
+      "lng": -84.49772,
+      "display": "Newport Aquarium, 1, Riverboat Row, Newport, Campbell County, Kentucky, 41071, United States"
+    },
+    {
+      "key": "waffle-house-amelia",
+      "name": "Waffle House",
+      "area": "Amelia, OH",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "d-W1eCTJm30"
+      ],
+      "found": true,
+      "address": "",
+      "weak": false,
+      "precision": "exact",
+      "lat": 39.01863,
+      "lng": -84.20132,
+      "display": "Waffle House, 1761, East Ohio Pike, Amelia, Pierce Township, Clermont County, Ohio, 45102, United States"
+    },
+    {
+      "key": "village-coffee-shop",
+      "name": "Village Coffee Shop",
+      "area": "Newtown, OH",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "PboDUQWG-SM"
+      ],
+      "found": true,
+      "address": "",
+      "weak": false,
+      "precision": "exact",
+      "lat": 39.12398,
+      "lng": -84.35004,
+      "display": "Village Coffee Shop, 7397, Main Street, Newtown, Hamilton County, Ohio, 45244, United States"
+    },
+    {
+      "key": "pumpkin-run-nationals",
+      "name": "Pumpkin Run Nationals",
+      "area": "Owensville, OH",
+      "cat": "events",
+      "trip": false,
+      "videos": [
+        "rLVN1GDqgyg"
+      ],
+      "found": true,
+      "address": "1000 Locust St, Owensville, OH 45160",
+      "weak": false,
+      "precision": "exact",
+      "lat": 39.12405,
+      "lng": -84.14138,
+      "display": "1000, Locust Street, Owensville, Stonelick Township, Clermont County, Ohio, 45160, United States"
+    },
+    {
+      "key": "pepper-pod",
+      "name": "Pepper Pod Restaurant",
+      "area": "Newport, KY",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "7dQ3xmej_zw"
+      ],
+      "found": true,
+      "address": "703 Monmouth St, Newport, KY 41071",
+      "weak": false,
+      "precision": "area",
+      "lat": 39.09025,
+      "lng": -84.4922,
+      "display": "703, Monmouth Street, Monmouth Street Business District, Clifton, Newport, Campbell County, Kentucky, 41071, United States"
+    },
+    {
+      "key": "roneys",
+      "name": "Roney's",
+      "area": "Ohio",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "wUoajMSfVew"
+      ],
+      "found": true,
+      "address": "",
+      "weak": false,
+      "precision": "exact",
+      "lat": 39.15906,
+      "lng": -84.27572,
+      "display": "Roney’s, 314, Chamber Drive, Milford, Clermont County, Ohio, 45150, United States"
+    },
+    {
+      "key": "bards-burgers-and-chili",
+      "name": "Bard's Burgers & Chili",
+      "area": "Latonia, KY",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "MiQgvNamNRM"
+      ],
+      "found": true,
+      "address": "",
+      "weak": false,
+      "precision": "exact",
+      "lat": 39.048,
+      "lng": -84.50295,
+      "display": "Bard's Burgers & Chili, 3620, Decoursey Avenue, Latonia, Covington, Kenton County, Kentucky, 41015, United States"
+    },
+    {
+      "key": "pig-candy-bbq",
+      "name": "Pig Candy BBQ",
+      "area": "Cincinnati, OH",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "zpjnmZOukbE"
+      ],
+      "found": true,
+      "address": "",
+      "weak": false,
+      "precision": "exact",
+      "lat": 39.06523,
+      "lng": -84.42382,
+      "display": "Pig Candy BBQ, 5901, Kellogg Avenue, California, Cincinnati, Hamilton County, Ohio, 45230, United States"
+    },
+    {
+      "key": "peters-cartridge-factory",
+      "name": "Peters Cartridge Factory",
+      "area": "Maineville, OH",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "Z6mJQNFHaa8"
+      ],
+      "found": true,
+      "address": "",
+      "weak": false,
+      "precision": "area",
+      "lat": 39.35036,
+      "lng": -84.24274,
+      "display": "Peters Cartridge Factory Apartments, 1409, Maineville, Hamilton Township, Warren County, Ohio, 45039, United States"
+    },
+    {
+      "key": "kroger-wellness-festival",
+      "name": "Kroger Wellness Festival",
+      "area": "Downtown Cincinnati, OH",
+      "cat": "events",
+      "trip": false,
+      "videos": [
+        "BKGWYmUlRYw"
+      ],
+      "found": true,
+      "address": "5th St & Main St, Cincinnati, OH 45202",
+      "weak": true,
+      "precision": "area",
+      "lat": 39.10151,
+      "lng": -84.50992,
+      "display": "East 5th Street, Main Street Historic District, Central Business District, Cincinnati, Hamilton County, Ohio, 45202, United States"
+    },
+    {
+      "key": "lazlos-iron-skillet",
+      "name": "Laszlo's Iron Skillet",
+      "area": "Withamsville, OH",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "sVeQVqBwhlE"
+      ],
+      "found": true,
+      "address": "1020 Ohio Pike, Cincinnati, OH 45245",
+      "weak": true,
+      "precision": "exact",
+      "lat": 39.05831,
+      "lng": -84.26269,
+      "display": "David's Kitchen & Bar, 1020, Ohio Pike, Merwin, Cincinnati, Union Township, Clermont County, Ohio, 45245, United States"
+    },
+    {
+      "key": "liberty-collective",
+      "name": "Liberty Collective",
+      "area": "Liberty Township, OH",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "pbML3MMRDi0"
+      ],
+      "found": true,
+      "address": "6735 Lakota Ln, Liberty Township, OH 45044",
+      "weak": false,
+      "precision": "exact",
+      "lat": 39.38152,
+      "lng": -84.37404,
+      "display": "Rice Life Flavorful Hibachi, 6735, Lakota Lane, Bethany, Liberty Township, Butler County, Ohio, 45044, United States"
+    },
+    {
+      "key": "graeters-anderson",
+      "name": "Graeter's",
+      "area": "Anderson Township, OH",
+      "cat": "sweets",
+      "trip": false,
+      "videos": [
+        "T_Di2H9UZ_k"
+      ],
+      "found": true,
+      "address": "",
+      "weak": false,
+      "precision": "exact",
+      "lat": 39.07181,
+      "lng": -84.31818,
+      "display": "Graeter's, 8533, Beechmont Avenue, Beechmont Avenue Business District, Cherry Grove, Cincinnati, Anderson Township, Hamilton County, Ohio, 45255, United States"
+    },
+    {
+      "key": "cincinnati-fear-fest",
+      "name": "Cincinnati Fear Fest",
+      "area": "Williamsburg, OH",
+      "cat": "events",
+      "trip": false,
+      "videos": [
+        "swVspYaMth4"
+      ],
+      "found": true,
+      "address": "1449 Greenbush Cobb Rd, Williamsburg, OH 45176",
+      "weak": false,
+      "lat": 39.05732,
+      "lng": -84.00596,
+      "precision": "exact",
+      "source": "youtube-tag",
+      "display": "from the video's YouTube location tag"
+    },
+    {
+      "key": "kennys-place",
+      "name": "Kenny's Place",
+      "area": "Amelia, OH",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "kWlwLOZ1qaI"
+      ],
+      "found": true,
+      "address": "1340 State Route 125, Amelia, OH 45102",
+      "weak": false,
+      "precision": "exact",
+      "lat": 39.04017,
+      "lng": -84.23457,
+      "display": "1340, West Ohio Pike, Amelia, Batavia Township, Clermont County, Ohio, 45102, United States"
+    },
+    {
+      "key": "the-chill-out",
+      "name": "The Chill Out",
+      "area": "Batavia, OH",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "l5Y_eGnPaCE"
+      ],
+      "found": true,
+      "address": "2792 Old State Route 32, Batavia, OH 45103",
+      "weak": false,
+      "precision": "exact",
+      "lat": 39.05933,
+      "lng": -84.10283,
+      "display": "2792, Old State Route 32, Batavia, Williamsburg Township, Clermont County, Ohio, 45103, United States"
+    },
+    {
+      "key": "mr-hayeks",
+      "name": "Mr. Hayek's Fish & Chicken",
+      "area": "Springdale, OH",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "zOu-wg4e0x4"
+      ],
+      "found": true,
+      "address": "11482 Springfield Pike, Cincinnati, OH 45246",
+      "weak": false,
+      "lat": 39.28357,
+      "lng": -84.48514,
+      "precision": "exact",
+      "source": "youtube-tag",
+      "display": "from the video's YouTube location tag"
+    },
+    {
+      "key": "yummy-bowl",
+      "name": "Yummy Bowl",
+      "area": "Ohio",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "4KGk9PRD6yw"
+      ],
+      "found": true,
+      "address": "",
+      "weak": false,
+      "precision": "exact",
+      "lat": 39.32496,
+      "lng": -84.42946,
+      "display": "Yummy Bowl, Union Centre Boulevard, West Chester Township, Butler County, Ohio, 45069, United States"
+    },
+    {
+      "key": "clermont-county-fair",
+      "name": "Clermont County Fair",
+      "area": "Owensville, OH",
+      "cat": "events",
+      "trip": false,
+      "videos": [
+        "Osju-Q_aSzk"
+      ],
+      "found": true,
+      "address": "1000 Locust St, Owensville, OH 45160",
+      "weak": false,
+      "precision": "exact",
+      "lat": 39.12405,
+      "lng": -84.14138,
+      "display": "1000, Locust Street, Owensville, Stonelick Township, Clermont County, Ohio, 45160, United States"
+    },
+    {
+      "key": "vinny-rays-bbq",
+      "name": "Vinny Ray's BBQ",
+      "area": "Felicity, OH",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "cIPn2_CzueY"
+      ],
+      "found": true,
+      "address": "1295 State Route 756, Felicity, OH 45120",
+      "weak": false,
+      "precision": "area",
+      "lat": 38.84107,
+      "lng": -84.09521,
+      "display": "North Market Street, Felicity, Franklin Township, Clermont County, Ohio, 45120, United States"
+    },
+    {
+      "key": "rise-and-dine",
+      "name": "Rise & Dine Breakfast",
+      "area": "Bethel, OH",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "PmMPaBOKDs4"
+      ],
+      "found": true,
+      "address": "101 E Plane St, Bethel, OH 45106",
+      "weak": false,
+      "precision": "area",
+      "lat": 38.96314,
+      "lng": -84.07824,
+      "display": "101, East Plane Street, Bethel, Tate Township, Clermont County, Ohio, 45106, United States"
+    },
+    {
+      "key": "mr-smiths-coffee-house",
+      "name": "Mr. Smith's Coffee House",
+      "area": "Sandusky, OH",
+      "cat": "eats",
+      "trip": true,
+      "videos": [
+        "lMaY0adZmnA"
+      ],
+      "found": true,
+      "address": "140 Columbus Ave, Sandusky, OH 44870",
+      "weak": false,
+      "precision": "area",
+      "lat": 41.45677,
+      "lng": -82.71194,
+      "display": "140, Columbus Avenue, Columbus Avenue Historic District, Sandusky, Erie County, Ohio, 44870, United States"
+    },
+    {
+      "key": "corner-inn-upper-sandusky",
+      "name": "Corner Inn Restaurant",
+      "area": "Upper Sandusky, OH",
+      "cat": "eats",
+      "trip": true,
+      "videos": [
+        "RNr59XTM6zE"
+      ],
+      "found": true,
+      "address": "143 N Sandusky Ave, Upper Sandusky, OH 43351",
+      "weak": false,
+      "precision": "area",
+      "lat": 40.82811,
+      "lng": -83.28127,
+      "display": "143, North Sandusky Avenue, South Sandusky Avenue Historic District, Upper Sandusky, Crane Township, Wyandot County, Ohio, 43351, United States"
+    },
+    {
+      "key": "village-pump",
+      "name": "The Village Pump",
+      "area": "Kelleys Island, OH",
+      "cat": "eats",
+      "trip": true,
+      "videos": [
+        "VGwRm1fdnvo"
+      ],
+      "found": true,
+      "address": "",
+      "weak": false,
+      "precision": "exact",
+      "lat": 41.59418,
+      "lng": -82.71135,
+      "display": "The Village Pump, 103, West Lake Shore Drive, Sunset Point, Kelleys Island, Erie County, Ohio, 43438, United States"
+    },
+    {
+      "key": "uncle-beths-bbq",
+      "name": "Uncle Beth's BBQ",
+      "area": "North Lewisburg, OH",
+      "cat": "eats",
+      "trip": true,
+      "videos": [
+        "tT9A09OAy58"
+      ],
+      "found": true,
+      "address": "6262 State Route 245, North Lewisburg, OH 43060",
+      "weak": false,
+      "precision": "area",
+      "lat": 40.22627,
+      "lng": -83.53705,
+      "display": "SR 245, North Lewisburg, Rush Township, Champaign County, Ohio, 43060, United States"
+    },
+    {
+      "key": "tokyo-grill",
+      "name": "Tokyo Grill Sushi & Hibachi Buffet",
+      "area": "Mason, OH",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "QfM8_aBCr18"
+      ],
+      "found": true,
+      "address": "5456 Kings Center Dr, Mason, OH 45040",
+      "weak": false,
+      "lat": 39.35649,
+      "lng": -84.25953,
+      "precision": "exact",
+      "source": "youtube-tag",
+      "display": "from the video's YouTube location tag"
+    },
+    {
+      "key": "cm-chicken",
+      "name": "CM Chicken",
+      "area": "Liberty Township, OH",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "8KiA0aQmIZE"
+      ],
+      "found": true,
+      "address": "7206 Towne Centre Dr, Liberty Township, OH 45069",
+      "weak": true,
+      "precision": "area",
+      "lat": 39.37166,
+      "lng": -84.38607,
+      "display": "Towne Centre, Liberty Towne Centre, Liberty Township, Butler County, Ohio, 45069, United States"
+    },
+    {
+      "key": "friendship-kitchen",
+      "name": "Friendship Kitchen",
+      "area": "Ohio",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "hJ1Toe34pVc"
+      ],
+      "found": true,
+      "address": "",
+      "weak": false,
+      "precision": "exact",
+      "lat": 41.41056,
+      "lng": -82.11887,
+      "display": "FriendShip Kitchen, 41186, Beechwood Drive, Elyria, Elyria Township, Lorain County, Ohio, 44035, United States"
+    },
+    {
+      "key": "plane-street-cafe",
+      "name": "The Plane Street Coffee House & Cafe",
+      "area": "Bethel, OH",
+      "cat": "shopping",
+      "trip": false,
+      "videos": [
+        "Ey7HTC8ztyM"
+      ],
+      "found": true,
+      "address": "125 W Plane St, Bethel, OH 45106",
+      "weak": false,
+      "precision": "exact",
+      "lat": 38.96329,
+      "lng": -84.07955,
+      "display": "125, West Plane Street, Bethel, Tate Township, Clermont County, Ohio, 45106, United States"
+    },
+    {
+      "key": "jeffs-candy-shop",
+      "name": "Jeff's Candy Shop",
+      "area": "Willoughby, OH",
+      "cat": "sweets",
+      "trip": true,
+      "videos": [
+        "qmQeVs_I1Jw"
+      ],
+      "found": true,
+      "address": "1238 Lost Nation Rd, Willoughby, OH 44094",
+      "weak": false,
+      "precision": "area",
+      "lat": 41.69138,
+      "lng": -81.3996,
+      "display": "1238, Lost Nation Road, Will-O-Bee-on-the-Lake, Arrowhead Beach, Willoughby, Lake County, Ohio, 44094, United States"
+    },
+    {
+      "key": "u-ni-rice",
+      "name": "U Ni Rice",
+      "area": "Corryville, Cincinnati, OH",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "bz3KLgCLv8E"
+      ],
+      "found": true,
+      "address": "2826 Short Vine St, Cincinnati, OH 45219",
+      "weak": false,
+      "precision": "area",
+      "lat": 39.13202,
+      "lng": -84.5092,
+      "display": "2826, Short Vine Street, University Village Business District, University Heights, Corryville, Cincinnati, Hamilton County, Ohio, 45219, United States"
+    },
+    {
+      "key": "silver-spring-house",
+      "name": "Silver Spring House",
+      "area": "Symmes Township, OH",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "Q6XEMxIHEhc"
+      ],
+      "found": true,
+      "address": "8322 E Kemper Rd, Cincinnati, OH 45249",
+      "weak": false,
+      "precision": "exact",
+      "lat": 39.28465,
+      "lng": -84.42693,
+      "display": "Sonesta ES Suites Cincinnati - Sharonville East, 2670, East Kemper Road, Cincinnati, Hamilton County, Ohio, 45241, United States"
+    },
+    {
+      "key": "jukebox-mason",
+      "name": "Jukebox",
+      "area": "Mason, OH",
+      "cat": "sweets",
+      "trip": false,
+      "videos": [
+        "p82t7LJSyAQ"
+      ],
+      "found": true,
+      "address": "5859 Deerfield Blvd, Mason, OH 45040",
+      "weak": false,
+      "precision": "area",
+      "lat": 39.32959,
+      "lng": -84.3183,
+      "display": "Deerfield Twp Family Counseling Center, 7567, Central Parke Boulevard, Fountains of Mason, Mason, Warren County, Ohio, 45040, United States"
+    },
+    {
+      "key": "bourbon-house-pizza",
+      "name": "Bourbon House Pizza",
+      "area": "Newport, KY",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "bEOt2oqPefg"
+      ],
+      "found": true,
+      "address": "",
+      "weak": false,
+      "precision": "exact",
+      "lat": 39.09529,
+      "lng": -84.49436,
+      "display": "Bourbon House Pizza, Aqua Way, The Estates at Wiedemann Mansion, Newport, Campbell County, Kentucky, 41071, United States"
+    },
+    {
+      "key": "bailey-jaynes",
+      "name": "Bailey Jaynes Bakery & Cafe",
+      "area": "Walton, KY",
+      "cat": "sweets",
+      "trip": false,
+      "videos": [
+        "mlXyeHeyMrs"
+      ],
+      "found": true,
+      "address": "5 N Main St, Walton, KY 41094",
+      "weak": false,
+      "precision": "area",
+      "lat": 38.867,
+      "lng": -84.61203,
+      "display": "5, North Main Street, Sunset Ridge, Walton, Boone County, Kentucky, 41094, United States"
+    },
+    {
+      "key": "yt-waynesville-fall-fest",
+      "name": "Waynesville Fall Fest",
+      "area": "OH",
+      "address": "SR 73, OH",
+      "cat": "events",
+      "trip": false,
+      "videos": [
+        "OJIPDg6uwSw"
+      ],
+      "found": true,
+      "lat": 39.52212,
+      "lng": -84.05412,
+      "precision": "exact",
+      "display": "from the video's YouTube location tag · SR 73, Wayne Township, Warren County, Ohio, 45068, United St",
+      "weak": false,
+      "source": "youtube-tag"
+    },
+    {
+      "key": "yt-kalahari-resorts-indoor-waterpark-sandusky-oh",
+      "name": "Kalahari Resorts Indoor Waterpark - Sandusky, OH",
+      "area": "OH",
+      "address": "Botswana Drive, OH",
+      "cat": "family",
+      "trip": true,
+      "videos": [
+        "K0yLjDJ499s"
+      ],
+      "found": true,
+      "lat": 41.38223,
+      "lng": -82.64332,
+      "precision": "exact",
+      "display": "from the video's YouTube location tag · Kalahari Resort & Waterpark, Botswana Drive, Huron Township,",
+      "weak": false,
+      "source": "youtube-tag"
+    },
+    {
+      "key": "yt-stone-bowl-korean-ramen-restaurant",
+      "name": "Stone Bowl Korean & Ramen Restaurant",
+      "area": "Cincinnati, OH",
+      "address": "Madison Road, Cincinnati, OH",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "KdZDxMavuzo"
+      ],
+      "found": true,
+      "lat": 39.15694,
+      "lng": -84.42321,
+      "precision": "exact",
+      "display": "from the video's YouTube location tag · Madison Road, Oakley, Cincinnati, Hamilton County, Ohio, 452",
+      "weak": false,
+      "source": "youtube-tag"
+    },
+    {
+      "key": "yt-cincinnati-zoo-botanical-garden",
+      "name": "Cincinnati Zoo & Botanical Garden",
+      "area": "Cincinnati, OH",
+      "address": "Erkenbrecher Avenue, Cincinnati, OH",
+      "cat": "family",
+      "trip": false,
+      "videos": [
+        "4DpAjYhDQbw"
+      ],
+      "found": true,
+      "lat": 39.14414,
+      "lng": -84.50849,
+      "precision": "exact",
+      "display": "from the video's YouTube location tag · Erkenbrecher Avenue, Avondale, Cincinnati, Hamilton County, ",
+      "weak": false,
+      "source": "youtube-tag"
+    },
+    {
+      "key": "yt-schmidt-bakery",
+      "name": "Schmidt Bakery",
+      "area": "Batesville, OH",
+      "address": "East Pearl Street, Batesville, OH",
+      "cat": "sweets",
+      "trip": false,
+      "videos": [
+        "FnpB7tCNKmE"
+      ],
+      "found": true,
+      "lat": 39.29857,
+      "lng": -85.22135,
+      "precision": "exact",
+      "display": "from the video's YouTube location tag · East Pearl Street, Huntersville, Batesville, Ripley County, ",
+      "weak": false,
+      "source": "youtube-tag"
+    },
+    {
+      "key": "yt-incline-public-house",
+      "name": "Incline Public House",
+      "area": "Cincinnati, OH",
+      "address": "2601 West 8th Street, Cincinnati, OH",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "BIPdNnI9F8Q"
+      ],
+      "found": true,
+      "lat": 39.10533,
+      "lng": -84.55661,
+      "precision": "exact",
+      "display": "from the video's YouTube location tag · Incline Public House, 2601, West 8th Street, Incline Distric",
+      "weak": false,
+      "source": "youtube-tag"
+    },
+    {
+      "key": "yt-the-859-taproom-and-grill",
+      "name": "The 859 Taproom and Grill",
+      "area": "Florence, KY",
+      "address": "8720 Bankers Street, Florence, KY",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "5Dy78iyatvQ"
+      ],
+      "found": true,
+      "lat": 39.00707,
+      "lng": -84.65447,
+      "precision": "exact",
+      "display": "from the video's YouTube location tag · The 859 Taproom and Grill, 8720, Bankers Street, Florence, B",
+      "weak": false,
+      "source": "youtube-tag"
+    },
+    {
+      "key": "yt-camp-washington-chili",
+      "name": "Camp Washington Chili",
+      "area": "Cincinnati, OH",
+      "address": "Colerain Avenue, Cincinnati, OH",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "Lboy6BG6M2c"
+      ],
+      "found": true,
+      "lat": 39.13727,
+      "lng": -84.5377,
+      "precision": "exact",
+      "display": "from the video's YouTube location tag · Camp Washington Chili, Colerain Avenue, Camp Washington, Cin",
+      "weak": false,
+      "source": "youtube-tag"
+    },
+    {
+      "key": "yt-kenwood-towne-centre",
+      "name": "Kenwood Towne Centre",
+      "area": "Kenwood, OH",
+      "address": "Montgomery Road, Kenwood, OH",
+      "cat": "shopping",
+      "trip": false,
+      "videos": [
+        "dMcUjQleS3k"
+      ],
+      "found": true,
+      "lat": 39.20224,
+      "lng": -84.3772,
+      "precision": "exact",
+      "display": "from the video's YouTube location tag · Blue Chip Cookies, Montgomery Road, Harewood Acres, Kenwood,",
+      "weak": false,
+      "source": "youtube-tag"
+    },
+    {
+      "key": "yt-cincinnati-fear-fest",
+      "name": "Cincinnati Fear Fest",
+      "area": "Mount Orab, OH",
+      "address": "1506 Cobb Road, Mount Orab, OH",
+      "cat": "events",
+      "trip": false,
+      "videos": [
+        "y477BQXOHmU"
+      ],
+      "found": true,
+      "lat": 39.05732,
+      "lng": -84.00596,
+      "precision": "exact",
+      "display": "from the video's YouTube location tag · 1506, Cobb Road, Eastwood, Mount Orab, Sterling Township, Br",
+      "weak": false,
+      "source": "youtube-tag"
+    },
+    {
+      "key": "yt-mimi-s-kitchen",
+      "name": "Mimi’s Kitchen",
+      "area": "Hillsboro, OH",
+      "address": "114 East Main Street, Hillsboro, OH",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "axSHJj4Gf7s"
+      ],
+      "found": true,
+      "lat": 39.20237,
+      "lng": -83.61075,
+      "precision": "exact",
+      "display": "from the video's YouTube location tag · 114, East Main Street, Hillsboro Historic Business District,",
+      "weak": false,
+      "source": "youtube-tag"
+    },
+    {
+      "key": "yt-ben-franklin",
+      "name": "Ben Franklin",
+      "area": "Bethel, OH",
+      "address": "303 West Plane Street, Bethel, OH",
+      "cat": "eats",
+      "trip": false,
+      "videos": [
+        "kd3S3BYmruU"
+      ],
+      "found": true,
+      "lat": 38.96348,
+      "lng": -84.08133,
+      "precision": "exact",
+      "display": "from the video's YouTube location tag · 303, West Plane Street, Bethel, Tate Township, Clermont Coun",
+      "weak": false,
+      "source": "youtube-tag"
+    },
+    {
+      "key": "yt-scoopable-ice-cream",
+      "name": "ScoopAble Ice Cream",
+      "area": "Loveland, OH",
+      "address": "6405 Branch Hill-Guinea Road, Loveland, OH",
+      "cat": "sweets",
+      "trip": false,
+      "videos": [
+        "hfm369BRzYM"
+      ],
+      "found": true,
+      "lat": 39.23018,
+      "lng": -84.25831,
+      "precision": "exact",
+      "display": "from the video's YouTube location tag · Mezedes, 6405, Branch Hill-Guinea Road, Epworth Heights, Lov",
+      "weak": false,
+      "source": "youtube-tag"
+    }
+  ],
+  "skip": [
+    "09TyohpYewc",
+    "-BkA4ujOE_4",
+    "fGw9HYVTEig",
+    "iiD2iqTd_J8",
+    "2IeTFgmZNOQ",
+    "AB9DhL5W5Nw",
+    "ZONHzTBTfCw",
+    "EsVPQNtbE9w",
+    "8e4teh_HB5Y",
+    "Jrj-Xf45R9M",
+    "M2SFR_PkcUg",
+    "VVyXKs_BJz0",
+    "1HFISWqVtAs",
+    "1zxzXIwvsVA",
+    "QfNC3yWpFtw",
+    "JhuybPc1NOI",
+    "GxpsaOq4jlM",
+    "kH_qj6o4qjE",
+    "M_DiAe1GvXU",
+    "q-2ZrFG_xjU",
+    "DfMROlgenIw",
+    "yQJI-oFajSM",
+    "Lq2_v3ARr0s",
+    "EMpQlW0sBiQ",
+    "VDP646XPGHk",
+    "vVkpNT7esmU",
+    "UAtwFU82Lbc",
+    "MtvhcZ54_Ag",
+    "2GG6rT0IF1M",
+    "l8hlZY4gHO0",
+    "TTuTH8ALO0I",
+    "ZUJcIdWsvGI",
+    "qqEv3cPV70w",
+    "sLRe5vgY6Uo",
+    "GS8O75EA1Hw",
+    "WEqx2jHHZcY",
+    "yKuYYXlnlnA",
+    "FfNAX_0jv9c",
+    "n-aThfGSPJg",
+    "x7nlRjeIq94",
+    "J6bl7WnFTWs",
+    "h1gvP4DiY3A",
+    "gKubOVhnXCw",
+    "bMOHKofMBK8",
+    "jdvw7aezrKQ",
+    "7eNWhevONgA",
+    "Phreqvq_zuY",
+    "nEAK4_e3PVM",
+    "I-BZ5KXShPo",
+    "SX5cmIQ_gNs",
+    "XOeJkIlxPFQ",
+    "OeqcsTe1B1A",
+    "6snaTC3FSyU",
+    "4d0R4rdrHTw",
+    "SAn_xXKEM7M",
+    "nksHsxLJHww",
+    "fwVXanaINuw",
+    "X_rgkslS9nU",
+    "vImlCqWTAEk",
+    "rWqEHYwxhV8",
+    "sNnHh1fRqGY",
+    "yDeANBEcpmM",
+    "x8PphKpP1Lo",
+    "QbWAcdbDj8Y",
+    "Jh-m0-8VpfI",
+    "FOUHcmxCB38",
+    "UunHZij9orw",
+    "CqFLDgUYMog",
+    "C-IMO9S5kJE",
+    "HyF2Bvu7rpw",
+    "xDD3bMDnkEM",
+    "05d6N4h5jDk",
+    "wVdTu_nJw1Y",
+    "pricdNomhks",
+    "xEcAR3EFPVE",
+    "K_LCmBR2X10",
+    "LzTvmVoQVls",
+    "r1XKwvOcZ8o",
+    "Rwz9jaVJwHE",
+    "UFkTKueVgtk",
+    "C_5qeCNQp_c",
+    "JHSJvlLFL9Q",
+    "J3ZaLbbOG7Y",
+    "aq1FcLip3bA",
+    "9q9i8GSIxlw",
+    "qpHLy8OjbOs",
+    "7a4W8cb_4u0",
+    "W4kuVbN7aqk",
+    "X4Yxm0uOenk",
+    "eXddSi6xQ6Q",
+    "62remxG2d6c",
+    "b3FYwl1qPmg",
+    "5jp8gJPiDN4",
+    "osvnDHFlX1M",
+    "ZIhKOBx7Ncs",
+    "QK9bilMbqmo",
+    "G9hSS5VZ_cA",
+    "gBXplfCAT6c",
+    "LZ6G2DmDFgE",
+    "JGCjsfvRkBE",
+    "o-6kll1Gmes",
+    "MQpjmkAZetA",
+    "1UrqFFvG1q8",
+    "rLnsqzAG0jE",
+    "FbqQKhzie28",
+    "tqCLhWiTkTY",
+    "1oesL1IyxMY",
+    "clv1GMwcgMQ",
+    "TC_pmufOmZI",
+    "Mb8ZEdsMVUM",
+    "R_NNl70H5RI",
+    "FMBx1rvPc8s",
+    "v2l2binW7p4",
+    "vTyn2uau32w",
+    "zKVGjpQWGno",
+    "gQoHd8866u0",
+    "tQB3ElzIw0M",
+    "BzrXSECwNAw",
+    "tuDoPiffw6w",
+    "RjQRswot3bk",
+    "cqJ-8pX2-iU",
+    "NAWoJcfiD6w",
+    "FiCPri6fNmY",
+    "gdCuQxKqF4s",
+    "O1BMc0EHNEs",
+    "SDWFFTp9u7M",
+    "Pv0FSyVX_kY",
+    "sVn9utyR94k",
+    "KtNGBpie7_U",
+    "LVCxb0_zh7Y",
+    "O1wq4Yb8uL4",
+    "dekQRtJTjaU",
+    "BZ-9Fd66vUs",
+    "84pPJ9kgvAU",
+    "keq2151q9m0",
+    "voE-tw-TGAc",
+    "VJz6ufpjTlI",
+    "65Wr6K6d4CI",
+    "rU_FzChez-I",
+    "mY8DZaJI-Zo",
+    "1mRTvozOauk",
+    "aYq_BGua8SI",
+    "3ZHYN2vCrdo",
+    "MbRB1WP9MBM",
+    "dO7QeEU_UD0",
+    "XwjRvvuBUzY"
+  ],
+  "existing": {
+    "-eGqNc7zJe8": "eastgate-vendors-market",
+    "TlcGOiHFFhQ": "kings-island"
+  }
+}

@@ -1,0 +1,1716 @@
+[
+  {
+    "slug": "kings-island",
+    "name": "Kings Island",
+    "area": "Mason, OH",
+    "address": "6300 Kings Island Dr, Mason, OH",
+    "cat": "family",
+    "trip": false,
+    "lat": 39.3442,
+    "lng": -84.2696,
+    "precision": "exact",
+    "aliases": [
+      "kings island",
+      "kingsisland"
+    ]
+  },
+  {
+    "slug": "cedar-point",
+    "name": "Cedar Point",
+    "area": "Sandusky, OH",
+    "address": "1 Cedar Point Dr, Sandusky, OH",
+    "cat": "family",
+    "trip": true,
+    "lat": 41.4822,
+    "lng": -82.6835,
+    "precision": "exact",
+    "aliases": [
+      "cedar point",
+      "cedarpoint"
+    ]
+  },
+  {
+    "slug": "glacial-grooves",
+    "name": "Glacial Grooves",
+    "area": "Kelleys Island, OH",
+    "address": "739 Division St, Kelleys Island, OH 43438",
+    "cat": "family",
+    "trip": true,
+    "lat": 41.61247,
+    "lng": -82.70725,
+    "precision": "exact",
+    "aliases": [
+      "glacial grooves",
+      "kelleys island"
+    ]
+  },
+  {
+    "slug": "findlay-market",
+    "name": "Findlay Market",
+    "area": "Over-the-Rhine, Cincinnati, OH",
+    "address": "1801 Race St, Cincinnati, OH",
+    "cat": "shopping",
+    "trip": false,
+    "lat": 39.1149,
+    "lng": -84.5181,
+    "precision": "exact",
+    "aliases": [
+      "findlay market"
+    ]
+  },
+  {
+    "slug": "jungle-jims-eastgate",
+    "name": "Jungle Jim's International Market",
+    "area": "Eastgate, Cincinnati, OH",
+    "address": "4450 Eastgate S Dr, Cincinnati, OH 45245",
+    "cat": "shopping",
+    "trip": false,
+    "lat": 39.09324,
+    "lng": -84.27524,
+    "precision": "exact",
+    "aliases": [
+      "jungle jim",
+      "jungle jims"
+    ]
+  },
+  {
+    "slug": "eastgate-vendors-market",
+    "name": "Eastgate Vendors Market",
+    "area": "Eastgate Mall, Cincinnati, OH",
+    "address": "4555 Eastgate Blvd, Cincinnati, OH 45245",
+    "cat": "shopping",
+    "trip": false,
+    "lat": 39.10327,
+    "lng": -84.27775,
+    "precision": "exact",
+    "aliases": [
+      "eastgate vendors market",
+      "galactic crunch"
+    ]
+  },
+  {
+    "slug": "the-meat-store-eastgate",
+    "name": "The Meat Store",
+    "area": "Eastgate, OH",
+    "address": "956 Old State Route 74, Batavia, OH 45103",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.10099,
+    "lng": -84.26219,
+    "precision": "exact",
+    "aliases": [
+      "the meat store"
+    ]
+  },
+  {
+    "slug": "webn-fireworks-at-sawyer-point",
+    "name": "WEBN Fireworks at Sawyer Point",
+    "area": "Downtown Cincinnati, OH",
+    "address": "705 E Pete Rose Way, Cincinnati, OH 45202",
+    "cat": "events",
+    "trip": false,
+    "lat": 39.10115,
+    "lng": -84.50018,
+    "precision": "exact",
+    "aliases": [
+      "WEBN Fireworks at Sawyer Point"
+    ]
+  },
+  {
+    "slug": "tickled-sweet-harvest-market",
+    "name": "Tickled Sweet & Harvest Market",
+    "area": "Milford, OH",
+    "address": "",
+    "cat": "sweets",
+    "trip": false,
+    "lat": 39.17543,
+    "lng": -84.29524,
+    "precision": "exact",
+    "aliases": [
+      "Tickled Sweet & Harvest Market"
+    ]
+  },
+  {
+    "slug": "st-bernadette-festival",
+    "name": "St. Bernadette Festival",
+    "area": "Amelia, OH",
+    "address": "1479 Locust Lake Rd, Amelia, OH 45102",
+    "cat": "events",
+    "trip": false,
+    "lat": 39.02806,
+    "lng": -84.22659,
+    "precision": "exact",
+    "aliases": [
+      "St. Bernadette Festival"
+    ]
+  },
+  {
+    "slug": "ollie-s-trolley",
+    "name": "Ollie's Trolley",
+    "area": "Cincinnati, OH",
+    "address": "",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.11349,
+    "lng": -84.52289,
+    "precision": "exact",
+    "aliases": [
+      "Ollie's Trolley"
+    ]
+  },
+  {
+    "slug": "mt-washington-creamy-whip-bakery",
+    "name": "Mt. Washington Creamy Whip & Bakery",
+    "area": "Mount Washington, Cincinnati, OH",
+    "address": "2069 Beechmont Ave, Cincinnati, OH 45230",
+    "cat": "sweets",
+    "trip": false,
+    "lat": 39.09245,
+    "lng": -84.38732,
+    "precision": "exact",
+    "aliases": [
+      "Mt. Washington Creamy Whip & Bakery"
+    ]
+  },
+  {
+    "slug": "shaw-farms",
+    "name": "Shaw Farms",
+    "area": "Milford, OH",
+    "address": "1737 State Route 131, Milford, OH 45150",
+    "cat": "shopping",
+    "trip": false,
+    "lat": 39.17534,
+    "lng": -84.18527,
+    "precision": "exact",
+    "aliases": [
+      "Shaw Farms"
+    ]
+  },
+  {
+    "slug": "great-inland-seafood-festival",
+    "name": "Great Inland Seafood Festival",
+    "area": "Newport, KY",
+    "address": "1 Levee Way, Newport, KY 41071",
+    "cat": "events",
+    "trip": false,
+    "lat": 39.09434,
+    "lng": -84.49607,
+    "precision": "exact",
+    "aliases": [
+      "Great Inland Seafood Festival"
+    ]
+  },
+  {
+    "slug": "kungfood-chu-s-amerasia",
+    "name": "KungFood Chu's AmerAsia",
+    "area": "Covington, KY",
+    "address": "521 Madison Ave, Covington, KY 41011",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.08513,
+    "lng": -84.51092,
+    "precision": "exact",
+    "aliases": [
+      "KungFood Chu's AmerAsia"
+    ]
+  },
+  {
+    "slug": "uncle-john-s-place",
+    "name": "Uncle John's Place",
+    "area": "Mansfield, OH",
+    "address": "",
+    "cat": "eats",
+    "trip": true,
+    "lat": 40.75803,
+    "lng": -82.51585,
+    "precision": "exact",
+    "aliases": [
+      "Uncle John's Place"
+    ]
+  },
+  {
+    "slug": "mercer-social-house",
+    "name": "Mercer Social House",
+    "area": "Newtown, OH",
+    "address": "",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.12411,
+    "lng": -84.36937,
+    "precision": "exact",
+    "aliases": [
+      "Mercer Social House"
+    ]
+  },
+  {
+    "slug": "kewpee-hamburgers",
+    "name": "Kewpee Hamburgers",
+    "area": "Lima, OH",
+    "address": "1330 Bellefontaine Avenue, Lima, OH",
+    "cat": "eats",
+    "trip": true,
+    "lat": 40.73104,
+    "lng": -84.0814,
+    "precision": "exact",
+    "aliases": [
+      "Kewpee Hamburgers"
+    ]
+  },
+  {
+    "slug": "corner-dumpling-house",
+    "name": "Corner Dumpling House",
+    "area": "Symmes Township, OH",
+    "address": "11371 Montgomery Rd, Cincinnati, OH 45249",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.27345,
+    "lng": -84.3298,
+    "precision": "exact",
+    "aliases": [
+      "Corner Dumpling House"
+    ]
+  },
+  {
+    "slug": "sweets-geeks-sandusky-mall",
+    "name": "Sweets & Geeks (Sandusky Mall)",
+    "area": "Sandusky, OH",
+    "address": "4314 Milan Rd, Sandusky, OH 44870",
+    "cat": "sweets",
+    "trip": true,
+    "lat": 41.4188,
+    "lng": -82.6698,
+    "precision": "exact",
+    "aliases": [
+      "Sweets & Geeks (Sandusky Mall)"
+    ]
+  },
+  {
+    "slug": "local-producers-collective",
+    "name": "Local Producers Collective",
+    "area": "Batavia, OH",
+    "address": "95 W Main St, Batavia, OH 45103",
+    "cat": "shopping",
+    "trip": false,
+    "lat": 39.07932,
+    "lng": -84.18052,
+    "precision": "exact",
+    "aliases": [
+      "Local Producers Collective"
+    ]
+  },
+  {
+    "slug": "st-veronica-festival",
+    "name": "St. Veronica Festival",
+    "area": "Mt. Carmel, OH",
+    "address": "4473 Mt Carmel Tobasco Rd, Cincinnati, OH 45244",
+    "cat": "events",
+    "trip": false,
+    "lat": 39.1008,
+    "lng": -84.30035,
+    "precision": "exact",
+    "aliases": [
+      "St. Veronica Festival"
+    ]
+  },
+  {
+    "slug": "old-dutch-tavern",
+    "name": "Old Dutch Tavern",
+    "area": "Sandusky, OH",
+    "address": "2219 E Perkins Ave, Sandusky, OH 44870",
+    "cat": "eats",
+    "trip": true,
+    "lat": 41.42764,
+    "lng": -82.66398,
+    "precision": "exact",
+    "aliases": [
+      "Old Dutch Tavern"
+    ]
+  },
+  {
+    "slug": "basil-1791",
+    "name": "Basil 1791",
+    "area": "Hamilton, OH",
+    "address": "241 High St, Hamilton, OH 45011",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.39919,
+    "lng": -84.56083,
+    "precision": "exact",
+    "aliases": [
+      "Basil 1791"
+    ]
+  },
+  {
+    "slug": "diego-s-street-tacos",
+    "name": "Diego's Street Tacos",
+    "area": "Batavia, OH",
+    "address": "1006 Old State Route 74, Batavia, OH 45103",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.09938,
+    "lng": -84.25791,
+    "precision": "exact",
+    "aliases": [
+      "Diego's Street Tacos"
+    ]
+  },
+  {
+    "slug": "the-roost-latonia",
+    "name": "The Roost Latonia",
+    "area": "Latonia, KY",
+    "address": "3616 Decoursey Ave, Covington, KY 41015",
+    "cat": "shopping",
+    "trip": false,
+    "lat": 39.04815,
+    "lng": -84.50311,
+    "precision": "exact",
+    "aliases": [
+      "The Roost Latonia"
+    ]
+  },
+  {
+    "slug": "sandusky-pancake-house",
+    "name": "Sandusky Pancake House",
+    "area": "Sandusky, OH",
+    "address": "",
+    "cat": "eats",
+    "trip": true,
+    "lat": 41.41057,
+    "lng": -82.66565,
+    "precision": "exact",
+    "aliases": [
+      "Sandusky Pancake House"
+    ]
+  },
+  {
+    "slug": "heineman-winery-crystal-cave",
+    "name": "Heineman Winery & Crystal Cave",
+    "area": "Put-in-Bay, OH",
+    "address": "",
+    "cat": "family",
+    "trip": true,
+    "lat": 41.64656,
+    "lng": -82.82684,
+    "precision": "exact",
+    "aliases": [
+      "Heineman Winery & Crystal Cave"
+    ]
+  },
+  {
+    "slug": "fruit-land",
+    "name": "Fruit Land",
+    "area": "Newport, KY",
+    "address": "",
+    "cat": "shopping",
+    "trip": false,
+    "lat": 39.0894,
+    "lng": -84.49177,
+    "precision": "exact",
+    "aliases": [
+      "Fruit Land"
+    ]
+  },
+  {
+    "slug": "newtown-farm-market",
+    "name": "Newtown Farm Market",
+    "area": "Newtown, OH",
+    "address": "3950 Round Bottom Rd,45244",
+    "cat": "shopping",
+    "trip": false,
+    "lat": 39.13544,
+    "lng": -84.33605,
+    "precision": "exact",
+    "aliases": [
+      "Newtown Farm Market"
+    ]
+  },
+  {
+    "slug": "takumi-steakhouse",
+    "name": "Takumi Steakhouse",
+    "area": "Mason, OH",
+    "address": "12071 Mason Montgomery Rd, 45249",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.29013,
+    "lng": -84.3166,
+    "precision": "exact",
+    "aliases": [
+      "Takumi Steakhouse"
+    ]
+  },
+  {
+    "slug": "paradise-ice",
+    "name": "Paradise Ice",
+    "area": "Milford, OH",
+    "address": "1313 State Route 131, Milford, OH 45150",
+    "cat": "sweets",
+    "trip": false,
+    "lat": 39.17608,
+    "lng": -84.2208,
+    "precision": "exact",
+    "aliases": [
+      "Paradise Ice"
+    ]
+  },
+  {
+    "slug": "the-invention-restaurant",
+    "name": "The Invention Restaurant",
+    "area": "Milan, OH",
+    "address": "",
+    "cat": "eats",
+    "trip": true,
+    "lat": 41.29765,
+    "lng": -82.60598,
+    "precision": "exact",
+    "aliases": [
+      "The Invention Restaurant"
+    ]
+  },
+  {
+    "slug": "milkshake-factory",
+    "name": "MilkShake Factory",
+    "area": "Mason, OH",
+    "address": "2144 Kings Mills Rd, Mason, OH 45040",
+    "cat": "sweets",
+    "trip": false,
+    "lat": 39.35778,
+    "lng": -84.25629,
+    "precision": "exact",
+    "aliases": [
+      "MilkShake Factory"
+    ]
+  },
+  {
+    "slug": "cincy-gourmet-deli",
+    "name": "Cincy Gourmet Deli",
+    "area": "Clifton Heights, Cincinnati, OH",
+    "address": "2832 Jefferson Ave, Cincinnati, OH 45219",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.13287,
+    "lng": -84.51068,
+    "precision": "exact",
+    "aliases": [
+      "Cincy Gourmet Deli"
+    ]
+  },
+  {
+    "slug": "element-eatery",
+    "name": "Element Eatery",
+    "area": "Cincinnati area, OH",
+    "address": "",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.15978,
+    "lng": -84.4024,
+    "precision": "exact",
+    "aliases": [
+      "Element Eatery"
+    ]
+  },
+  {
+    "slug": "big-daddy-marketplace",
+    "name": "Big Daddy Marketplace",
+    "area": "Amelia, OH",
+    "address": "14 W Main St, Amelia, OH 45102",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.02825,
+    "lng": -84.21872,
+    "precision": "exact",
+    "aliases": [
+      "Big Daddy Marketplace"
+    ]
+  },
+  {
+    "slug": "traders-world-flea-market",
+    "name": "Traders World Flea Market",
+    "area": "Monroe, OH",
+    "address": "601 Union Rd, Monroe, OH 45050",
+    "cat": "shopping",
+    "trip": false,
+    "lat": 39.44045,
+    "lng": -84.323,
+    "precision": "area",
+    "aliases": [
+      "Traders World Flea Market"
+    ]
+  },
+  {
+    "slug": "padrino",
+    "name": "Padrino",
+    "area": "Milford, OH",
+    "address": "",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.17327,
+    "lng": -84.29625,
+    "precision": "exact",
+    "aliases": [
+      "Padrino"
+    ]
+  },
+  {
+    "slug": "legen-dairy-whip",
+    "name": "Legen-Dairy Whip",
+    "area": "Bethel, OH",
+    "address": "3376 State Route 125, Bethel, OH 45106",
+    "cat": "eats",
+    "trip": false,
+    "lat": 38.96295,
+    "lng": -84.06922,
+    "precision": "exact",
+    "aliases": [
+      "Legen-Dairy Whip"
+    ]
+  },
+  {
+    "slug": "house-of-plastik",
+    "name": "House of Plastik",
+    "area": "Cincinnati, OH",
+    "address": "",
+    "cat": "shopping",
+    "trip": false,
+    "lat": 39.06483,
+    "lng": -84.27791,
+    "precision": "exact",
+    "aliases": [
+      "House of Plastik"
+    ]
+  },
+  {
+    "slug": "seoul-korean-bbq-hot-pot",
+    "name": "Seoul Korean BBQ & Hot Pot",
+    "area": "Mason, OH",
+    "address": "5113 Bowen Dr, Mason, OH 45040",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.31143,
+    "lng": -84.31432,
+    "precision": "exact",
+    "aliases": [
+      "Seoul Korean BBQ & Hot Pot"
+    ]
+  },
+  {
+    "slug": "blue-ash-chili",
+    "name": "Blue Ash Chili",
+    "area": "Blue Ash, OH",
+    "address": "",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.23113,
+    "lng": -84.37855,
+    "precision": "exact",
+    "aliases": [
+      "Blue Ash Chili"
+    ]
+  },
+  {
+    "slug": "cincinnati-union-terminal",
+    "name": "Cincinnati Union Terminal",
+    "area": "Cincinnati, OH",
+    "address": "",
+    "cat": "family",
+    "trip": false,
+    "lat": 39.10984,
+    "lng": -84.53714,
+    "precision": "exact",
+    "aliases": [
+      "Cincinnati Union Terminal"
+    ]
+  },
+  {
+    "slug": "bell-s-grab-go",
+    "name": "Bell's Grab & Go",
+    "area": "Mount Healthy, OH",
+    "address": "Compton Road, Mount Healthy, OH",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.23096,
+    "lng": -84.53708,
+    "precision": "exact",
+    "aliases": [
+      "Bell's Grab & Go"
+    ]
+  },
+  {
+    "slug": "sugar-n-spice",
+    "name": "Sugar n' Spice",
+    "area": "Cincinnati, OH",
+    "address": "Grear Alley, Cincinnati, OH",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.10951,
+    "lng": -84.5104,
+    "precision": "exact",
+    "aliases": [
+      "Sugar n' Spice"
+    ]
+  },
+  {
+    "slug": "goshen-grind",
+    "name": "Goshen Grind",
+    "area": "Goshen, OH",
+    "address": "",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.23154,
+    "lng": -84.16338,
+    "precision": "exact",
+    "aliases": [
+      "Goshen Grind"
+    ]
+  },
+  {
+    "slug": "tokugawa-japan-steakhouse",
+    "name": "Tokugawa Japan Steakhouse",
+    "area": "Milford, OH",
+    "address": "5723 Signal Hill Ct, Milford, OH 45150",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.18562,
+    "lng": -84.26672,
+    "precision": "exact",
+    "aliases": [
+      "Tokugawa Japan Steakhouse"
+    ]
+  },
+  {
+    "slug": "northside-yacht-club",
+    "name": "Northside Yacht Club",
+    "area": "Northside, Cincinnati, OH",
+    "address": "",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.15984,
+    "lng": -84.53262,
+    "precision": "exact",
+    "aliases": [
+      "Northside Yacht Club"
+    ]
+  },
+  {
+    "slug": "leyla-mediterranean",
+    "name": "Leyla Mediterranean",
+    "area": "Anderson Township, OH",
+    "address": "7418 Beechmont Ave, Cincinnati, OH 45255",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.07416,
+    "lng": -84.35099,
+    "precision": "exact",
+    "aliases": [
+      "Leyla Mediterranean"
+    ]
+  },
+  {
+    "slug": "fountain-square",
+    "name": "Fountain Square",
+    "area": "Downtown Cincinnati, OH",
+    "address": "",
+    "cat": "events",
+    "trip": false,
+    "lat": 39.1015,
+    "lng": -84.51241,
+    "precision": "exact",
+    "aliases": [
+      "Fountain Square"
+    ]
+  },
+  {
+    "slug": "cincinnati-christkindlmarkt",
+    "name": "Cincinnati Christkindlmarkt",
+    "area": "The Banks, Cincinnati, OH",
+    "address": "115 Joe Nuxhall Way, Cincinnati, OH 45202",
+    "cat": "events",
+    "trip": false,
+    "lat": 39.09629,
+    "lng": -84.5087,
+    "precision": "exact",
+    "aliases": [
+      "Cincinnati Christkindlmarkt"
+    ]
+  },
+  {
+    "slug": "yuletide-village",
+    "name": "Yuletide Village",
+    "area": "Waynesville, OH",
+    "address": "10542 E State Route 73, Waynesville, OH 45068",
+    "cat": "events",
+    "trip": false,
+    "lat": 39.50129,
+    "lng": -83.98681,
+    "precision": "exact",
+    "aliases": [
+      "Yuletide Village"
+    ]
+  },
+  {
+    "slug": "corsi-tree-farm",
+    "name": "Corsi Tree Farm",
+    "area": "Ohio",
+    "address": "",
+    "cat": "family",
+    "trip": false,
+    "lat": 38.95508,
+    "lng": -83.99688,
+    "precision": "exact",
+    "aliases": [
+      "Corsi Tree Farm"
+    ]
+  },
+  {
+    "slug": "lori-s-american-grille",
+    "name": "Lori's American Grille",
+    "area": "Goshen, OH",
+    "address": "1711 State Route 28, Goshen, OH 45122",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.22598,
+    "lng": -84.17843,
+    "precision": "exact",
+    "aliases": [
+      "Lori's American Grille"
+    ]
+  },
+  {
+    "slug": "masa-gyro",
+    "name": "Masa Gyro",
+    "area": "Amelia, OH",
+    "address": "1310 Ohio Pike, Amelia, OH 45102",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.04293,
+    "lng": -84.23816,
+    "precision": "exact",
+    "aliases": [
+      "Masa Gyro"
+    ]
+  },
+  {
+    "slug": "grant-s-garden-center-christmas-market",
+    "name": "Grant's Garden Center Christmas Market",
+    "area": "Batavia, OH",
+    "address": "2100 SR 131, Batavia, OH",
+    "cat": "shopping",
+    "trip": false,
+    "lat": 39.17199,
+    "lng": -84.15255,
+    "precision": "exact",
+    "aliases": [
+      "Grant's Garden Center Christmas Market"
+    ]
+  },
+  {
+    "slug": "el-coyote",
+    "name": "El Coyote",
+    "area": "Anderson Township, OH",
+    "address": "",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.08591,
+    "lng": -84.35324,
+    "precision": "exact",
+    "aliases": [
+      "El Coyote"
+    ]
+  },
+  {
+    "slug": "the-porch",
+    "name": "The Porch",
+    "area": "Hillsboro, OH",
+    "address": "421 North West Street, Hillsboro, OH",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.20713,
+    "lng": -83.61319,
+    "precision": "exact",
+    "aliases": [
+      "The Porch"
+    ]
+  },
+  {
+    "slug": "buttermilks-bakery",
+    "name": "ButterMilks Bakery",
+    "area": "Hillsboro, OH",
+    "address": "142 W Main St, Hillsboro, OH 45133",
+    "cat": "sweets",
+    "trip": false,
+    "lat": 39.20259,
+    "lng": -83.61323,
+    "precision": "exact",
+    "aliases": [
+      "ButterMilks Bakery"
+    ]
+  },
+  {
+    "slug": "mi-cozumel",
+    "name": "Mi Cozumel Kenwood Mall",
+    "area": "Kenwood, OH",
+    "address": "Kenwood Road, Kenwood, OH",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.20367,
+    "lng": -84.37774,
+    "precision": "exact",
+    "aliases": [
+      "Mi Cozumel"
+    ]
+  },
+  {
+    "slug": "the-arepa-place",
+    "name": "The Arepa Place",
+    "area": "Cincinnati area, OH",
+    "address": "",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.11501,
+    "lng": -84.51953,
+    "precision": "exact",
+    "aliases": [
+      "The Arepa Place"
+    ]
+  },
+  {
+    "slug": "birdie-s-coffee-co",
+    "name": "Birdie's Coffee Co.",
+    "area": "Norwood, OH",
+    "address": "",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.1522,
+    "lng": -84.45398,
+    "precision": "exact",
+    "aliases": [
+      "Birdie's Coffee Co."
+    ]
+  },
+  {
+    "slug": "la-michoacana-y-sus-antojitos",
+    "name": "La Michoacana Y Sus Antojitos",
+    "area": "Norwood, OH",
+    "address": "5225 Montgomery Rd, Cincinnati, OH 45212",
+    "cat": "sweets",
+    "trip": false,
+    "lat": 39.17618,
+    "lng": -84.44044,
+    "precision": "area",
+    "aliases": [
+      "La Michoacana Y Sus Antojitos"
+    ]
+  },
+  {
+    "slug": "swampwater-grill-riverside-centre-antiques",
+    "name": "Swampwater Grill & Riverside Centre Antiques",
+    "area": "East End, Cincinnati, OH",
+    "address": "3742 Kellogg Ave, Cincinnati, OH 45226",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.11196,
+    "lng": -84.43858,
+    "precision": "exact",
+    "aliases": [
+      "Swampwater Grill & Riverside Centre Antiques"
+    ]
+  },
+  {
+    "slug": "parlor-doughnuts",
+    "name": "Parlor Doughnuts",
+    "area": "Anderson Township, OH",
+    "address": "",
+    "cat": "sweets",
+    "trip": false,
+    "lat": 39.07242,
+    "lng": -84.33951,
+    "precision": "exact",
+    "aliases": [
+      "Parlor Doughnuts"
+    ]
+  },
+  {
+    "slug": "country-inn-withamsville",
+    "name": "Country Inn Withamsville",
+    "area": "Withamsville, OH",
+    "address": "",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.06168,
+    "lng": -84.27141,
+    "precision": "exact",
+    "aliases": [
+      "Country Inn Withamsville"
+    ]
+  },
+  {
+    "slug": "circuit-cafe-cincinnati-cars-coffee",
+    "name": "Circuit Cafe / Cincinnati Cars & Coffee",
+    "area": "East End, Cincinnati, OH",
+    "address": "2726 Riverside Dr, Cincinnati, OH 45202",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.12277,
+    "lng": -84.45494,
+    "precision": "exact",
+    "aliases": [
+      "Circuit Cafe / Cincinnati Cars & Coffee"
+    ]
+  },
+  {
+    "slug": "moka-co",
+    "name": "Moka & Co.",
+    "area": "West Chester, OH",
+    "address": "7307 Tylers Corner Dr, West Chester, OH 45069",
+    "cat": "sweets",
+    "trip": false,
+    "lat": 39.35695,
+    "lng": -84.38331,
+    "precision": "exact",
+    "aliases": [
+      "Moka & Co."
+    ]
+  },
+  {
+    "slug": "fairborn-halloween-festival",
+    "name": "Fairborn Halloween Festival",
+    "area": "Fairborn, OH",
+    "address": "Main St & Central Ave, Fairborn, OH 45324",
+    "cat": "events",
+    "trip": true,
+    "lat": 39.82089,
+    "lng": -84.01938,
+    "precision": "exact",
+    "aliases": [
+      "Fairborn Halloween Festival"
+    ]
+  },
+  {
+    "slug": "feel-good-food-stop",
+    "name": "Feel Good Food Stop",
+    "area": "Newtown, OH",
+    "address": "6836 Main St, Cincinnati, OH 45244",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.12489,
+    "lng": -84.36048,
+    "precision": "area",
+    "aliases": [
+      "Feel Good Food Stop"
+    ]
+  },
+  {
+    "slug": "doscher-s-candies",
+    "name": "Doscher's Candies & Coffee House",
+    "area": "Newtown, OH",
+    "address": "6929 Main Street, Newtown, OH",
+    "cat": "sweets",
+    "trip": false,
+    "lat": 39.12489,
+    "lng": -84.36048,
+    "precision": "exact",
+    "aliases": [
+      "Doscher's Candies"
+    ]
+  },
+  {
+    "slug": "newport-aquarium",
+    "name": "Newport Aquarium",
+    "area": "Newport, KY",
+    "address": "",
+    "cat": "family",
+    "trip": false,
+    "lat": 39.09437,
+    "lng": -84.49772,
+    "precision": "exact",
+    "aliases": [
+      "Newport Aquarium"
+    ]
+  },
+  {
+    "slug": "waffle-house",
+    "name": "Waffle House",
+    "area": "Amelia, OH",
+    "address": "",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.01863,
+    "lng": -84.20132,
+    "precision": "exact",
+    "aliases": [
+      "Waffle House"
+    ]
+  },
+  {
+    "slug": "village-coffee-shop",
+    "name": "Village Coffee Shop",
+    "area": "Newtown, OH",
+    "address": "",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.12398,
+    "lng": -84.35004,
+    "precision": "exact",
+    "aliases": [
+      "Village Coffee Shop"
+    ]
+  },
+  {
+    "slug": "pumpkin-run-nationals",
+    "name": "Pumpkin Run Nationals",
+    "area": "Owensville, OH",
+    "address": "1000 Locust St, Owensville, OH 45160",
+    "cat": "events",
+    "trip": false,
+    "lat": 39.12405,
+    "lng": -84.14138,
+    "precision": "exact",
+    "aliases": [
+      "Pumpkin Run Nationals"
+    ]
+  },
+  {
+    "slug": "pepper-pod-restaurant",
+    "name": "Pepper Pod Restaurant",
+    "area": "Newport, KY",
+    "address": "703 Monmouth St, Newport, KY 41071",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.09025,
+    "lng": -84.4922,
+    "precision": "exact",
+    "aliases": [
+      "Pepper Pod Restaurant"
+    ]
+  },
+  {
+    "slug": "roney-s",
+    "name": "Roney's",
+    "area": "Ohio",
+    "address": "",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.15906,
+    "lng": -84.27572,
+    "precision": "exact",
+    "aliases": [
+      "Roney's"
+    ]
+  },
+  {
+    "slug": "bard-s-burgers-chili",
+    "name": "Bard's Burgers & Chili",
+    "area": "Latonia, KY",
+    "address": "",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.048,
+    "lng": -84.50295,
+    "precision": "exact",
+    "aliases": [
+      "Bard's Burgers & Chili"
+    ]
+  },
+  {
+    "slug": "pig-candy-bbq",
+    "name": "Pig Candy BBQ",
+    "area": "Cincinnati, OH",
+    "address": "",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.06523,
+    "lng": -84.42382,
+    "precision": "exact",
+    "aliases": [
+      "Pig Candy BBQ"
+    ]
+  },
+  {
+    "slug": "peters-cartridge-factory",
+    "name": "Peters Cartridge Factory",
+    "area": "Maineville, OH",
+    "address": "",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.35031,
+    "lng": -84.24298,
+    "precision": "exact",
+    "aliases": [
+      "Peters Cartridge Factory"
+    ]
+  },
+  {
+    "slug": "kroger-wellness-festival",
+    "name": "Kroger Wellness Festival",
+    "area": "Downtown Cincinnati, OH",
+    "address": "5th St & Main St, Cincinnati, OH 45202",
+    "cat": "events",
+    "trip": false,
+    "lat": 39.10312,
+    "lng": -84.51202,
+    "precision": "exact",
+    "aliases": [
+      "Kroger Wellness Festival"
+    ]
+  },
+  {
+    "slug": "liberty-collective",
+    "name": "Liberty Collective",
+    "area": "Liberty Township, OH",
+    "address": "6735 Lakota Ln, Liberty Township, OH 45044",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.38152,
+    "lng": -84.37404,
+    "precision": "exact",
+    "aliases": [
+      "Liberty Collective"
+    ]
+  },
+  {
+    "slug": "graeter-s",
+    "name": "Graeter's",
+    "area": "Anderson Township, OH",
+    "address": "",
+    "cat": "sweets",
+    "trip": false,
+    "lat": 39.07181,
+    "lng": -84.31818,
+    "precision": "exact",
+    "aliases": [
+      "Graeter's"
+    ]
+  },
+  {
+    "slug": "kenny-s-place",
+    "name": "Kenny's Place",
+    "area": "Amelia, OH",
+    "address": "1340 State Route 125, Amelia, OH 45102",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.04017,
+    "lng": -84.23457,
+    "precision": "exact",
+    "aliases": [
+      "Kenny's Place"
+    ]
+  },
+  {
+    "slug": "the-chill-out",
+    "name": "The Chill Out",
+    "area": "Batavia, OH",
+    "address": "2792 Old State Route 32, Batavia, OH 45103",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.05933,
+    "lng": -84.10283,
+    "precision": "exact",
+    "aliases": [
+      "The Chill Out"
+    ]
+  },
+  {
+    "slug": "yummy-bowl",
+    "name": "Yummy Bowl",
+    "area": "Ohio",
+    "address": "",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.07439,
+    "lng": -84.34916,
+    "precision": "exact",
+    "aliases": [
+      "Yummy Bowl"
+    ]
+  },
+  {
+    "slug": "clermont-county-fair",
+    "name": "Clermont County Fair",
+    "area": "Owensville, OH",
+    "address": "1000 Locust St, Owensville, OH 45160",
+    "cat": "events",
+    "trip": false,
+    "lat": 39.12405,
+    "lng": -84.14138,
+    "precision": "exact",
+    "aliases": [
+      "Clermont County Fair"
+    ]
+  },
+  {
+    "slug": "vinny-ray-s-bbq",
+    "name": "Vinny Ray's BBQ",
+    "area": "Felicity, OH",
+    "address": "1295 State Route 756, Felicity, OH 45120",
+    "cat": "eats",
+    "trip": false,
+    "lat": 38.84107,
+    "lng": -84.09521,
+    "precision": "area",
+    "aliases": [
+      "Vinny Ray's BBQ"
+    ]
+  },
+  {
+    "slug": "rise-dine-breakfast",
+    "name": "Rise & Dine Breakfast",
+    "area": "Bethel, OH",
+    "address": "101 E Plane St, Bethel, OH 45106",
+    "cat": "eats",
+    "trip": false,
+    "lat": 38.96319,
+    "lng": -84.07831,
+    "precision": "exact",
+    "aliases": [
+      "Rise & Dine Breakfast"
+    ]
+  },
+  {
+    "slug": "mr-smith-s-coffee-house",
+    "name": "Mr. Smith's Coffee House",
+    "area": "Sandusky, OH",
+    "address": "140 Columbus Ave, Sandusky, OH 44870",
+    "cat": "eats",
+    "trip": true,
+    "lat": 41.45677,
+    "lng": -82.71194,
+    "precision": "exact",
+    "aliases": [
+      "Mr. Smith's Coffee House"
+    ]
+  },
+  {
+    "slug": "corner-inn-restaurant",
+    "name": "Corner Inn Restaurant",
+    "area": "Upper Sandusky, OH",
+    "address": "143 N Sandusky Ave, Upper Sandusky, OH 43351",
+    "cat": "eats",
+    "trip": true,
+    "lat": 40.82873,
+    "lng": -83.28115,
+    "precision": "exact",
+    "aliases": [
+      "Corner Inn Restaurant"
+    ]
+  },
+  {
+    "slug": "the-village-pump",
+    "name": "The Village Pump",
+    "area": "Kelleys Island, OH",
+    "address": "",
+    "cat": "eats",
+    "trip": true,
+    "lat": 41.59418,
+    "lng": -82.71135,
+    "precision": "exact",
+    "aliases": [
+      "The Village Pump"
+    ]
+  },
+  {
+    "slug": "uncle-beth-s-bbq",
+    "name": "Uncle Beth's BBQ",
+    "area": "North Lewisburg, OH",
+    "address": "6262 State Route 245, North Lewisburg, OH 43060",
+    "cat": "eats",
+    "trip": true,
+    "lat": 40.19205,
+    "lng": -83.61902,
+    "precision": "exact",
+    "aliases": [
+      "Uncle Beth's BBQ"
+    ]
+  },
+  {
+    "slug": "cm-chicken",
+    "name": "CM Chicken",
+    "area": "Cincinnati, OH",
+    "address": "3786 Paxton Avenue, Cincinnati, OH",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.14593,
+    "lng": -84.42907,
+    "precision": "exact",
+    "aliases": [
+      "CM Chicken"
+    ]
+  },
+  {
+    "slug": "friendship-kitchen",
+    "name": "Friendship Kitchen",
+    "area": "Ohio",
+    "address": "",
+    "cat": "eats",
+    "trip": false,
+    "lat": 41.42031,
+    "lng": -82.75796,
+    "precision": "exact",
+    "aliases": [
+      "Friendship Kitchen"
+    ]
+  },
+  {
+    "slug": "the-plane-street-coffee-house-cafe",
+    "name": "The Plane Street Coffee House & Cafe",
+    "area": "Bethel, OH",
+    "address": "125 W Plane St, Bethel, OH 45106",
+    "cat": "shopping",
+    "trip": false,
+    "lat": 38.96329,
+    "lng": -84.07955,
+    "precision": "exact",
+    "aliases": [
+      "The Plane Street Coffee House & Cafe"
+    ]
+  },
+  {
+    "slug": "jeff-s-candy-shop",
+    "name": "Jeff's Candy Shop",
+    "area": "Willoughby, OH",
+    "address": "1238 Lost Nation Rd, Willoughby, OH 44094",
+    "cat": "sweets",
+    "trip": true,
+    "lat": 41.69259,
+    "lng": -81.39955,
+    "precision": "exact",
+    "aliases": [
+      "Jeff's Candy Shop"
+    ]
+  },
+  {
+    "slug": "u-ni-rice",
+    "name": "U Ni Rice",
+    "area": "Corryville, Cincinnati, OH",
+    "address": "2826 Short Vine St, Cincinnati, OH 45219",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.13264,
+    "lng": -84.50904,
+    "precision": "exact",
+    "aliases": [
+      "U Ni Rice"
+    ]
+  },
+  {
+    "slug": "silver-spring-house",
+    "name": "Silver Spring House",
+    "area": "Symmes Township, OH",
+    "address": "8322 E Kemper Rd, Cincinnati, OH 45249",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.27598,
+    "lng": -84.33487,
+    "precision": "exact",
+    "aliases": [
+      "Silver Spring House"
+    ]
+  },
+  {
+    "slug": "jukebox",
+    "name": "Jukebox",
+    "area": "Mason, OH",
+    "address": "5859 Deerfield Blvd, Mason, OH 45040",
+    "cat": "sweets",
+    "trip": false,
+    "lat": 39.32959,
+    "lng": -84.3183,
+    "precision": "area",
+    "aliases": [
+      "Jukebox"
+    ]
+  },
+  {
+    "slug": "bourbon-house-pizza",
+    "name": "Bourbon House Pizza",
+    "area": "Newport, KY",
+    "address": "",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.09529,
+    "lng": -84.49436,
+    "precision": "exact",
+    "aliases": [
+      "Bourbon House Pizza"
+    ]
+  },
+  {
+    "slug": "bailey-jaynes-bakery-cafe",
+    "name": "Bailey Jaynes Bakery & Cafe",
+    "area": "Walton, KY",
+    "address": "5 N Main St, Walton, KY 41094",
+    "cat": "sweets",
+    "trip": false,
+    "lat": 38.867,
+    "lng": -84.61203,
+    "precision": "area",
+    "aliases": [
+      "Bailey Jaynes Bakery & Cafe"
+    ]
+  },
+  {
+    "slug": "east-fork-state-park",
+    "name": "East Fork State Park",
+    "area": "Bethel, OH",
+    "address": "3294 Elklick Rd, Bethel, OH 45106",
+    "cat": "family",
+    "trip": false,
+    "lat": 39.00433,
+    "lng": -84.14037,
+    "precision": "exact",
+    "aliases": [
+      "East Fork State Park"
+    ]
+  },
+  {
+    "slug": "the-food-pitt",
+    "name": "The Food Pitt",
+    "area": "Ohio",
+    "address": "",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.82089,
+    "lng": -84.01938,
+    "precision": "exact",
+    "aliases": [
+      "The Food Pitt"
+    ]
+  },
+  {
+    "slug": "cincinnati-fear-fest",
+    "name": "Cincinnati Fear Fest",
+    "area": "Williamsburg, OH",
+    "address": "1449 Greenbush Cobb Rd, Williamsburg, OH 45176",
+    "cat": "events",
+    "trip": false,
+    "lat": 39.05732,
+    "lng": -84.00596,
+    "precision": "exact",
+    "aliases": [
+      "Cincinnati Fear Fest"
+    ]
+  },
+  {
+    "slug": "mr-hayek-s-fish-chicken",
+    "name": "Mr. Hayek's Fish & Chicken",
+    "area": "Springdale, OH",
+    "address": "11482 Springfield Pike, Cincinnati, OH 45246",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.28357,
+    "lng": -84.48514,
+    "precision": "exact",
+    "aliases": [
+      "Mr. Hayek's Fish & Chicken"
+    ]
+  },
+  {
+    "slug": "waynesville-fall-fest",
+    "name": "Waynesville Fall Fest",
+    "area": "OH",
+    "address": "SR 73, OH",
+    "cat": "events",
+    "trip": false,
+    "lat": 39.52212,
+    "lng": -84.05412,
+    "precision": "exact",
+    "aliases": [
+      "Waynesville Fall Fest"
+    ]
+  },
+  {
+    "slug": "kalahari-resorts-indoor-waterpark-sandusky-oh",
+    "name": "Kalahari Resorts Indoor Waterpark",
+    "area": "Sandusky, OH",
+    "address": "Botswana Drive, OH",
+    "cat": "family",
+    "trip": true,
+    "lat": 41.38223,
+    "lng": -82.64332,
+    "precision": "exact",
+    "aliases": [
+      "Kalahari Resorts Indoor Waterpark - Sandusky, OH"
+    ]
+  },
+  {
+    "slug": "stone-bowl-korean-ramen-restaurant",
+    "name": "Stone Bowl Korean & Ramen Restaurant",
+    "area": "Cincinnati, OH",
+    "address": "Madison Road, Cincinnati, OH",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.15694,
+    "lng": -84.42321,
+    "precision": "exact",
+    "aliases": [
+      "Stone Bowl Korean & Ramen Restaurant"
+    ]
+  },
+  {
+    "slug": "cincinnati-zoo-botanical-garden",
+    "name": "Cincinnati Zoo & Botanical Garden",
+    "area": "Cincinnati, OH",
+    "address": "Erkenbrecher Avenue, Cincinnati, OH",
+    "cat": "family",
+    "trip": false,
+    "lat": 39.14414,
+    "lng": -84.50849,
+    "precision": "exact",
+    "aliases": [
+      "Cincinnati Zoo & Botanical Garden"
+    ]
+  },
+  {
+    "slug": "schmidt-bakery",
+    "name": "Schmidt Bakery",
+    "area": "Batesville, OH",
+    "address": "East Pearl Street, Batesville, OH",
+    "cat": "sweets",
+    "trip": false,
+    "lat": 39.29857,
+    "lng": -85.22135,
+    "precision": "exact",
+    "aliases": [
+      "Schmidt Bakery"
+    ]
+  },
+  {
+    "slug": "incline-public-house",
+    "name": "Incline Public House",
+    "area": "Cincinnati, OH",
+    "address": "2601 West 8th Street, Cincinnati, OH",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.10533,
+    "lng": -84.55661,
+    "precision": "exact",
+    "aliases": [
+      "Incline Public House"
+    ]
+  },
+  {
+    "slug": "the-859-taproom-and-grill",
+    "name": "The 859 Taproom and Grill",
+    "area": "Florence, KY",
+    "address": "8720 Bankers Street, Florence, KY",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.00707,
+    "lng": -84.65447,
+    "precision": "exact",
+    "aliases": [
+      "The 859 Taproom and Grill"
+    ]
+  },
+  {
+    "slug": "camp-washington-chili",
+    "name": "Camp Washington Chili",
+    "area": "Cincinnati, OH",
+    "address": "Colerain Avenue, Cincinnati, OH",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.13727,
+    "lng": -84.5377,
+    "precision": "exact",
+    "aliases": [
+      "Camp Washington Chili"
+    ]
+  },
+  {
+    "slug": "kenwood-towne-centre",
+    "name": "Kenwood Towne Centre",
+    "area": "Kenwood, OH",
+    "address": "Montgomery Road, Kenwood, OH",
+    "cat": "shopping",
+    "trip": false,
+    "lat": 39.20224,
+    "lng": -84.3772,
+    "precision": "exact",
+    "aliases": [
+      "Kenwood Towne Centre"
+    ]
+  },
+  {
+    "slug": "mimi-s-kitchen",
+    "name": "Mimi’s Kitchen",
+    "area": "Hillsboro, OH",
+    "address": "114 East Main Street, Hillsboro, OH",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.20237,
+    "lng": -83.61075,
+    "precision": "exact",
+    "aliases": [
+      "Mimi’s Kitchen"
+    ]
+  },
+  {
+    "slug": "ben-franklin",
+    "name": "Ben Franklin",
+    "area": "Bethel, OH",
+    "address": "303 West Plane Street, Bethel, OH",
+    "cat": "eats",
+    "trip": false,
+    "lat": 38.96348,
+    "lng": -84.08133,
+    "precision": "exact",
+    "aliases": [
+      "Ben Franklin"
+    ]
+  },
+  {
+    "slug": "scoopable-ice-cream",
+    "name": "ScoopAble Ice Cream",
+    "area": "Loveland, OH",
+    "address": "6405 Branch Hill-Guinea Road, Loveland, OH",
+    "cat": "sweets",
+    "trip": false,
+    "lat": 39.23018,
+    "lng": -84.25831,
+    "precision": "exact",
+    "aliases": [
+      "ScoopAble Ice Cream"
+    ]
+  },
+  {
+    "slug": "jungle-jim-s-international-market-fairfield",
+    "name": "Jungle Jim's International Market (Fairfield)",
+    "area": "Fairfield, OH",
+    "address": "5440 Dixie Highway, Fairfield, OH",
+    "cat": "shopping",
+    "trip": false,
+    "lat": 39.33549,
+    "lng": -84.5253,
+    "precision": "exact",
+    "aliases": [
+      "Jungle Jim's International Market (Fairfield)"
+    ]
+  },
+  {
+    "slug": "berardi-s-family-kitchen",
+    "name": "Berardi's Family Kitchen",
+    "area": "Sandusky, OH",
+    "address": "",
+    "cat": "eats",
+    "trip": true,
+    "lat": 41.43346,
+    "lng": -82.7164,
+    "precision": "exact",
+    "aliases": [
+      "Berardi's Family Kitchen",
+      "Berardi's"
+    ]
+  },
+  {
+    "slug": "skyline-chili-cincinnati",
+    "name": "Skyline Chili (Ohio Pike)",
+    "area": "Withamsville, OH",
+    "address": "1097 Ohio Pike, Cincinnati, OH",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.0533,
+    "lng": -84.25581,
+    "precision": "exact",
+    "aliases": [
+      "Skyline Chili (Cincinnati)"
+    ]
+  }
+]

@@ -1,0 +1,288 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex, nofollow"><meta name="theme-color" content="#0b0c11"><title>Review new videos | Hatz</title><link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230b0c11'/%3E%3Cpath d='M8 7h5v7h6V7h5v18h-5v-7h-6v7H8z' fill='%2300aeff'/%3E%3Cpath d='M8 27h16v2H8z' fill='%23ff39d5'/%3E%3C/svg%3E"><link rel="stylesheet" href="../styles.css"></head><body class="rv-body">
+<header class="header"><a class="wordmark" href="../" aria-label="Hatz home"><img src="../assets/hatz-brand.webp" alt="" width="56" height="56"><span><strong>HATZ</strong><small>REVIEW QUEUE</small></span></a><a class="button button-small" href="../explore/">View the map <span aria-hidden="true">→</span></a></header>
+<main class="rv" id="main">
+  <section class="rv-head">
+    <p class="eyebrow">ONLY FOR HATZ</p>
+    <h1>New videos need a place.</h1>
+    <p class="hero-intro" id="summary">Loading…</p>
+    <p class="rv-sub" style="margin-top:.8rem">This page is unlisted, not locked. Anyone who finds the address can look, but nothing here changes the site until you save your choices below.</p>
+  </section>
+
+  <section id="flag-sec" aria-labelledby="flag-h" hidden><h2 id="flag-h">Sent from the map</h2><p class="rv-sub">You flagged these from the map. Fix the pin or the address, pull a video off the place, or take the whole place down.</p><div id="flagged" class="rv-stack"></div></section>
+  <section id="quick-sec" aria-labelledby="quick-h" hidden><h2 id="quick-h">Quick confirm</h2><p class="rv-sub">I read your video titles and guessed the place for each. Check the pin, fix anything that looks off, then confirm. One tap covers every video from that place.</p><div id="quick" class="rv-stack"></div></section>
+  <section id="exist-sec" aria-labelledby="exist-h" hidden><h2 id="exist-h">Belongs to a place already on the map</h2><div id="exist" class="rv-stack"></div></section>
+  <section id="skip-sec" aria-labelledby="skip-h" hidden><h2 id="skip-h">Probably not place videos</h2><p class="rv-sub">Gaming, Elf on the Shelf, the Red Bull calendar, family clips and chains with no single location. Untick any that should be on the map, then skip the rest. They still show in Latest from Hatz.</p><div id="skips" class="rv-stack"></div></section>
+  <section aria-labelledby="pending-h"><h2 id="pending-h">Everything else</h2><div id="pending" class="rv-stack"></div></section>
+  <section aria-labelledby="auto-h"><h2 id="auto-h">Placed automatically</h2><p class="rv-sub">These matched a place name in the title or description. Undo any that are wrong.</p><div id="auto" class="rv-stack"></div></section>
+  <section aria-labelledby="pins-h"><h2 id="pins-h">Pins to tighten up</h2><p class="rv-sub">These pins show the area, not the exact door. Enter the street address to fix them.</p><div id="pins" class="rv-stack"></div></section>
+
+  <section class="rv-save" aria-labelledby="save-h">
+    <h2 id="save-h">Save your choices</h2>
+    <p>Your choices are kept in this browser until you save them to the site. Two steps:</p>
+    <ol>
+      <li><button type="button" class="button button-small" id="copy">Copy my choices</button> <span id="copied" role="status"></span></li>
+      <li>Open <a id="ghlink" href="#" target="_blank" rel="noopener noreferrer">data/decisions.json on GitHub ↗</a>, click the pencil, select everything, paste, and press <strong>Commit changes</strong>. The site updates in a few minutes.</li>
+    </ol>
+    <label for="out" class="sr-only">Your choices</label>
+    <textarea id="out" readonly rows="8"></textarea>
+    <p><button type="button" class="text-link linkbtn" id="clear">I saved them. Clear this list.</button></p>
+    <p class="rv-sub" style="margin-top:1.2rem;color:#aab5c9">Opening this page turns on the <strong>Fix</strong> links on the map and place pages, in this browser only. <button type="button" class="text-link linkbtn" id="adminOff">Turn them off</button></p>
+  </section>
+</main>
+
+<script src="../data/data.js"></script>
+<script>
+(function(){
+  var D=window.HATZ_DATA||{places:[],videos:[]};
+  var KEY="hatz-review-decisions";
+  var REPO="";  // once the site has a GitHub repository, put it here like "yourname/hatz-site" so the save link goes straight to the file
+  try{ localStorage.setItem("hatz-admin","1"); }catch(e){}
+  document.getElementById("adminOff").addEventListener("click",function(){ try{localStorage.removeItem("hatz-admin");}catch(e){} this.textContent="Off. Open this page again to turn them back on."; });
+  var CATS={eats:"Restaurant / eats",sweets:"Sweets / bakery",shopping:"Market / shopping",family:"Family outing",events:"Event / seasonal"};
+  var local=[], existing=[];
+  try{ local=JSON.parse(localStorage.getItem(KEY)||"[]"); }catch(e){}
+  function persist(){ try{localStorage.setItem(KEY,JSON.stringify(local));}catch(e){} out(); }
+  function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+  function slugify(s){return s.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,"")}
+  function fmt(iso){try{return new Date(iso).toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"})}catch(e){return ""}}
+  var places=D.places, byslug={}; places.forEach(function(p){byslug[p.slug]=p});
+  function decided(vid){ for(var i=local.length-1;i>=0;i--){ if(local[i].video===vid) return local[i]; } return null; }
+
+  function vcard(v,body){
+    return '<article class="rv-card" data-id="'+v.id+'"><a class="rv-thumb" href="https://www.youtube.com/watch?v='+v.id+'" target="_blank" rel="noopener noreferrer"><img src="https://i.ytimg.com/vi/'+v.id+'/hqdefault.jpg" alt="" width="240" height="135" loading="lazy"></a>'+
+      '<div class="rv-body-col"><p class="meta">'+fmt(v.published)+'</p><h3>'+esc(v.title)+'</h3>'+body+'</div></article>';
+  }
+  function placeOptions(v){
+    var sug=(v.suggest||[]);
+    var opts='<option value="">Choose a place…</option>';
+    if(sug.length){ opts+='<optgroup label="Looks like">'+sug.map(function(s){return byslug[s]?'<option value="'+esc(s)+'">'+esc(byslug[s].name)+'</option>':''}).join("")+'</optgroup>'; }
+    opts+='<optgroup label="All places">'+places.slice().sort(function(a,b){return a.name.localeCompare(b.name)}).map(function(p){return '<option value="'+esc(p.slug)+'">'+esc(p.name)+'</option>'}).join("")+'</optgroup>';
+    opts+='<option value="__new">＋ A new place…</option>';
+    return opts;
+  }
+  function pendingBody(v){
+    return '<div class="rv-form"><label>Place<select class="pl">'+placeOptions(v)+'</select></label>'+
+      '<div class="newp" hidden>'+
+        '<label>Business or place name<input class="np-name" type="text" autocomplete="off"></label>'+
+        '<label>Street address or city<input class="np-addr" type="text" placeholder="e.g. 4450 Eastgate Blvd, Cincinnati OH" autocomplete="off"></label>'+
+        '<div class="rv-two"><label>Type<select class="np-cat">'+Object.keys(CATS).map(function(k){return '<option value="'+k+'">'+CATS[k]+'</option>'}).join("")+'</select></label>'+
+        '<label class="rv-check"><input class="np-trip" type="checkbox"> Ohio road trip (outside the Cincinnati area)</label></div>'+
+        '<div class="rv-geo"><button type="button" class="button button-small find">Find on map</button><span class="found" role="status"></span></div>'+
+        '<div class="rv-two"><label>Latitude<input class="np-lat" type="text" inputmode="decimal"></label><label>Longitude<input class="np-lng" type="text" inputmode="decimal"></label></div>'+
+      '</div>'+
+      '<div class="rv-acts"><button type="button" class="button button-small put">Put on the map</button><button type="button" class="text-link linkbtn skip">Not a place video</button></div></div>';
+  }
+  /* ---------- suggestions (batch confirm) ---------- */
+  var S=D.suggestions||{places:[],skip:[],existing:{}};
+  var vmap={}; D.videos.forEach(function(v){vmap[v.id]=v});
+  var DKEY="hatz-review-dismissed", dismissed=[];
+  try{ dismissed=JSON.parse(localStorage.getItem(DKEY)||"[]"); }catch(e){}
+  function dismiss(k){ dismissed.push(k); try{localStorage.setItem(DKEY,JSON.stringify(dismissed));}catch(e){} }
+  function openVideo(id){ var v=vmap[id]; return v && v.status==="pending" && !decided(id); }
+  function suggestedIds(){
+    var s={};
+    S.places.forEach(function(p){ if(dismissed.indexOf(p.key)===-1) p.videos.forEach(function(id){s[id]=1}) });
+    if(dismissed.indexOf("__skip")===-1) S.skip.forEach(function(id){s[id]=1});
+    if(dismissed.indexOf("__exist")===-1) Object.keys(S.existing).forEach(function(id){s[id]=1});
+    return s;
+  }
+  function titleList(ids){ return '<ul class="rv-titles">'+ids.map(function(id){return '<li><a href="https://www.youtube.com/watch?v='+id+'" target="_blank" rel="noopener noreferrer">'+esc(vmap[id].title)+'</a></li>'}).join("")+'</ul>'; }
+  function quickCard(p){
+    var ids=p.videos.filter(openVideo); if(!ids.length||dismissed.indexOf(p.key)!==-1) return "";
+    var has=p.found, warn=p.weak?' <strong class="warn">Double-check this pin.</strong>':'';
+    var status=has ? 'Pin: '+esc(p.display.split(",").slice(0,4).join(","))+' <a href="https://www.openstreetmap.org/?mlat='+p.lat+'&mlon='+p.lng+'#map=17/'+p.lat+'/'+p.lng+'" target="_blank" rel="noopener noreferrer">Check it ↗</a>'+warn
+                    : 'No pin found automatically. Type the street address and press Find on map.';
+    return '<article class="rv-card quick-card" data-key="'+esc(p.key)+'"><div class="rv-body-col"><p class="meta">'+ids.length+' video'+(ids.length>1?'s':'')+'</p>'+
+      '<div class="rv-form"><label>Place name<input class="q-name" type="text" value="'+esc(p.name)+'"></label>'+
+      '<div class="rv-two"><label>Type<select class="q-cat">'+Object.keys(CATS).map(function(k){return '<option value="'+k+'"'+(k===p.cat?' selected':'')+'>'+CATS[k]+'</option>'}).join("")+'</select></label>'+
+      '<label class="rv-check"><input class="q-trip" type="checkbox"'+(p.trip?' checked':'')+'> Ohio road trip</label></div>'+
+      '<label>Street address <span class="opt">(fixes the pin)</span><input class="q-addr" type="text" value="'+esc(p.address||"")+'" placeholder="e.g. 317 Main St, Milford OH" autocomplete="off"></label>'+
+      '<div class="rv-geo"><button type="button" class="button button-small qfind">Find on map</button><span class="found" role="status">'+status+'</span></div>'+
+      '<input class="q-lat" type="hidden" value="'+(has?p.lat:'')+'"><input class="q-lng" type="hidden" value="'+(has?p.lng:'')+'"><input class="q-prec" type="hidden" value="'+(has?(p.precision||'area'):'exact')+'">'+
+      '<details><summary>Show the '+ids.length+' video'+(ids.length>1?'s':'')+'</summary>'+titleList(ids)+'</details>'+
+      '<div class="rv-acts"><button type="button" class="button button-small qgo">Confirm '+ids.length+' video'+(ids.length>1?'s':'')+'</button><button type="button" class="text-link linkbtn qno">Not right, leave in the list</button></div></div></div></article>';
+  }
+  function renderSuggestions(){
+    var q=S.places.map(quickCard).filter(Boolean);
+    document.getElementById("quick").innerHTML=q.join(""); document.getElementById("quick-sec").hidden=!q.length;
+    var ex=Object.keys(S.existing).filter(openVideo); var exOn=dismissed.indexOf("__exist")===-1&&ex.length;
+    document.getElementById("exist").innerHTML=exOn?'<article class="rv-card quick-card"><div class="rv-body-col"><div class="rv-form">'+titleList(ex)+
+      ex.map(function(id){var p=byslug[S.existing[id]];return ''}).join("")+'<p class="rv-sub">'+ex.map(function(id){var p=byslug[S.existing[id]];return esc((p?p.name:S.existing[id]))}).filter(function(x,i,a){return a.indexOf(x)===i}).join(", ")+'</p>'+
+      '<div class="rv-acts"><button type="button" class="button button-small exgo">Confirm '+ex.length+'</button><button type="button" class="text-link linkbtn exno">Not right</button></div></div></div></article>':"";
+    document.getElementById("exist-sec").hidden=!exOn;
+    var sk=S.skip.filter(openVideo); var skOn=dismissed.indexOf("__skip")===-1&&sk.length;
+    document.getElementById("skips").innerHTML=skOn?'<article class="rv-card quick-card"><div class="rv-body-col"><div class="rv-form"><ul class="rv-titles checks">'+sk.map(function(id){return '<li><label class="rv-check"><input type="checkbox" class="skchk" value="'+id+'" checked> <span>'+esc(vmap[id].title)+'</span></label></li>'}).join("")+'</ul>'+
+      '<div class="rv-acts"><button type="button" class="button button-small skgo">Skip the checked videos</button><button type="button" class="text-link linkbtn skno">Keep them all in the list</button></div></div></div></article>':"";
+    document.getElementById("skip-sec").hidden=!skOn;
+  }
+  function slugTaken(slug){ return !!byslug[slug] || local.some(function(d){return d.newPlace && (d.newPlace.slug===slug)}); }
+
+  /* ---------- places sent here from the map (#fix-slug) ---------- */
+  var FKEY="hatz-review-flagged", flagged=[];
+  try{ flagged=JSON.parse(localStorage.getItem(FKEY)||"[]"); }catch(e){}
+  function saveFlags(){ try{localStorage.setItem(FKEY,JSON.stringify(flagged));}catch(e){} }
+  (function(){
+    var m=/^#fix-([a-z0-9-]+)$/.exec(location.hash||"");
+    if(m && byslug[m[1]] && flagged.indexOf(m[1])===-1){ flagged.push(m[1]); saveFlags(); }
+    if(m){ try{ history.replaceState(null,"",location.pathname); }catch(e){} }
+  })();
+  function flagCard(slug){
+    var p=byslug[slug]; if(!p) return "";
+    var vids=(p.videos||[]).filter(function(id){ return vmap[id] && !decided(id); });
+    return '<article class="rv-card quick-card flag-card" data-slug="'+esc(slug)+'"><div class="rv-body-col"><h3>'+esc(p.name)+'</h3><p class="meta">'+esc(p.area||"")+(p.precision!=="exact"?' · approximate pin':'')+'</p>'+
+      '<div class="rv-form"><label>Place name<input class="f-name" type="text" value="'+esc(p.name)+'"></label>'+
+      '<label>Street address<input class="f-addr" type="text" value="'+esc(p.address||"")+'" autocomplete="off"></label>'+
+      '<div class="rv-geo"><button type="button" class="button button-small ffind">Find on map</button><span class="found" role="status">'+(p.lat!=null?'Current pin: <a href="https://www.openstreetmap.org/?mlat='+p.lat+'&mlon='+p.lng+'#map=17/'+p.lat+'/'+p.lng+'" target="_blank" rel="noopener noreferrer">Check it ↗</a>':'No pin yet')+'</span></div>'+
+      '<input class="f-lat" type="hidden" value="'+(p.lat!=null?p.lat:'')+'"><input class="f-lng" type="hidden" value="'+(p.lng!=null?p.lng:'')+'"><input class="f-prec" type="hidden" value="'+esc(p.precision||"area")+'">'+
+      '<div class="rv-acts"><button type="button" class="button button-small fsave">Save place details</button></div>'+
+      (vids.length?'<p class="rv-sub" style="margin-top:.6rem">Videos at this place. Pull any that don’t belong; they go back into the queue.</p><ul class="rv-titles checks">'+vids.map(function(id){return '<li><a href="https://www.youtube.com/watch?v='+id+'" target="_blank" rel="noopener noreferrer">'+esc(vmap[id].title)+'</a> <button type="button" class="linkbtn fpull" data-vid="'+id+'">Not this place</button></li>'}).join("")+'</ul>':'')+
+      '<div class="rv-acts"><button type="button" class="text-link linkbtn fdone">Done with this place</button><button type="button" class="text-link linkbtn fremove">Take the whole place off the map</button></div></div></div></article>';
+  }
+  function renderFlagged(){
+    var cards=flagged.map(flagCard).filter(Boolean);
+    document.getElementById("flagged").innerHTML=cards.join("");
+    document.getElementById("flag-sec").hidden=!cards.length;
+  }
+
+  function render(){
+    var sugg=suggestedIds();
+    var pend=D.videos.filter(function(v){return v.status==="pending" && !decided(v.id) && !sugg[v.id]});
+    renderSuggestions(); renderFlagged();
+    var auto=D.videos.filter(function(v){return v.status==="mapped" && v.by==="auto" && !decided(v.id)});
+    var pins=places.filter(function(p){return p.precision!=="exact" && !local.some(function(d){return d.action==="editPlace" && d.slug===p.slug})});
+    var total=D.videos.filter(function(v){return v.status==="pending" && !decided(v.id)}).length;
+    document.getElementById("summary").textContent = total ? total+" video"+(total===1?"":"s")+" waiting. Start with Quick confirm below, then finish the few left over." : "You’re all caught up. New videos show up here automatically.";
+    document.getElementById("pending").innerHTML = pend.length ? pend.map(function(v){return vcard(v,pendingBody(v))}).join("") : '<p class="rv-empty">Nothing waiting.</p>';
+    document.getElementById("auto").innerHTML = auto.length ? auto.map(function(v){var p=byslug[v.place];return vcard(v,'<p><strong>'+esc(p?p.name:v.place)+'</strong></p><div class="rv-acts"><button type="button" class="text-link linkbtn undo">Undo, this is wrong</button></div>')}).join("") : '<p class="rv-empty">Nothing placed automatically yet.</p>';
+    document.getElementById("pins").innerHTML = pins.length ? pins.map(function(p){
+      return '<article class="rv-card pin-card" data-slug="'+esc(p.slug)+'"><div class="rv-body-col"><h3>'+esc(p.name)+'</h3><p class="meta">'+esc(p.area||"")+'</p>'+
+        '<div class="rv-form"><label>Street address<input class="pa-addr" type="text" value="'+esc(p.address||"")+'" autocomplete="off"></label>'+
+        '<div class="rv-geo"><button type="button" class="button button-small pfind">Find on map</button><span class="found" role="status"></span></div>'+
+        '<input class="pa-lat" type="hidden"><input class="pa-lng" type="hidden">'+
+        '<div class="rv-acts"><button type="button" class="button button-small psave" disabled>Save exact pin</button></div></div></div></article>';
+    }).join("") : '<p class="rv-empty">Every pin is exact.</p>';
+  }
+
+  function geocode(q, cb){
+    fetch("https://nominatim.openstreetmap.org/search?format=json&limit=1&countrycodes=us&q="+encodeURIComponent(q))
+      .then(function(r){return r.json()}).then(function(j){ cb(null, j[0]||null) }).catch(function(e){ cb(e) });
+  }
+  document.addEventListener("change",function(e){
+    if(e.target.classList.contains("pl")){ var card=e.target.closest(".rv-card"); card.querySelector(".newp").hidden = e.target.value!=="__new"; }
+  });
+  document.addEventListener("click",function(e){
+    var b=e.target.closest("button"); if(!b) return;
+    var card=b.closest(".rv-card"); var id=card&&card.dataset.id;
+    if(b.classList.contains("ffind")){
+      var fa=card.querySelector(".f-addr").value.trim(), ff=card.querySelector(".found");
+      if(!fa){ff.textContent="Type the street address first.";return}
+      ff.textContent="Searching…";
+      geocode(fa,function(err,r){
+        if(err||!r){ff.textContent="Nothing found. Add the city and state.";return}
+        card.querySelector(".f-lat").value=(+r.lat).toFixed(5); card.querySelector(".f-lng").value=(+r.lon).toFixed(5); card.querySelector(".f-prec").value="exact";
+        ff.innerHTML='New pin: '+esc(r.display_name.split(",").slice(0,4).join(","))+' <a href="https://www.openstreetmap.org/?mlat='+r.lat+'&mlon='+r.lon+'#map=17/'+r.lat+'/'+r.lon+'" target="_blank" rel="noopener noreferrer">Check it ↗</a>';
+      });
+      return;
+    }
+    if(b.classList.contains("fsave")){
+      var d={action:"editPlace",slug:card.dataset.slug,name:card.querySelector(".f-name").value.trim(),address:card.querySelector(".f-addr").value.trim(),precision:card.querySelector(".f-prec").value};
+      var fl=parseFloat(card.querySelector(".f-lat").value), fg=parseFloat(card.querySelector(".f-lng").value);
+      if(!isNaN(fl)&&!isNaN(fg)){ d.lat=fl; d.lng=fg; }
+      local.push(d); persist(); card.querySelector(".found").textContent="Saved. Remember the two save steps at the bottom of the page."; return;
+    }
+    if(b.classList.contains("fpull")){ local.push({video:b.dataset.vid,action:"pending"}); persist(); render(); return; }
+    if(b.classList.contains("fremove")){
+      var pr=byslug[card.dataset.slug]; (pr.videos||[]).forEach(function(id){ if(!decided(id)) local.push({video:id,action:"pending"}); });
+      flagged=flagged.filter(function(s){return s!==card.dataset.slug}); saveFlags(); persist(); render(); return;
+    }
+    if(b.classList.contains("fdone")){ flagged=flagged.filter(function(s){return s!==card.dataset.slug}); saveFlags(); render(); return; }
+    if(b.classList.contains("qfind")){
+      var qa=card.querySelector(".q-addr").value.trim(), qn=card.querySelector(".q-name").value.trim(), fo=card.querySelector(".found");
+      if(!qa){fo.textContent="Type the street address first.";return}
+      fo.textContent="Searching…";
+      geocode(qa,function(err,r){
+        if(err||!r){fo.textContent="Nothing found. Add the city and state.";return}
+        card.querySelector(".q-lat").value=(+r.lat).toFixed(5); card.querySelector(".q-lng").value=(+r.lon).toFixed(5); card.querySelector(".q-prec").value="exact";
+        fo.innerHTML='Pin: '+esc(r.display_name.split(",").slice(0,4).join(","))+' <a href="https://www.openstreetmap.org/?mlat='+r.lat+'&mlon='+r.lon+'#map=17/'+r.lat+'/'+r.lon+'" target="_blank" rel="noopener noreferrer">Check it ↗</a>';
+      });
+      return;
+    }
+    if(b.classList.contains("qgo")){
+      var key=card.dataset.key, sp=S.places.filter(function(p){return p.key===key})[0];
+      var lat=parseFloat(card.querySelector(".q-lat").value), lng=parseFloat(card.querySelector(".q-lng").value), nm=card.querySelector(".q-name").value.trim();
+      if(!nm||isNaN(lat)||isNaN(lng)){card.querySelector(".found").textContent="This one needs a pin. Type the address and press Find on map.";return}
+      var slug=slugify(nm), ids=sp.videos.filter(openVideo), addr=card.querySelector(".q-addr").value.trim();
+      var np={slug:slug,name:nm,area:sp.area,address:addr,cat:card.querySelector(".q-cat").value,trip:card.querySelector(".q-trip").checked,lat:lat,lng:lng,precision:card.querySelector(".q-prec").value,aliases:[nm]};
+      var first=!slugTaken(slug);
+      ids.forEach(function(v,i){ local.push((first&&i===0)?{video:v,action:"assign",newPlace:np}:{video:v,action:"assign",place:slug}); });
+      persist(); render(); return;
+    }
+    if(b.classList.contains("qno")){ dismiss(card.dataset.key); render(); return; }
+    if(b.classList.contains("exgo")){ Object.keys(S.existing).filter(openVideo).forEach(function(v){ local.push({video:v,action:"assign",place:S.existing[v]}); }); persist(); render(); return; }
+    if(b.classList.contains("exno")){ dismiss("__exist"); render(); return; }
+    if(b.classList.contains("skgo")){ Array.prototype.forEach.call(card.querySelectorAll(".skchk:checked"),function(c){ local.push({video:c.value,action:"skip"}); }); persist(); dismiss("__skip"); render(); return; }
+    if(b.classList.contains("skno")){ dismiss("__skip"); render(); return; }
+    if(b.classList.contains("find")){
+      var q=(card.querySelector(".np-addr").value+" "+card.querySelector(".np-name").value).trim(); var out=card.querySelector(".found");
+      if(!q){out.textContent="Type an address first.";return}
+      out.textContent="Searching…";
+      geocode(q,function(err,r){
+        if(err||!r){out.textContent="Nothing found. Try adding the city, or type the latitude and longitude yourself.";return}
+        card.querySelector(".np-lat").value=(+r.lat).toFixed(5); card.querySelector(".np-lng").value=(+r.lon).toFixed(5);
+        out.innerHTML='Found: '+esc(r.display_name)+' <a href="https://www.openstreetmap.org/?mlat='+r.lat+'&mlon='+r.lon+'#map=17/'+r.lat+'/'+r.lon+'" target="_blank" rel="noopener noreferrer">Check it ↗</a>';
+      });
+    }
+    else if(b.classList.contains("put")){
+      var sel=card.querySelector(".pl").value; if(!sel){card.querySelector(".pl").focus();return}
+      if(sel!=="__new"){ local.push({video:id,action:"assign",place:sel}); }
+      else{
+        var name=card.querySelector(".np-name").value.trim(), lat=parseFloat(card.querySelector(".np-lat").value), lng=parseFloat(card.querySelector(".np-lng").value);
+        var addr=card.querySelector(".np-addr").value.trim();
+        if(!name||isNaN(lat)||isNaN(lng)){card.querySelector(".found").textContent="Add a name, then press Find on map.";return}
+        local.push({video:id,action:"assign",newPlace:{slug:slugify(name),name:name,area:addr.replace(/^\d+[^,]*,\s*/,""),address:addr,cat:card.querySelector(".np-cat").value,trip:card.querySelector(".np-trip").checked,lat:lat,lng:lng,precision:/\d/.test(addr)?"exact":"area",aliases:[name]}});
+      }
+      persist(); render();
+    }
+    else if(b.classList.contains("skip")){ local.push({video:id,action:"skip"}); persist(); render(); }
+    else if(b.classList.contains("undo")){ local.push({video:id,action:"pending"}); persist(); render(); }
+    else if(b.classList.contains("pfind")){
+      var out2=card.querySelector(".found"), addr2=card.querySelector(".pa-addr").value.trim(); if(!addr2){out2.textContent="Type the street address first.";return}
+      out2.textContent="Searching…";
+      geocode(addr2,function(err,r){
+        if(err||!r){out2.textContent="Nothing found. Add the city and state.";return}
+        card.querySelector(".pa-lat").value=(+r.lat).toFixed(5); card.querySelector(".pa-lng").value=(+r.lon).toFixed(5); card.querySelector(".psave").disabled=false;
+        out2.innerHTML='Found: '+esc(r.display_name)+' <a href="https://www.openstreetmap.org/?mlat='+r.lat+'&mlon='+r.lon+'#map=17/'+r.lat+'/'+r.lon+'" target="_blank" rel="noopener noreferrer">Check it ↗</a>';
+      });
+    }
+    else if(b.classList.contains("psave")){
+      local.push({action:"editPlace",slug:card.dataset.slug,address:card.querySelector(".pa-addr").value.trim(),lat:parseFloat(card.querySelector(".pa-lat").value),lng:parseFloat(card.querySelector(".pa-lng").value),precision:"exact"});
+      persist(); render();
+    }
+  });
+
+  function out(){
+    var all=existing.concat(local);
+    document.getElementById("out").value=JSON.stringify(all,null,2);
+  }
+  document.getElementById("copy").addEventListener("click",function(){
+    var t=document.getElementById("out"); var msg=document.getElementById("copied");
+    function done(){msg.textContent="Copied."}
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.value).then(done,function(){t.select();document.execCommand("copy");done()})}
+    else{t.select();document.execCommand("copy");done()}
+  });
+  document.getElementById("clear").addEventListener("click",function(){ existing=existing.concat(local); local=[]; persist(); render(); });
+
+  // GitHub link (works when the site is on github.io; otherwise shows a plain hint)
+  (function(){
+    var h=location.hostname, a=document.getElementById("ghlink");
+    var m=h.match(/^([^.]+)\.github\.io$/); var repo=location.pathname.split("/")[1];
+    if(REPO){ a.href="https://github.com/"+REPO+"/edit/main/data/decisions.json"; }
+    else if(m&&repo){ a.href="https://github.com/"+m[1]+"/"+repo+"/edit/main/data/decisions.json"; }
+    else{ a.removeAttribute("href"); a.textContent="data/decisions.json in your GitHub repository (see README)"; }
+  })();
+
+  fetch("../data/decisions.json",{cache:"no-store"}).then(function(r){return r.ok?r.json():[]}).then(function(j){existing=Array.isArray(j)?j:[]}).catch(function(){}).then(function(){ out(); });
+  render(); out();
+})();
+</script>
+</body></html>

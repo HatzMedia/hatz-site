@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /review/
+Sitemap: https://hatzmedia.com/sitemap.xml
