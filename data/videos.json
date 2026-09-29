@@ -3391,7 +3391,14 @@
     "place": null,
     "status": "pending",
     "by": null,
-    "suggest": []
+    "suggest": [
+      "the-food-pitt"
+    ],
+    "tag": {
+      "lat": 39.82089,
+      "lng": -84.01938,
+      "label": "Fairborn"
+    }
   },
   {
     "id": "J1SYtXL7PMU",
