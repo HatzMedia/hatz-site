@@ -230,6 +230,8 @@ def apply_decisions(videos, places, decisions):
             v.update(place=None, status="skip", by="hatz")
         elif act == "pending":
             v.update(place=None, status="pending", by=None)
+        elif act == "home":  # a product review filmed away from the place; the pin stays on the shop
+            v["home"] = bool(d.get("on", True))
 
 
 # ---------------------------------------------------------------- HTML pieces
@@ -244,14 +246,14 @@ def header(rp):
     return ('<a class="skip-link" href="#main">Skip to content</a><header class="header"><a class="wordmark" href="%(rp)s" aria-label="Hatz home">'
             '<img src="%(rp)sassets/hatz-brand.webp" alt="" width="56" height="56"><span><strong>HATZ</strong><small>CINCINNATI &amp; BEYOND</small></span></a>'
             '<nav aria-label="Main navigation"><a href="%(rp)s#watch">Watch</a><a href="%(rp)sexplore/">Explore the map</a><a href="%(rp)s#about">Meet Hatz</a><a href="%(rp)s#follow">Join the crew</a></nav>'
-            '<a class="button button-small" href="%(c)s">Let’s collab <span aria-hidden="true">↗</span></a></header>') % {"rp": rp, "c": COLLAB}
+            '<a class="button button-small" href="%(rp)swork-with-hatz/">Let’s collab <span aria-hidden="true">→</span></a></header>') % {"rp": rp, "c": COLLAB}
 
 
 def footer(rp):
     return ('<footer><div class="footer-top"><a class="wordmark" href="%(rp)s" aria-label="Hatz home"><img src="%(rp)sassets/hatz-brand.webp" alt="" width="56" height="56">'
             '<span><strong>HATZ</strong><small>CINCINNATI &amp; BEYOND</small></span></a><a class="footer-email" href="mailto:%(e)s">%(e)s</a></div>'
             '<div class="footer-bottom"><p>© 2026 Hatz Media Works LLC</p><div><a href="%(rp)s#watch">Watch</a><a href="%(rp)sexplore/">Explore the map</a>'
-            '<a href="%(c)s">Collaborations</a><a href="%(rp)sprivacy/">Privacy &amp; disclosures</a>'
+            '<a href="%(rp)swork-with-hatz/">Work with Hatz</a><a href="%(rp)sprivacy/">Privacy &amp; disclosures</a>'
             '<a href="https://linktr.ee/HatzReviews" target="_blank" rel="noopener noreferrer">All Hatz links <span aria-hidden="true">↗</span></a></div></div></footer>') % {"rp": rp, "e": EMAIL, "c": COLLAB}
 
 
@@ -297,7 +299,7 @@ def render_latest(videos, places):
     cards = []
     for v in recent:
         p = by.get(v["place"]) if v["status"] == "mapped" else None
-        label = ("On the map · " + p["name"]) if p else "Watch on YouTube ↗"
+        label = (("Tried at home · " if v.get("home") else "On the map · ") + p["name"]) if p else "Watch on YouTube ↗"
         cards.append(video_card(v, label, fmt_date(v["published"]), href=("places/%s/" % p["slug"]) if p else None))
     return ('<!--LATEST_START--><section class="latest section" id="watch" aria-labelledby="latest-title"><div class="section-heading"><div>'
             '<p class="eyebrow">THE ADVENTURE KEEPS GOING</p><h2 id="latest-title">Latest from Hatz.</h2></div>'
@@ -319,7 +321,7 @@ def render_place_page(p, vids, all_places, all_vids):
     more = ""
     if n > 1:
         more = ('<section class="related section" aria-labelledby="more-title"><p class="eyebrow">MORE FROM THIS PLACE</p><h2 id="more-title">Every visit.</h2><div class="video-grid">%s</div></section>'
-                % "".join(video_card(v, "Watch on YouTube ↗", fmt_date(v["published"])) for v in vids))
+                % "".join(video_card(v, "Tried at home" if v.get("home") else "Watch on YouTube ↗", fmt_date(v["published"])) for v in vids))
     # the three closest places that have a video
     near = []
     if p.get("lat") is not None:
@@ -337,6 +339,9 @@ def render_place_page(p, vids, all_places, all_vids):
     approx = ""
     if p.get("precision") != "exact":
         approx = '<li>The map pin is approximate. It shows the area, not the exact door.</li>'
+    if any(v.get("home") for v in vids):
+        approx += ('<li>%s filmed at home with the product in hand. The pin is where you get it.</li>'
+                   % ("These videos were" if all(v.get("home") for v in vids) else "Some of these videos were"))
     where = esc(p.get("address") or p.get("area") or "")
     ld = json.dumps({
         "@context": "https://schema.org", "@type": "VideoObject", "name": latest["title"], "description": desc,
@@ -354,7 +359,7 @@ def render_place_page(p, vids, all_places, all_vids):
             '<p class="watch-description">%(desc)s</p></section>'
             '<div class="watch-layout"><div><div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/%(vid)s?rel=0" title="%(name)s — Hatz video" width="960" height="540" '
             'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>'
-            '<p class="player-help">%(title)s · <a href="%(yt)s" target="_blank" rel="noopener noreferrer">Watch directly on YouTube <span aria-hidden="true">↗</span></a></p></div>'
+            '<p class="player-help">%(title)s%(homepill)s · <a href="%(yt)s" target="_blank" rel="noopener noreferrer">Watch directly on YouTube <span aria-hidden="true">↗</span></a></p></div>'
             '<aside class="visit-notes"><p class="eyebrow">THE STOP</p><h2>Plan your visit.</h2><ul><li><strong>%(name)s</strong>%(where)s</li>%(approx)s</ul>'
             '<p class="visit-note">Check with the business for current hours, menus, and availability.</p>'
             '<p><a class="button button-small" href="%(dir)s" target="_blank" rel="noopener noreferrer">Get directions <span aria-hidden="true">↗</span></a></p>'
@@ -367,6 +372,7 @@ def render_place_page(p, vids, all_places, all_vids):
             '<script type="application/ld+json">%(ld)s</script>%(footer)s</body></html>') % {
         "name": esc(p["name"]), "desc": esc(desc), "site": SITE, "slug": esc(p["slug"]), "thumb": thumb(latest), "fav": FAVICON, "rp": rp,
         "top": ('<span class="top-badge">Hatz Top Five · #%d</span>' % p["top"]) if p.get("top") else "",
+        "homepill": ' <span class="home-pill">Tried at home</span>' if latest.get("home") else "",
         "header": header(rp), "cat": esc(cat), "areaSep": (" / " + esc(p["area"])) if p.get("area") else "",
         "count": "%d video%s" % (n, "" if n == 1 else "s"), "date": esc(fmt_date(latest["published"])), "vid": latest["id"],
         "title": esc(latest["title"]), "yt": yt_url(latest), "where": (" · " + where) if where else "", "approx": approx,
@@ -411,7 +417,7 @@ def build(videos, places):
         "generated": datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds"),
         "places": out_places,
         "videos": [{"id": v["id"], "title": v["title"], "published": v["published"], "place": v["place"], "status": v["status"],
-                    "by": v.get("by"), "suggest": v.get("suggest", [])} for v in sorted(videos, key=lambda v: v["published"], reverse=True)],
+                    "by": v.get("by"), "suggest": v.get("suggest", []), "home": bool(v.get("home"))} for v in sorted(videos, key=lambda v: v["published"], reverse=True)],
     }
     (DATA / "data.js").write_text("window.HATZ_DATA = " + json.dumps(payload, ensure_ascii=False) + ";\n", encoding="utf-8")
 
@@ -432,18 +438,23 @@ def build(videos, places):
             d.rmdir()
 
     # home page blocks
+    stats = "<!--STATS_START-->%d videos across %d places<!--STATS_END-->" % (len(mapped), len(public_places))
     idx = ROOT / "index.html"
     if idx.exists():
         t = idx.read_text(encoding="utf-8")
         t = replace_block(t, "<!--LATEST_START-->", "<!--LATEST_END-->", render_latest(videos, places))
         t = replace_block(t, "<!--TOP5_START-->", "<!--TOP5_END-->", render_top5(public_places, mapped))
-        stats = "<!--STATS_START-->%d videos across %d places<!--STATS_END-->" % (len(mapped), len(public_places))
         t = replace_block(t, "<!--STATS_START-->", "<!--STATS_END-->", stats)
         idx.write_text(t, encoding="utf-8")
+    wk = ROOT / "work-with-hatz" / "index.html"
+    if wk.exists():  # the media kit quotes the same live count
+        t = wk.read_text(encoding="utf-8")
+        t = replace_block(t, "<!--STATS_START-->", "<!--STATS_END-->", stats)
+        wk.write_text(t, encoding="utf-8")
 
     # sitemap + robots
     today = datetime.date.today().isoformat()
-    urls = ["", "explore/", "privacy/"] + ["places/%s/" % p["slug"] for p in public_places]
+    urls = ["", "explore/", "work-with-hatz/", "privacy/"] + ["places/%s/" % p["slug"] for p in public_places]
     sm = ('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
           "".join("  <url><loc>%s/%s</loc><lastmod>%s</lastmod></url>\n" % (SITE, u, today) for u in urls) + "</urlset>\n")
     (ROOT / "sitemap.xml").write_text(sm, encoding="utf-8")

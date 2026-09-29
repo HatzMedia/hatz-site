@@ -647,7 +647,8 @@
     "place": "local-producers-collective",
     "status": "mapped",
     "by": "hatz",
-    "suggest": []
+    "suggest": [],
+    "home": true
   },
   {
     "id": "VE7j8O90TYU",
@@ -1213,7 +1214,8 @@
     "place": "jeff-s-candy-shop",
     "status": "mapped",
     "by": "hatz",
-    "suggest": []
+    "suggest": [],
+    "home": true
   },
   {
     "id": "bz3KLgCLv8E",
@@ -3389,9 +3391,7 @@
     "place": null,
     "status": "pending",
     "by": null,
-    "suggest": [
-      "the-food-pitt"
-    ]
+    "suggest": []
   },
   {
     "id": "J1SYtXL7PMU",

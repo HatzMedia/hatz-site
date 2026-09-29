@@ -16,6 +16,12 @@
   <section aria-labelledby="auto-h"><h2 id="auto-h">Placed automatically</h2><p class="rv-sub">The robot matched these to a place from the title, description or location tag. Each card shows where it landed. Press <strong>Looks right</strong> to confirm one, or confirm them all at once.</p><div class="rv-acts" id="autoActs" hidden style="margin-bottom:1rem"><button type="button" class="button button-small" id="autoAll">These all look right</button></div><div id="auto" class="rv-stack"></div></section>
   <section aria-labelledby="pins-h"><h2 id="pins-h">Pins to tighten up</h2><p class="rv-sub">These pins show the area, not the exact door. Enter the street address to fix them.</p><div id="pins" class="rv-stack"></div></section>
 
+  <section id="home-sec" aria-labelledby="home-h">
+    <h2 id="home-h">Tried at home</h2>
+    <p class="rv-sub">Product reviews filmed away from the place. The pin stays on the shop; the video gets a small “Tried at home” label on the map and its place page.</p>
+    <div class="rv-card quick-card"><div class="rv-body-col"><div class="rv-form"><label>Find a video<input id="homeq" type="search" placeholder="Type part of the title, e.g. candy or milk" autocomplete="off"></label><ul class="rv-titles checks" id="homelist"><li class="rv-empty">Type at least two letters.</li></ul></div></div></div>
+  </section>
+
   <section id="top5-sec" aria-labelledby="top5-h">
     <h2 id="top5-h">Hatz Top Five</h2>
     <p class="rv-sub">Your five favorite places, in order. They get a gold pin on the map, a strip on the home page, and a badge on their pages. Change them whenever you like.</p>
@@ -83,8 +89,11 @@
         '<div class="rv-geo"><button type="button" class="button button-small find">Find on map</button><span class="found" role="status"></span></div>'+
         '<div class="rv-two"><label>Latitude<input class="np-lat" type="text" inputmode="decimal"></label><label>Longitude<input class="np-lng" type="text" inputmode="decimal"></label></div>'+
       '</div>'+
+      '<label class="rv-check"><input class="np-home" type="checkbox"> Tried at home (a product review filmed away from the place)</label>'+
       '<div class="rv-acts"><button type="button" class="button button-small put">Put on the map</button><button type="button" class="text-link linkbtn skip">Not a place video</button></div></div>';
   }
+  function homeState(id){ for(var i=local.length-1;i>=0;i--){ if(local[i].video===id && local[i].action==="home") return !!local[i].on; } return !!(vmap[id]&&vmap[id].home); }
+  function homeToggle(id){ return '<button type="button" class="linkbtn hometoggle" data-vid="'+id+'">'+(homeState(id)?'Tried at home ✓ (undo)':'Mark tried at home')+'</button>'; }
   /* ---------- suggestions (batch confirm) ---------- */
   var S=D.suggestions||{places:[],skip:[],existing:{}};
   var vmap={}; D.videos.forEach(function(v){vmap[v.id]=v});
@@ -148,7 +157,7 @@
       '<div class="rv-geo"><button type="button" class="button button-small ffind">Find on map</button><span class="found" role="status">'+(p.lat!=null?'Current pin: <a href="https://www.openstreetmap.org/?mlat='+p.lat+'&mlon='+p.lng+'#map=17/'+p.lat+'/'+p.lng+'" target="_blank" rel="noopener noreferrer">Check it ↗</a>':'No pin yet')+'</span></div>'+
       '<input class="f-lat" type="hidden" value="'+(p.lat!=null?p.lat:'')+'"><input class="f-lng" type="hidden" value="'+(p.lng!=null?p.lng:'')+'"><input class="f-prec" type="hidden" value="'+esc(p.precision||"area")+'">'+
       '<div class="rv-acts"><button type="button" class="button button-small fsave">Save place details</button></div>'+
-      (vids.length?'<p class="rv-sub" style="margin-top:.6rem">Videos at this place. Pull any that don’t belong; they go back into the queue.</p><ul class="rv-titles checks">'+vids.map(function(id){return '<li><a href="https://www.youtube.com/watch?v='+id+'" target="_blank" rel="noopener noreferrer">'+esc(vmap[id].title)+'</a> <button type="button" class="linkbtn fpull" data-vid="'+id+'">Not this place</button></li>'}).join("")+'</ul>':'')+
+      (vids.length?'<p class="rv-sub" style="margin-top:.6rem">Videos at this place. Pull any that don’t belong; they go back into the queue.</p><ul class="rv-titles checks">'+vids.map(function(id){return '<li><a href="https://www.youtube.com/watch?v='+id+'" target="_blank" rel="noopener noreferrer">'+esc(vmap[id].title)+'</a> <button type="button" class="linkbtn fpull" data-vid="'+id+'">Not this place</button> '+homeToggle(id)+'</li>'}).join("")+'</ul>':'')+
       '<div class="rv-acts"><button type="button" class="text-link linkbtn fdone">Done with this place</button><button type="button" class="text-link linkbtn fremove">Take the whole place off the map</button></div></div></div></article>';
   }
   function renderFlagged(){
@@ -156,6 +165,16 @@
     document.getElementById("flagged").innerHTML=cards.join("");
     document.getElementById("flag-sec").hidden=!cards.length;
   }
+
+  /* ---------- Tried at home: search mapped videos and toggle ---------- */
+  function renderHomeSearch(){
+    var q=(document.getElementById("homeq").value||"").trim().toLowerCase(), ul=document.getElementById("homelist");
+    if(q.length<2){ ul.innerHTML='<li class="rv-empty">Type at least two letters.</li>'; return; }
+    var hits=D.videos.filter(function(v){ if(v.status!=="mapped") return false; var p=byslug[v.place]; return (v.title+" "+(p?p.name:"")).toLowerCase().indexOf(q)!==-1; }).slice(0,25);
+    ul.innerHTML = hits.length ? hits.map(function(v){ var p=byslug[v.place]; return '<li>'+(homeState(v.id)?'<span class="home-pill">Tried at home</span> ':'')+esc(v.title)+' <span class="opt">· '+esc(p?p.name:v.place)+'</span> '+homeToggle(v.id)+'</li>'; }).join("")
+                              : '<li class="rv-empty">No mapped video matches that.</li>';
+  }
+  document.getElementById("homeq").addEventListener("input",renderHomeSearch);
 
   /* ---------- Hatz Top Five ---------- */
   function renderTop5(){
@@ -276,8 +295,10 @@
         if(!name||isNaN(lat)||isNaN(lng)){card.querySelector(".found").textContent="Add a name, then press Find on map.";return}
         local.push({video:id,action:"assign",newPlace:{slug:slugify(name),name:name,area:addr.replace(/^\d+[^,]*,\s*/,""),address:addr,cat:card.querySelector(".np-cat").value,trip:card.querySelector(".np-trip").checked,lat:lat,lng:lng,precision:/\d/.test(addr)?"exact":"area",aliases:[name]}});
       }
+      var hb=card.querySelector(".np-home"); if(hb&&hb.checked) local.push({video:id,action:"home",on:true});
       persist(); render();
     }
+    else if(b.classList.contains("hometoggle")){ var hv=b.dataset.vid; local.push({video:hv,action:"home",on:!homeState(hv)}); persist(); render(); renderHomeSearch(); }
     else if(b.classList.contains("skip")){ local.push({video:id,action:"skip"}); persist(); render(); }
     else if(b.classList.contains("undo")){ local.push({video:id,action:"pending"}); persist(); render(); }
     else if(b.classList.contains("autook")){ var av=vmap[id]; if(av){ local.push({video:id,action:"assign",place:av.place}); persist(); render(); } }
@@ -315,6 +336,7 @@
     }
     if(d.action==="skip") return '<span class="tag skip">Not a place video</span>'+esc(t);
     if(d.action==="pending") return '<span class="tag skip">Back to the queue</span>'+esc(t);
+    if(d.action==="home") return '<span class="tag pin">Tried at home</span>'+esc(t)+(d.on?'':' <em>(label removed)</em>');
     if(d.action==="top5") return '<span class="tag new">Top five</span>'+esc((d.slugs||[]).map(function(s){return byslug[s]?byslug[s].name:s}).join(" · ")||"(none)");
     if(d.action==="editPlace"){ var q=byslug[d.slug]; return '<span class="tag pin">Pin / details</span>'+esc(d.name||(q?q.name:d.slug))+(d.lat!=null?' (new pin)':''); }
     return esc(JSON.stringify(d));
