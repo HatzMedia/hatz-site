@@ -1245,7 +1245,7 @@
     "trip": false,
     "lat": 38.84107,
     "lng": -84.09521,
-    "precision": "area",
+    "precision": "exact",
     "aliases": [
       "Vinny Ray's BBQ"
     ]
@@ -1731,12 +1731,12 @@
     "slug": "caddy-shack-square",
     "name": "Caddy Shack Square",
     "area": "",
-    "address": "",
+    "address": "115 Division St, Kelleys Island, OH 43438",
     "cat": "shopping",
     "trip": true,
-    "lat": 41.594925279191784,
-    "lng": -82.71038746350683,
-    "precision": "area",
+    "lat": 41.59443,
+    "lng": -82.71102,
+    "precision": "exact",
     "aliases": [
       "Caddy Shack Square"
     ]
