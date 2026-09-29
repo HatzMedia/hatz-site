@@ -3646,5 +3646,25 @@
     "video": "tYz-RavPDbs",
     "action": "assign",
     "place": "jungle-jims-eastgate"
+  },
+  {
+    "video": "wsxX3e2-ayU",
+    "action": "skip"
+  },
+  {
+    "action": "editPlace",
+    "slug": "caddy-shack-square",
+    "address": "115 Division St, Kelleys Island, OH 43438",
+    "lat": 41.59443,
+    "lng": -82.71102,
+    "precision": "exact"
+  },
+  {
+    "action": "editPlace",
+    "slug": "vinny-ray-s-bbq",
+    "address": "1295 State Route 756, Felicity, OH 45120",
+    "lat": 38.84107,
+    "lng": -84.09521,
+    "precision": "exact"
   }
 ]
