@@ -3224,5 +3224,427 @@
     "lat": 39.44045,
     "lng": -84.323,
     "precision": "exact"
+  },
+  {
+    "video": "mCnBfoiZmxo",
+    "action": "assign",
+    "newPlace": {
+      "slug": "caddy-shack-square",
+      "name": "Caddy Shack Square",
+      "area": "",
+      "address": "",
+      "cat": "shopping",
+      "trip": true,
+      "lat": 41.594925279191784,
+      "lng": -82.71038746350683,
+      "precision": "area",
+      "aliases": [
+        "Caddy Shack Square"
+      ]
+    }
+  },
+  {
+    "video": "aB3QNMMmRgY",
+    "action": "assign",
+    "place": "glacial-grooves"
+  },
+  {
+    "video": "wsxX3e2-ayU",
+    "action": "pending"
+  },
+  {
+    "video": "1e1NLzOULNA",
+    "action": "assign",
+    "place": "findlay-market"
+  },
+  {
+    "video": "hv30XCL6qZk",
+    "action": "assign",
+    "place": "cedar-point"
+  },
+  {
+    "video": "MBRCIn3PtNI",
+    "action": "assign",
+    "place": "eastgate-vendors-market"
+  },
+  {
+    "video": "HKqEO-HLTG4",
+    "action": "assign",
+    "place": "eastgate-vendors-market"
+  },
+  {
+    "video": "6wc4OPeZOTQ",
+    "action": "assign",
+    "place": "cedar-point"
+  },
+  {
+    "video": "QtexnPl8GPc",
+    "action": "assign",
+    "place": "cedar-point"
+  },
+  {
+    "video": "qF9PUBowjFo",
+    "action": "assign",
+    "place": "kings-island"
+  },
+  {
+    "video": "IpscC43pCrk",
+    "action": "assign",
+    "place": "cedar-point"
+  },
+  {
+    "video": "W-fuLP8u2kE",
+    "action": "assign",
+    "place": "cedar-point"
+  },
+  {
+    "video": "_FuZaEBg-uI",
+    "action": "assign",
+    "place": "cedar-point"
+  },
+  {
+    "video": "qzrndO0gfic",
+    "action": "assign",
+    "place": "cedar-point"
+  },
+  {
+    "video": "YKH26VZQ-hU",
+    "action": "assign",
+    "place": "cedar-point"
+  },
+  {
+    "video": "KOSZ7aFKntA",
+    "action": "assign",
+    "place": "cedar-point"
+  },
+  {
+    "video": "JInZbKI1g_8",
+    "action": "assign",
+    "place": "cedar-point"
+  },
+  {
+    "video": "1CXYNNQIIeA",
+    "action": "assign",
+    "place": "cedar-point"
+  },
+  {
+    "video": "l-fPIOLotCc",
+    "action": "assign",
+    "place": "cedar-point"
+  },
+  {
+    "video": "ZRi1zKVaZRw",
+    "action": "assign",
+    "place": "cedar-point"
+  },
+  {
+    "video": "M8Qn9wdpHoU",
+    "action": "assign",
+    "place": "cedar-point"
+  },
+  {
+    "video": "mrDD5grDnp0",
+    "action": "assign",
+    "place": "jungle-jims-eastgate"
+  },
+  {
+    "video": "brtiTSVcfbI",
+    "action": "assign",
+    "place": "jungle-jims-eastgate"
+  },
+  {
+    "video": "37kU-mgfeis",
+    "action": "assign",
+    "place": "cedar-point"
+  },
+  {
+    "video": "AkYC02fh6zM",
+    "action": "assign",
+    "place": "kings-island"
+  },
+  {
+    "video": "Ug8-ieULbH0",
+    "action": "assign",
+    "place": "kings-island"
+  },
+  {
+    "video": "v-QrIgT3pqI",
+    "action": "assign",
+    "place": "kings-island"
+  },
+  {
+    "video": "Tc66UiNlMpE",
+    "action": "assign",
+    "place": "kings-island"
+  },
+  {
+    "video": "c4L4ONqaK1E",
+    "action": "assign",
+    "place": "kings-island"
+  },
+  {
+    "video": "by-JfCYL1pk",
+    "action": "assign",
+    "place": "kings-island"
+  },
+  {
+    "video": "mVw6VJ7PmX8",
+    "action": "assign",
+    "place": "cedar-point"
+  },
+  {
+    "video": "WyJAGKe-LII",
+    "action": "assign",
+    "place": "kings-island"
+  },
+  {
+    "video": "iPfG85eWZGM",
+    "action": "assign",
+    "place": "cedar-point"
+  },
+  {
+    "video": "VDS0C6H7JCU",
+    "action": "assign",
+    "place": "cedar-point"
+  },
+  {
+    "video": "r2CRKwluV94",
+    "action": "assign",
+    "place": "cedar-point"
+  },
+  {
+    "video": "nirMnOgNDXM",
+    "action": "assign",
+    "place": "cedar-point"
+  },
+  {
+    "video": "mY8oGu09YjA",
+    "action": "assign",
+    "place": "cedar-point"
+  },
+  {
+    "video": "_ZS1tuP3TBE",
+    "action": "assign",
+    "place": "kings-island"
+  },
+  {
+    "video": "G7Vjq65IQcA",
+    "action": "assign",
+    "place": "kings-island"
+  },
+  {
+    "video": "bN6g1DDqdoM",
+    "action": "assign",
+    "place": "eastgate-vendors-market"
+  },
+  {
+    "video": "pBXvXdjxEZE",
+    "action": "assign",
+    "place": "eastgate-vendors-market"
+  },
+  {
+    "video": "fcnNh1qEb7U",
+    "action": "assign",
+    "place": "kings-island"
+  },
+  {
+    "video": "vZ1KlfvyN3M",
+    "action": "assign",
+    "place": "kings-island"
+  },
+  {
+    "video": "YjuWMX9iGTs",
+    "action": "assign",
+    "place": "cedar-point"
+  },
+  {
+    "video": "97Ui5IrGlAc",
+    "action": "assign",
+    "place": "jungle-jims-eastgate"
+  },
+  {
+    "video": "9t10aOxEEHg",
+    "action": "assign",
+    "place": "kings-island"
+  },
+  {
+    "video": "DFj7t_b8Tw4",
+    "action": "assign",
+    "place": "jungle-jims-eastgate"
+  },
+  {
+    "video": "CFsm36CZJ3Y",
+    "action": "assign",
+    "place": "jungle-jims-eastgate"
+  },
+  {
+    "video": "sNCC6aRSkms",
+    "action": "assign",
+    "place": "kings-island"
+  },
+  {
+    "video": "WA0dvzyEizU",
+    "action": "assign",
+    "place": "kings-island"
+  },
+  {
+    "video": "Dl5v6cZYeNA",
+    "action": "assign",
+    "place": "kings-island"
+  },
+  {
+    "video": "D_HIIaeTEbU",
+    "action": "assign",
+    "place": "kings-island"
+  },
+  {
+    "video": "4ENVbYoamDU",
+    "action": "assign",
+    "place": "kings-island"
+  },
+  {
+    "video": "2thUIAnx8To",
+    "action": "assign",
+    "place": "kings-island"
+  },
+  {
+    "video": "2HghhueYQa4",
+    "action": "assign",
+    "place": "kings-island"
+  },
+  {
+    "video": "GC7TFgJ4-iQ",
+    "action": "assign",
+    "place": "jungle-jims-eastgate"
+  },
+  {
+    "video": "g7DWgmSwtkY",
+    "action": "assign",
+    "place": "kings-island"
+  },
+  {
+    "video": "fNLwF9sWCPg",
+    "action": "assign",
+    "place": "jungle-jims-eastgate"
+  },
+  {
+    "video": "IyLBoSTWCwE",
+    "action": "assign",
+    "place": "jungle-jims-eastgate"
+  },
+  {
+    "video": "JxuLR9cddqs",
+    "action": "assign",
+    "place": "jungle-jims-eastgate"
+  },
+  {
+    "video": "3Mx2mJcDOnw",
+    "action": "assign",
+    "place": "jungle-jims-eastgate"
+  },
+  {
+    "video": "bDjt2sQdfjI",
+    "action": "assign",
+    "place": "jungle-jims-eastgate"
+  },
+  {
+    "video": "mfX2rk9iGHM",
+    "action": "assign",
+    "place": "jungle-jims-eastgate"
+  },
+  {
+    "video": "pTqr68-T9kc",
+    "action": "assign",
+    "place": "jungle-jims-eastgate"
+  },
+  {
+    "video": "tO46aPRm08s",
+    "action": "assign",
+    "place": "jungle-jims-eastgate"
+  },
+  {
+    "video": "SdBzJ7reNeE",
+    "action": "assign",
+    "place": "jungle-jims-eastgate"
+  },
+  {
+    "video": "veVH-6y2s9I",
+    "action": "assign",
+    "place": "jungle-jims-eastgate"
+  },
+  {
+    "video": "qtKcytn5pQU",
+    "action": "assign",
+    "place": "jungle-jims-eastgate"
+  },
+  {
+    "video": "usMf2bIi5os",
+    "action": "assign",
+    "place": "jungle-jims-eastgate"
+  },
+  {
+    "video": "d-LwGc4up3Y",
+    "action": "assign",
+    "place": "jungle-jims-eastgate"
+  },
+  {
+    "video": "K4rfy4UMn1E",
+    "action": "assign",
+    "place": "jungle-jims-eastgate"
+  },
+  {
+    "video": "C6_f-E3yWnY",
+    "action": "assign",
+    "place": "jungle-jims-eastgate"
+  },
+  {
+    "video": "hbECFaIfWDM",
+    "action": "assign",
+    "place": "jungle-jims-eastgate"
+  },
+  {
+    "video": "lcKYRsLY4fg",
+    "action": "assign",
+    "place": "jungle-jims-eastgate"
+  },
+  {
+    "video": "URytAIOz4Kw",
+    "action": "assign",
+    "place": "jungle-jims-eastgate"
+  },
+  {
+    "video": "Cc_WjTuorAY",
+    "action": "assign",
+    "place": "jungle-jims-eastgate"
+  },
+  {
+    "video": "3X3veIU7sro",
+    "action": "assign",
+    "place": "kings-island"
+  },
+  {
+    "video": "oFadU61joZs",
+    "action": "assign",
+    "place": "jungle-jims-eastgate"
+  },
+  {
+    "video": "nCcwUMVOb2s",
+    "action": "assign",
+    "place": "kings-island"
+  },
+  {
+    "video": "OWlH0tyffb4",
+    "action": "assign",
+    "place": "jungle-jims-eastgate"
+  },
+  {
+    "video": "Uif7-KlvKek",
+    "action": "assign",
+    "place": "kings-island"
+  },
+  {
+    "video": "tYz-RavPDbs",
+    "action": "assign",
+    "place": "jungle-jims-eastgate"
   }
 ]
