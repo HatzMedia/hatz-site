@@ -3120,5 +3120,75 @@
   {
     "video": "euU79c57sPM",
     "action": "skip"
+  },
+  {
+    "video": "XQl39syZ2yc",
+    "action": "skip"
+  },
+  {
+    "video": "eIjJmjqKoO0",
+    "action": "skip"
+  },
+  {
+    "video": "7eU_8B_5kaM",
+    "action": "assign",
+    "newPlace": {
+      "slug": "carl-s-deli",
+      "name": "Carl's Deli",
+      "area": "2836 Observatory Ave",
+      "address": "2836 Observatory Ave",
+      "cat": "eats",
+      "trip": false,
+      "lat": 39.13731,
+      "lng": -84.43729,
+      "precision": "exact",
+      "aliases": [
+        "Carl's Deli"
+      ]
+    }
+  },
+  {
+    "video": "mCnBfoiZmxo",
+    "action": "pending"
+  },
+  {
+    "action": "editPlace",
+    "slug": "traders-world-flea-market",
+    "address": "601 Union Rd, Monroe, OH 45050",
+    "lat": 39.44045,
+    "lng": -84.323,
+    "precision": "exact"
+  },
+  {
+    "action": "editPlace",
+    "slug": "la-michoacana-y-sus-antojitos",
+    "address": "5225 Montgomery Rd, Cincinnati, OH 45212",
+    "lat": 39.17618,
+    "lng": -84.44044,
+    "precision": "exact"
+  },
+  {
+    "action": "editPlace",
+    "slug": "feel-good-food-stop",
+    "address": "6836 Main St, 45244",
+    "lat": 39.12464,
+    "lng": -84.35386,
+    "precision": "exact"
+  },
+  {
+    "action": "editPlace",
+    "slug": "jukebox",
+    "address": "5859 Deerfield Blvd, 45040",
+    "lat": 39.30782,
+    "lng": -84.31476,
+    "precision": "exact"
+  },
+  {
+    "action": "editPlace",
+    "slug": "bailey-jaynes-bakery-cafe",
+    "address": "5 N Main St, Walton, KY 41094",
+    "lat": 38.86521,
+    "lng": -84.61079,
+    "precision": "exact"
   }
 ]
