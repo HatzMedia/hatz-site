@@ -323,7 +323,7 @@ def render_place_page(p, vids, all_places, all_vids):
             '<title>%(name)s | Watch with Hatz</title><meta name="description" content="%(desc)s">'
             '<link rel="canonical" href="%(site)s/places/%(slug)s/"><meta property="og:title" content="%(name)s | Watch with Hatz">'
             '<meta property="og:description" content="%(desc)s"><meta property="og:type" content="website"><meta property="og:image" content="%(thumb)s">'
-            '<link rel="icon" type="image/svg+xml" href="%(fav)s"><link rel="stylesheet" href="%(rp)sstyles.css">'
+            '<link rel="icon" type="image/svg+xml" href="%(fav)s"><link rel="stylesheet" href="%(rp)shatz.css">'
             '<script>try{if(localStorage.getItem("hatz-admin"))document.documentElement.classList.add("hatz-admin")}catch(e){}</script></head><body>%(header)s'
             '<main id="main" class="watch-page"><section class="watch-intro"><a class="back-link" href="%(rp)sexplore/">← Back to the map</a>'
             '<p class="eyebrow">%(cat)s%(areaSep)s</p><h1>%(name)s</h1><p class="story-meta">%(count)s <span aria-hidden="true">·</span> Latest visit %(date)s</p>'

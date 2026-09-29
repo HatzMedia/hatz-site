@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex, nofollow"><meta name="theme-color" content="#0b0c11"><title>Review new videos | Hatz</title><link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230b0c11'/%3E%3Cpath d='M8 7h5v7h6V7h5v18h-5v-7h-6v7H8z' fill='%2300aeff'/%3E%3Cpath d='M8 27h16v2H8z' fill='%23ff39d5'/%3E%3C/svg%3E"><link rel="stylesheet" href="../styles.css"></head><body class="rv-body">
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex, nofollow"><meta name="theme-color" content="#0b0c11"><title>Review new videos | Hatz</title><link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230b0c11'/%3E%3Cpath d='M8 7h5v7h6V7h5v18h-5v-7h-6v7H8z' fill='%2300aeff'/%3E%3Cpath d='M8 27h16v2H8z' fill='%23ff39d5'/%3E%3C/svg%3E"><link rel="stylesheet" href="../hatz.css"></head><body class="rv-body">
 <header class="header"><a class="wordmark" href="../" aria-label="Hatz home"><img src="../assets/hatz-brand.webp" alt="" width="56" height="56"><span><strong>HATZ</strong><small>REVIEW QUEUE</small></span></a><a class="button button-small" href="../explore/">View the map <span aria-hidden="true">→</span></a></header>
 <main class="rv" id="main">
   <section class="rv-head">
@@ -13,21 +13,28 @@
   <section id="exist-sec" aria-labelledby="exist-h" hidden><h2 id="exist-h">Belongs to a place already on the map</h2><div id="exist" class="rv-stack"></div></section>
   <section id="skip-sec" aria-labelledby="skip-h" hidden><h2 id="skip-h">Probably not place videos</h2><p class="rv-sub">Gaming, Elf on the Shelf, the Red Bull calendar, family clips and chains with no single location. Untick any that should be on the map, then skip the rest. They still show in Latest from Hatz.</p><div id="skips" class="rv-stack"></div></section>
   <section aria-labelledby="pending-h"><h2 id="pending-h">Everything else</h2><div id="pending" class="rv-stack"></div></section>
-  <section aria-labelledby="auto-h"><h2 id="auto-h">Placed automatically</h2><p class="rv-sub">These matched a place name in the title or description. Undo any that are wrong.</p><div id="auto" class="rv-stack"></div></section>
+  <section aria-labelledby="auto-h"><h2 id="auto-h">Placed automatically</h2><p class="rv-sub">The robot matched these to a place from the title, description or location tag. Each card shows where it landed. Press <strong>Looks right</strong> to confirm one, or confirm them all at once.</p><div class="rv-acts" id="autoActs" hidden style="margin-bottom:1rem"><button type="button" class="button button-small" id="autoAll">These all look right</button></div><div id="auto" class="rv-stack"></div></section>
   <section aria-labelledby="pins-h"><h2 id="pins-h">Pins to tighten up</h2><p class="rv-sub">These pins show the area, not the exact door. Enter the street address to fix them.</p><div id="pins" class="rv-stack"></div></section>
+
+  <section aria-labelledby="choices-h" id="choices-sec">
+    <h2 id="choices-h">Your choices</h2>
+    <p class="rv-status" id="saveStatus">Checking what's saved…</p>
+    <p class="rv-sub">Everything you decide on this page lands here first, kept in this browser. Undo any single one. Once a choice is saved on GitHub it drops off this list by itself.</p>
+    <ul class="rv-choices" id="choices"></ul>
+  </section>
 
   <section class="rv-save" aria-labelledby="save-h">
     <h2 id="save-h">Save your choices</h2>
-    <p>Your choices are kept in this browser until you save them to the site. Two steps:</p>
     <ol>
       <li><button type="button" class="button button-small" id="copy">Copy my choices</button> <span id="copied" role="status"></span></li>
-      <li>Open <a id="ghlink" href="#" target="_blank" rel="noopener noreferrer">data/decisions.json on GitHub ↗</a>, click the pencil, select everything, paste, and press <strong>Commit changes</strong>. The site updates in a few minutes.</li>
+      <li>Open <a id="ghlink" href="#" target="_blank" rel="noopener noreferrer">data/decisions.json on GitHub ↗</a>, click the pencil, click inside the text, press <strong>Ctrl+A</strong> then <strong>Ctrl+V</strong>, and press <strong>Commit changes</strong> (twice).</li>
+      <li>Come back here. The list above checks itself; <button type="button" class="text-link linkbtn" id="verify">check again now</button>. GitHub can take a few minutes to show the change. The map updates a few minutes after that.</li>
     </ol>
-    <label for="out" class="sr-only">Your choices</label>
-    <textarea id="out" readonly rows="8"></textarea>
-    <p><button type="button" class="text-link linkbtn" id="clear">I saved them. Clear this list.</button></p>
+    <details><summary>See the text that gets pasted</summary><label for="out" class="sr-only">Your choices</label><textarea id="out" readonly rows="8"></textarea></details>
     <p class="rv-sub" style="margin-top:1.2rem;color:#aab5c9">Opening this page turns on the <strong>Fix</strong> links on the map and place pages, in this browser only. <button type="button" class="text-link linkbtn" id="adminOff">Turn them off</button></p>
   </section>
+
+  <div class="rv-bar" id="bar"><strong id="barText">Checking…</strong><div class="bar-acts"><button type="button" class="button" id="barCopy">Copy my choices</button><a class="button ghost" id="barOpen" href="#" target="_blank" rel="noopener noreferrer">Open GitHub ↗</a></div></div>
 </main>
 
 <script src="../data/data.js"></script>
@@ -153,7 +160,14 @@
     var total=D.videos.filter(function(v){return v.status==="pending" && !decided(v.id)}).length;
     document.getElementById("summary").textContent = total ? total+" video"+(total===1?"":"s")+" waiting. Start with Quick confirm below, then finish the few left over." : "You’re all caught up. New videos show up here automatically.";
     document.getElementById("pending").innerHTML = pend.length ? pend.map(function(v){return vcard(v,pendingBody(v))}).join("") : '<p class="rv-empty">Nothing waiting.</p>';
-    document.getElementById("auto").innerHTML = auto.length ? auto.map(function(v){var p=byslug[v.place];return vcard(v,'<p><strong>'+esc(p?p.name:v.place)+'</strong></p><div class="rv-acts"><button type="button" class="text-link linkbtn undo">Undo, this is wrong</button></div>')}).join("") : '<p class="rv-empty">Nothing placed automatically yet.</p>';
+    document.getElementById("auto").innerHTML = auto.length ? auto.map(function(v){
+      var p=byslug[v.place]||{name:v.place};
+      var pin=(p.lat!=null)?' · <a href="https://www.openstreetmap.org/?mlat='+p.lat+'&mlon='+p.lng+'#map=17/'+p.lat+'/'+p.lng+'" target="_blank" rel="noopener noreferrer">Check the pin ↗</a>':'';
+      return vcard(v,'<div class="auto-place"><strong>'+esc(p.name)+'</strong>'+esc(p.area||"")+(p.address?' · '+esc(p.address):'')+(p.precision&&p.precision!=="exact"?' · approximate pin':'')+pin+'</div>'+
+        '<div class="rv-acts"><button type="button" class="button button-small autook">Looks right</button><button type="button" class="text-link linkbtn undo">Wrong place, back to the queue</button></div>');
+    }).join("") : '<p class="rv-empty">Nothing placed automatically is waiting for a look.</p>';
+    document.getElementById("autoActs").hidden = auto.length < 2;
+    renderChoices();
     document.getElementById("pins").innerHTML = pins.length ? pins.map(function(p){
       return '<article class="rv-card pin-card" data-slug="'+esc(p.slug)+'"><div class="rv-body-col"><h3>'+esc(p.name)+'</h3><p class="meta">'+esc(p.area||"")+'</p>'+
         '<div class="rv-form"><label>Street address<input class="pa-addr" type="text" value="'+esc(p.address||"")+'" autocomplete="off"></label>'+
@@ -245,6 +259,12 @@
     }
     else if(b.classList.contains("skip")){ local.push({video:id,action:"skip"}); persist(); render(); }
     else if(b.classList.contains("undo")){ local.push({video:id,action:"pending"}); persist(); render(); }
+    else if(b.classList.contains("autook")){ var av=vmap[id]; if(av){ local.push({video:id,action:"assign",place:av.place}); persist(); render(); } }
+    else if(b.id==="autoAll"){
+      D.videos.forEach(function(v){ if(v.status==="mapped" && v.by==="auto" && !decided(v.id)) local.push({video:v.id,action:"assign",place:v.place}); });
+      persist(); render();
+    }
+    else if(b.classList.contains("undo-local")){ removeLocal(parseInt(b.dataset.i,10)); }
     else if(b.classList.contains("pfind")){
       var out2=card.querySelector(".found"), addr2=card.querySelector(".pa-addr").value.trim(); if(!addr2){out2.textContent="Type the street address first.";return}
       out2.textContent="Searching…";
@@ -260,29 +280,79 @@
     }
   });
 
-  function out(){
-    var all=existing.concat(local);
-    document.getElementById("out").value=JSON.stringify(all,null,2);
+  /* ---------- your choices: list, undo, and checking what's saved ---------- */
+  function describe(d){
+    var t=d.video?(vmap[d.video]?vmap[d.video].title:d.video):"";
+    if(d.action==="assign"){
+      var pn=d.newPlace?d.newPlace.name:(byslug[d.place]?byslug[d.place].name:d.place);
+      return '<span class="tag'+(d.newPlace?' new':'')+'">'+(d.newPlace?'New place':'On the map')+'</span>'+esc(t)+' → <strong>'+esc(pn)+'</strong>';
+    }
+    if(d.action==="skip") return '<span class="tag skip">Not a place video</span>'+esc(t);
+    if(d.action==="pending") return '<span class="tag skip">Back to the queue</span>'+esc(t);
+    if(d.action==="editPlace"){ var q=byslug[d.slug]; return '<span class="tag pin">Pin / details</span>'+esc(d.name||(q?q.name:d.slug))+(d.lat!=null?' (new pin)':''); }
+    return esc(JSON.stringify(d));
   }
-  document.getElementById("copy").addEventListener("click",function(){
-    var t=document.getElementById("out"); var msg=document.getElementById("copied");
-    function done(){msg.textContent="Copied."}
+  function removeLocal(i){
+    var d=local[i]; if(!d) return;
+    local.splice(i,1);
+    if(d.newPlace){ // the place was created by this choice; hand the creation to the next video that still uses it
+      for(var j=0;j<local.length;j++){ if(local[j].action==="assign" && local[j].place===d.newPlace.slug){ local[j]={video:local[j].video,action:"assign",newPlace:d.newPlace}; break; } }
+    }
+    persist(); render();
+  }
+  function renderChoices(){
+    var ul=document.getElementById("choices");
+    ul.innerHTML = local.length ? local.map(function(d,i){ return '<li><span>'+describe(d)+'</span><button type="button" class="linkbtn undo-local" data-i="'+i+'">Undo</button></li>'; }).join("")
+                                : '<li><span>Nothing waiting to be saved.</span></li>';
+    var st=document.getElementById("saveStatus"), bar=document.getElementById("barText");
+    if(local.length){ st.className="rv-status warn"; st.textContent=local.length+" choice"+(local.length===1?"":"s")+" not saved yet. Do the two steps below when you're ready."; bar.textContent=local.length+" unsaved choice"+(local.length===1?"":"s"); }
+    else { st.className="rv-status ok"; st.textContent="All your choices are saved."+(lastCheck?" Checked "+lastCheck+".":""); bar.textContent="All saved ✓"; }
+  }
+  function canon(v){
+    if(Array.isArray(v)) return "["+v.map(canon).join(",")+"]";
+    if(v&&typeof v==="object"){ return "{"+Object.keys(v).sort().map(function(k){return JSON.stringify(k)+":"+canon(v[k])}).join(",")+"}"; }
+    return JSON.stringify(v);
+  }
+  var lastCheck="", checking=false;
+  function verify(){
+    if(checking) return; checking=true;
+    var urls=["../data/decisions.json?t="+Date.now()];
+    if(REPO) urls.unshift("https://raw.githubusercontent.com/"+REPO+"/main/data/decisions.json?t="+Date.now());
+    Promise.all(urls.map(function(u){ return fetch(u,{cache:"no-store"}).then(function(r){return r.ok?r.json():null}).catch(function(){return null}); }))
+      .then(function(res){
+        var lists=res.filter(Array.isArray);
+        if(!lists.length){ var st=document.getElementById("saveStatus"); st.className="rv-status warn"; st.textContent="Couldn’t reach the saved file right now. Your choices are still here."; return; }
+        existing=lists.reduce(function(a,b){return b.length>a.length?b:a});
+        var saved={}; lists.forEach(function(l){ l.forEach(function(d){ saved[canon(d)]=1; }); });
+        var before=local.length; local=local.filter(function(d){ return !saved[canon(d)]; });
+        lastCheck=new Date().toLocaleTimeString("en-US",{hour:"numeric",minute:"2-digit"});
+        if(local.length!==before) persist(); else out();
+        render();
+      }).then(function(){ checking=false; }, function(){ checking=false; });
+  }
+  function out(){ document.getElementById("out").value=JSON.stringify(existing.concat(local),null,2); }
+  function copyChoices(msgEl){
+    var t=document.getElementById("out");
+    function done(){ if(msgEl) msgEl.textContent="Copied."; document.getElementById("barCopy").textContent="Copied ✓"; setTimeout(function(){document.getElementById("barCopy").textContent="Copy my choices"},2500); }
     if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.value).then(done,function(){t.select();document.execCommand("copy");done()})}
     else{t.select();document.execCommand("copy");done()}
-  });
-  document.getElementById("clear").addEventListener("click",function(){ existing=existing.concat(local); local=[]; persist(); render(); });
+  }
+  document.getElementById("copy").addEventListener("click",function(){ copyChoices(document.getElementById("copied")); });
+  document.getElementById("barCopy").addEventListener("click",function(){ copyChoices(null); });
+  document.getElementById("verify").addEventListener("click",function(){ lastCheck=""; verify(); });
+  window.addEventListener("focus",function(){ if(local.length) verify(); });
 
   // GitHub link (works when the site is on github.io; otherwise shows a plain hint)
   (function(){
-    var h=location.hostname, a=document.getElementById("ghlink");
-    var m=h.match(/^([^.]+)\.github\.io$/); var repo=location.pathname.split("/")[1];
-    if(REPO){ a.href="https://github.com/"+REPO+"/edit/main/data/decisions.json"; }
-    else if(m&&repo){ a.href="https://github.com/"+m[1]+"/"+repo+"/edit/main/data/decisions.json"; }
-    else{ a.removeAttribute("href"); a.textContent="data/decisions.json in your GitHub repository (see README)"; }
+    var h=location.hostname, a=document.getElementById("ghlink"), b=document.getElementById("barOpen");
+    var m=h.match(/^([^.]+)\.github\.io$/); var repo=location.pathname.split("/")[1]; var href="";
+    if(REPO){ href="https://github.com/"+REPO+"/edit/main/data/decisions.json"; }
+    else if(m&&repo){ href="https://github.com/"+m[1]+"/"+repo+"/edit/main/data/decisions.json"; }
+    if(href){ a.href=href; b.href=href; }
+    else{ a.removeAttribute("href"); a.textContent="data/decisions.json in your GitHub repository (see README)"; b.hidden=true; }
   })();
 
-  fetch("../data/decisions.json",{cache:"no-store"}).then(function(r){return r.ok?r.json():[]}).then(function(j){existing=Array.isArray(j)?j:[]}).catch(function(){}).then(function(){ out(); });
-  render(); out();
+  render(); out(); verify();
 })();
 </script>
 </body></html>
