@@ -35,7 +35,7 @@
 (function(){
   var D=window.HATZ_DATA||{places:[],videos:[]};
   var KEY="hatz-review-decisions";
-  var REPO="";  // once the site has a GitHub repository, put it here like "yourname/hatz-site" so the save link goes straight to the file
+  var REPO="HatzMedia/hatz-site";  // the GitHub repository, so the save link goes straight to the file
   try{ localStorage.setItem("hatz-admin","1"); }catch(e){}
   document.getElementById("adminOff").addEventListener("click",function(){ try{localStorage.removeItem("hatz-admin");}catch(e){} this.textContent="Off. Open this page again to turn them back on."; });
   var CATS={eats:"Restaurant / eats",sweets:"Sweets / bakery",shopping:"Market / shopping",family:"Family outing",events:"Event / seasonal"};
