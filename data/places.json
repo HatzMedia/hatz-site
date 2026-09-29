@@ -1726,5 +1726,19 @@
     "aliases": [
       "Carl's Deli"
     ]
+  },
+  {
+    "slug": "caddy-shack-square",
+    "name": "Caddy Shack Square",
+    "area": "",
+    "address": "",
+    "cat": "shopping",
+    "trip": true,
+    "lat": 41.594925279191784,
+    "lng": -82.71038746350683,
+    "precision": "area",
+    "aliases": [
+      "Caddy Shack Square"
+    ]
   }
 ]
