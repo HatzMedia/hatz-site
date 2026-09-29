@@ -3190,5 +3190,39 @@
     "lat": 38.86521,
     "lng": -84.61079,
     "precision": "exact"
+  },
+  {
+    "video": "XQl39syZ2yc",
+    "action": "skip"
+  },
+  {
+    "video": "eIjJmjqKoO0",
+    "action": "skip"
+  },
+  {
+    "video": "7eU_8B_5kaM",
+    "action": "assign",
+    "newPlace": {
+      "slug": "carl-s-deli",
+      "name": "Carl's Deli",
+      "area": "2836 Observatory Ave",
+      "address": "2836 Observatory Ave",
+      "cat": "eats",
+      "trip": false,
+      "lat": 39.13731,
+      "lng": -84.43729,
+      "precision": "exact",
+      "aliases": [
+        "Carl's Deli"
+      ]
+    }
+  },
+  {
+    "action": "editPlace",
+    "slug": "traders-world-flea-market",
+    "address": "601 Union Rd, Monroe, OH 45050",
+    "lat": 39.44045,
+    "lng": -84.323,
+    "precision": "exact"
   }
 ]
