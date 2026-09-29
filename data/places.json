@@ -531,7 +531,7 @@
     "trip": false,
     "lat": 39.44045,
     "lng": -84.323,
-    "precision": "area",
+    "precision": "exact",
     "aliases": [
       "Traders World Flea Market"
     ]
@@ -895,7 +895,7 @@
     "trip": false,
     "lat": 39.17618,
     "lng": -84.44044,
-    "precision": "area",
+    "precision": "exact",
     "aliases": [
       "La Michoacana Y Sus Antojitos"
     ]
@@ -988,12 +988,12 @@
     "slug": "feel-good-food-stop",
     "name": "Feel Good Food Stop",
     "area": "Newtown, OH",
-    "address": "6836 Main St, Cincinnati, OH 45244",
+    "address": "6836 Main St, 45244",
     "cat": "eats",
     "trip": false,
-    "lat": 39.12489,
-    "lng": -84.36048,
-    "precision": "area",
+    "lat": 39.12464,
+    "lng": -84.35386,
+    "precision": "exact",
     "aliases": [
       "Feel Good Food Stop"
     ]
@@ -1408,12 +1408,12 @@
     "slug": "jukebox",
     "name": "Jukebox",
     "area": "Mason, OH",
-    "address": "5859 Deerfield Blvd, Mason, OH 45040",
+    "address": "5859 Deerfield Blvd, 45040",
     "cat": "sweets",
     "trip": false,
-    "lat": 39.32959,
-    "lng": -84.3183,
-    "precision": "area",
+    "lat": 39.30782,
+    "lng": -84.31476,
+    "precision": "exact",
     "aliases": [
       "Jukebox"
     ]
@@ -1439,9 +1439,9 @@
     "address": "5 N Main St, Walton, KY 41094",
     "cat": "sweets",
     "trip": false,
-    "lat": 38.867,
-    "lng": -84.61203,
-    "precision": "area",
+    "lat": 38.86521,
+    "lng": -84.61079,
+    "precision": "exact",
     "aliases": [
       "Bailey Jaynes Bakery & Cafe"
     ]
@@ -1711,6 +1711,20 @@
     "precision": "exact",
     "aliases": [
       "Skyline Chili (Cincinnati)"
+    ]
+  },
+  {
+    "slug": "carl-s-deli",
+    "name": "Carl's Deli",
+    "area": "2836 Observatory Ave",
+    "address": "2836 Observatory Ave",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.13731,
+    "lng": -84.43729,
+    "precision": "exact",
+    "aliases": [
+      "Carl's Deli"
     ]
   }
 ]

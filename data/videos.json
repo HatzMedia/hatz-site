@@ -304,9 +304,9 @@
     "title": "We did a little island shopping at Caddy Shack Square! #KelleysIsland #CaddyShackSquare #LakeErie",
     "published": "2026-08-04T02:17:07Z",
     "desc": "We did a little island shopping at Caddy Shack Square! 🏝️🛍️ So many cool little shops packed into one spot on Kelleys Island!\n\n#KelleysIsland #CaddyShackSquare #LakeErie #OhioAdventures #Hatz",
-    "place": "glacial-grooves",
-    "status": "mapped",
-    "by": "auto",
+    "place": null,
+    "status": "pending",
+    "by": null,
     "suggest": [
       "glacial-grooves"
     ]
@@ -1189,8 +1189,8 @@
     "published": "2026-04-30T03:34:44Z",
     "desc": "A journey into the tree 🌳✨\n\nThis tree’s been here as long as I can remember… \n\n#NatureVibes #HiddenGems #POV #ExploreMore #HatzCrew",
     "place": null,
-    "status": "pending",
-    "by": null,
+    "status": "skip",
+    "by": "hatz",
     "suggest": []
   },
   {
@@ -1689,8 +1689,8 @@
     "published": "2026-03-10T00:39:41Z",
     "desc": "Super late on this one… but when the Cinna Butter is right there, you know I had to try it 😅🔥\n\nWould you have grabbed one too?\n\n#hatzreviews #foodtok #latenightsnack #cinnabutter",
     "place": null,
-    "status": "pending",
-    "by": null,
+    "status": "skip",
+    "by": "hatz",
     "suggest": []
   },
   {
@@ -2104,9 +2104,9 @@
     "title": "Come on… look at this Reuben 🤤🥪#HATZReviews #CincinnatiFood #Reuben #DeliEats #EatLocal",
     "published": "2026-01-24T20:45:33Z",
     "desc": "",
-    "place": null,
-    "status": "pending",
-    "by": null,
+    "place": "carl-s-deli",
+    "status": "mapped",
+    "by": "hatz",
     "suggest": []
   },
   {
