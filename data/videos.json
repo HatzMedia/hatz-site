@@ -329,7 +329,9 @@
     "place": null,
     "status": "pending",
     "by": null,
-    "suggest": []
+    "suggest": [
+      "friendship-kitchen"
+    ]
   },
   {
     "id": "IpscC43pCrk",
