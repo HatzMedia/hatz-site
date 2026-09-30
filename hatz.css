@@ -270,3 +270,13 @@ h1 .top-badge{margin-left:.6rem;font-size:.9rem;vertical-align:.35em}
 .wk-tiers b{display:block;font-size:1.2rem;letter-spacing:-.03em;margin-bottom:.4rem}
 .wk-tiers p{margin:0;color:var(--muted);font-size:.95rem;line-height:1.5}
 @media(max-width:760px){.wk-tiers{grid-template-columns:1fr}}
+
+/* map page: readable notes and strip; sort control; hero strip links */
+.xp-note{color:#c7ccda}
+.xp .small-collab,.xp .small-collab p{color:var(--ink)}
+.xp .small-collab a{color:var(--ink)}
+.xp .small-collab a:hover{color:#005f91}
+.xp-sort{display:flex;align-items:center;gap:.5rem;font-weight:700;font-size:.9rem;color:#d5d8e1}
+.xp-sort select{min-height:44px;background:#1a1d29;color:#fff;border:1px solid #393c49;border-radius:6px;padding:.5rem .7rem;font:inherit;font-weight:700}
+.hero-strip a{color:inherit;text-decoration:none}
+.hero-strip a:hover,.hero-strip a:focus-visible{color:var(--accent)}

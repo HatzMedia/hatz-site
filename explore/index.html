@@ -17,6 +17,7 @@
           <button type="button" data-scope="trips" aria-pressed="false">Ohio road trips</button>
         </div>
         <label class="xp-search"><span class="sr-only">Search places and videos</span><input id="q" type="search" placeholder="Search a place or video" autocomplete="off"></label>
+        <label class="xp-sort">Sort <select id="sort"><option value="new">Newest visit</option><option value="az">A to Z</option><option value="most">Most videos</option><option value="near">Nearest</option></select></label>
       </div>
       <div class="xp-chips" id="cats" role="group" aria-label="Type of place"></div>
       <div class="xp-chips"><button type="button" class="chip gold" id="topChip" aria-pressed="false" hidden>★ Hatz Top Five</button></div>
@@ -46,7 +47,10 @@
   var CATS = [["all","All types"],["eats","Eats"],["sweets","Sweets"],["shopping","Markets & shopping"],["family","Family outings"],["events","Events"]];
   var vids = {}; D.videos.forEach(function(v){vids[v.id]=v});
   var places = D.places.filter(function(p){return p.videos && p.videos.length && p.lat!=null && p.lng!=null});
-  var st = {scope:"all", cat:"all", q:"", view:"map", top:false, center:null};
+  var st = {scope:"all", cats:[], q:"", view:"map", top:false, center:null, sort:"new"};
+  (function(){ // the home page links here with ?cats=eats or ?cats=family,events
+    try{ var c=new URLSearchParams(location.search).get("cats"); if(c){ var ok=CATS.map(function(x){return x[0]}); st.cats=c.split(",").filter(function(x){return x!=="all" && ok.indexOf(x)!==-1}); } }catch(e){}
+  })();
   var youMarker=null;
   function distMi(a,b){var R=3958.8,p1=a[0]*Math.PI/180,p2=b[0]*Math.PI/180,dp=(b[0]-a[0])*Math.PI/180,dl=(b[1]-a[1])*Math.PI/180;var h=Math.sin(dp/2)*Math.sin(dp/2)+Math.cos(p1)*Math.cos(p2)*Math.sin(dl/2)*Math.sin(dl/2);return 2*R*Math.asin(Math.sqrt(h))}
   function miOf(p){return st.center?distMi(st.center,[p.lat,p.lng]):null}
@@ -62,7 +66,7 @@
   function visible(p){
     if(st.scope==="local" && p.trip) return false;
     if(st.scope==="trips" && !p.trip) return false;
-    if(st.cat!=="all" && p.cat!==st.cat) return false;
+    if(st.cats.length && st.cats.indexOf(p.cat)===-1) return false;
     if(st.top && !p.top) return false;
     if(st.q){
       var hay=(p.name+" "+(p.area||"")+" "+p.videos.map(function(id){return vids[id]?vids[id].title:""}).join(" ")).toLowerCase();
@@ -82,13 +86,17 @@
       '<div class="acts"><a href="https://www.youtube.com/watch?v='+v.id+'" target="_blank" rel="noopener noreferrer">Watch</a><a href="'+esc(dir(p))+'" target="_blank" rel="noopener noreferrer">Directions</a><a class="fix" href="../review/#fix-'+encodeURIComponent(p.slug)+'" title="Send this place to the review page">Fix</a></div></div></article>';
   }
   function renderCats(){
-    document.getElementById("cats").innerHTML=CATS.map(function(c){return '<button type="button" class="chip" data-cat="'+c[0]+'" aria-pressed="'+(st.cat===c[0])+'">'+c[1]+'</button>'}).join("");
+    document.getElementById("cats").innerHTML=CATS.map(function(c){var on=c[0]==="all"?!st.cats.length:st.cats.indexOf(c[0])!==-1;return '<button type="button" class="chip" data-cat="'+c[0]+'" aria-pressed="'+on+'">'+c[1]+'</button>'}).join("");
   }
   var markerBySlug={};
   function render(){
     var shown=places.filter(visible);
-    if(st.center){ shown.sort(function(a,b){return miOf(a)-miOf(b)}); }
-    else if(st.top){ shown.sort(function(a,b){return a.top-b.top}); }
+    var mode=(st.sort==="near"&&!st.center)?"new":st.sort;
+    if(st.top){ shown.sort(function(a,b){return a.top-b.top}); }
+    else if(mode==="near"){ shown.sort(function(a,b){return miOf(a)-miOf(b)}); }
+    else if(mode==="az"){ shown.sort(function(a,b){return a.name.localeCompare(b.name)}); }
+    else if(mode==="most"){ shown.sort(function(a,b){return b.videos.length-a.videos.length||a.name.localeCompare(b.name)}); }
+    else { shown.sort(function(a,b){var pa=(vids[a.videos[0]]||{}).published||"",pb=(vids[b.videos[0]]||{}).published||"";return pb<pa?-1:pb>pa?1:0}); }
     var list=document.getElementById("list");
     list.innerHTML = shown.length ? shown.map(card).join("") : '<p class="xp-empty">No places match yet. Try another filter, or explore <button type="button" class="linkbtn" data-scope="all">all places</button>.</p>';
     document.getElementById("count").textContent = shown.length+" place"+(shown.length===1?"":"s")+" shown";
@@ -112,11 +120,17 @@
   document.addEventListener("click",function(e){
     var b=e.target.closest("button"); if(!b) return;
     if(b.dataset.scope){ st.scope=b.dataset.scope; document.querySelectorAll(".seg button").forEach(function(x){x.setAttribute("aria-pressed",String(x.dataset.scope===st.scope))}); render(); }
-    else if(b.dataset.cat){ st.cat=b.dataset.cat; renderCats(); render(); }
+    else if(b.dataset.cat){
+      var c=b.dataset.cat;
+      if(c==="all"){ st.cats=[]; }
+      else { var i=st.cats.indexOf(c); if(i===-1) st.cats.push(c); else st.cats.splice(i,1); }
+      renderCats(); render();
+    }
     else if(b.dataset.view){ setView(b.dataset.view); }
     else if(b.id==="topChip"){ st.top=!st.top; b.setAttribute("aria-pressed",String(st.top)); render(); }
   });
   document.getElementById("q").addEventListener("input",function(e){st.q=e.target.value.trim().toLowerCase(); render();});
+  document.getElementById("sort").addEventListener("change",function(){ st.sort=this.value; render(); });
   document.getElementById("list").addEventListener("mouseover",function(e){
     var c=e.target.closest(".xp-card"); if(!c||!map) return; var m=markerBySlug[c.dataset.slug]; if(m){ m.getElement() && m.getElement().classList.add("hot"); }
   });
@@ -130,6 +144,7 @@
   /* Near me: your location stays in this browser; a ZIP code goes to OpenStreetMap's search to find its spot */
   function setCenter(lat,lng,label){
     st.center=[lat,lng]; document.getElementById("nearClear").hidden=false; document.getElementById("nearStatus").textContent=label;
+    st.sort="near"; document.getElementById("sort").value="near";
     if(map){ if(youMarker){map.removeLayer(youMarker)} youMarker=L.marker([lat,lng],{icon:L.divIcon({className:"you-pin",html:"<span></span>",iconSize:[18,18],iconAnchor:[9,9]}),interactive:false}).addTo(map); map.setView([lat,lng],11); }
     render();
   }
@@ -153,6 +168,7 @@
   document.getElementById("zip").addEventListener("keydown",function(e){ if(e.key==="Enter"){ e.preventDefault(); goZip(); } });
   document.getElementById("nearClear").addEventListener("click",function(){
     st.center=null; this.hidden=true; document.getElementById("nearStatus").textContent=""; document.getElementById("zip").value="";
+    st.sort="new"; document.getElementById("sort").value="new";
     if(map&&youMarker){ map.removeLayer(youMarker); youMarker=null; } render();
   });
   try{
