@@ -408,7 +408,7 @@ def render_place_page(p, vids, all_places, all_vids):
             '<title>%(name)s | Watch with Hatz</title><meta name="description" content="%(desc)s">'
             '<link rel="canonical" href="%(site)s/places/%(slug)s/"><meta property="og:title" content="%(name)s | Watch with Hatz">'
             '<meta property="og:description" content="%(desc)s"><meta property="og:type" content="website"><meta property="og:image" content="%(thumb)s">'
-            '<link rel="icon" type="image/svg+xml" href="%(fav)s"><link rel="apple-touch-icon" href="%(rp)sassets/apple-touch-icon.png"><link rel="stylesheet" href="%(rp)shatz.css">'
+            '<link rel="icon" type="image/png" sizes="48x48" href="%(rp)sassets/favicon.png"><link rel="icon" href="%(rp)sfavicon.ico" sizes="any"><link rel="apple-touch-icon" href="%(rp)sassets/apple-touch-icon.png"><link rel="stylesheet" href="%(rp)shatz.css">'
             '<script>try{if(localStorage.getItem("hatz-admin"))document.documentElement.classList.add("hatz-admin")}catch(e){}</script><script src="%(rp)sanalytics.js" defer></script></head><body>%(header)s'
             '<main id="main" class="watch-page"><section class="watch-intro"><a class="back-link" href="%(rp)sexplore/">← Back to the map</a>'
             '<p class="eyebrow">%(cat)s%(areaSep)s</p><h1>%(name)s%(top)s</h1><p class="story-meta">%(count)s <span aria-hidden="true">·</span> Latest visit %(date)s</p>'
