@@ -362,7 +362,7 @@ def render_latest(videos, places):
             '<p>Food stops, family adventures, and whatever we get into next.</p></div>'
             '<p class="feed-note">Updated automatically from YouTube. Visit the channel for everything.</p>'
             '<div class="video-grid latest-grid">%s</div><div class="watch-more"><p>Catch up with the crew.</p>'
-            '<a class="text-link" href="https://www.tiktok.com/@hatzreviews" target="_blank" rel="noopener noreferrer">Follow Hatz on TikTok ↗</a></div></section><!--LATEST_END-->'
+            '<a class="text-link" href="https://www.tiktok.com/@hatzmedia" target="_blank" rel="noopener noreferrer">Follow Hatz on TikTok ↗</a></div></section><!--LATEST_END-->'
             ) % "".join(cards)
 
 
