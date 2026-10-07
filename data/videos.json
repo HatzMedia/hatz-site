@@ -17,8 +17,8 @@
     "published": "2026-10-05T04:25:26Z",
     "desc": "Trying the new Nuka-Cola Cranberry and Quartz from the Fallout x Jones Soda pack.\nWhich Jones Fallout flavor is your favorite? #Fallout #JonesSoda #nukacola",
     "place": null,
-    "status": "pending",
-    "by": null,
+    "status": "skip",
+    "by": "hatz",
     "suggest": [],
     "tag": null
   },
@@ -1387,7 +1387,7 @@
     "title": "Tokyo Grill Sushi and Hibachi Buffet might be a hidden gem near Kings Island",
     "published": "2026-04-11T14:49:02Z",
     "desc": "Tokyo Grill Sushi and Hibachi Buffet might be a hidden gem near Kings Island 👀\n#cincyfoodie #buffetreview #sushirolls #hibachitime #localeats",
-    "place": "kings-island",
+    "place": "tokyo-grill-sushi-hibachi-buffet",
     "status": "mapped",
     "by": "hatz",
     "suggest": [
@@ -3412,11 +3412,9 @@
     "published": "2025-10-21T21:09:35Z",
     "desc": "",
     "place": null,
-    "status": "pending",
-    "by": null,
-    "suggest": [
-      "the-food-pitt"
-    ],
+    "status": "skip",
+    "by": "hatz",
+    "suggest": [],
     "tag": {
       "lat": 39.82089,
       "lng": -84.01938,

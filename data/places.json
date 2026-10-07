@@ -1731,5 +1731,19 @@
     "aliases": [
       "Caddy Shack Square"
     ]
+  },
+  {
+    "slug": "tokyo-grill-sushi-hibachi-buffet",
+    "name": "Tokyo Grill Sushi & Hibachi Buffet",
+    "area": "Mason, OH",
+    "address": "5456 Kings Center Dr, Mason, OH 45040",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.35649,
+    "lng": -84.25953,
+    "precision": "exact",
+    "aliases": [
+      "Tokyo Grill Sushi & Hibachi Buffet"
+    ]
   }
 ]
