@@ -1466,20 +1466,6 @@
     ]
   },
   {
-    "slug": "the-food-pitt",
-    "name": "The Food Pitt",
-    "area": "Ohio",
-    "address": "",
-    "cat": "eats",
-    "trip": false,
-    "lat": 39.82089,
-    "lng": -84.01938,
-    "precision": "exact",
-    "aliases": [
-      "The Food Pitt"
-    ]
-  },
-  {
     "slug": "cincinnati-fear-fest",
     "name": "Cincinnati Fear Fest",
     "area": "Williamsburg, OH",
@@ -1566,8 +1552,8 @@
   {
     "slug": "schmidt-bakery",
     "name": "Schmidt Bakery",
-    "area": "Batesville, OH",
-    "address": "East Pearl Street, Batesville, OH",
+    "area": "Batesville, IN",
+    "address": "125 Batesville Shopping Village, Batesville, IN 47006",
     "cat": "sweets",
     "trip": false,
     "lat": 39.29857,

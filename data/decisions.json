@@ -2025,24 +2025,6 @@
   }
  },
  {
-  "video": "2OWrjLD94_c",
-  "action": "assign",
-  "newPlace": {
-   "slug": "the-food-pitt",
-   "name": "The Food Pitt",
-   "area": "Ohio",
-   "address": "",
-   "cat": "eats",
-   "trip": false,
-   "lat": 39.82089,
-   "lng": -84.01938,
-   "precision": "exact",
-   "aliases": [
-    "The Food Pitt"
-   ]
-  }
- },
- {
   "video": "swVspYaMth4",
   "action": "assign",
   "newPlace": {
@@ -3676,10 +3658,6 @@
   "action": "skip"
  },
  {
-  "video": "2OWrjLD94_c",
-  "action": "pending"
- },
- {
   "action": "top5",
   "slugs": [
    "corner-dumpling-house",
@@ -3698,5 +3676,31 @@
   "video": "0ApVfs4hhyc",
   "action": "home",
   "on": true
+ },
+ {
+  "video": "m_QeUb7N4KM",
+  "action": "skip"
+ },
+ {
+  "video": "2OWrjLD94_c",
+  "action": "skip"
+ },
+ {
+  "video": "QfM8_aBCr18",
+  "action": "assign",
+  "newPlace": {
+   "slug": "tokyo-grill-sushi-hibachi-buffet",
+   "name": "Tokyo Grill Sushi & Hibachi Buffet",
+   "area": "Mason, OH",
+   "address": "5456 Kings Center Dr, Mason, OH 45040",
+   "cat": "eats",
+   "trip": false,
+   "lat": 39.35649,
+   "lng": -84.25953,
+   "precision": "exact",
+   "aliases": [
+    "Tokyo Grill Sushi & Hibachi Buffet"
+   ]
+  }
  }
 ]
