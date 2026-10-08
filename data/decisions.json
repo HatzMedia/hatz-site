@@ -3702,5 +3702,14 @@
     "Tokyo Grill Sushi & Hibachi Buffet"
    ]
   }
+ },
+ {
+  "video": "fIFhbGGvi50",
+  "action": "skip"
+ },
+ {
+  "video": "ilZNfHyqf64",
+  "action": "assign",
+  "place": "eastgate-vendors-market"
  }
 ]
