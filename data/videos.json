@@ -1,5 +1,28 @@
 [
   {
+    "id": "ilZNfHyqf64",
+    "title": "🍿🚀 My sister and brother-in-law started Galactic Crunch Co. at the Eastgate Vendors Market! #Hatz",
+    "published": "2026-10-08T02:16:55Z",
+    "desc": "Swung by the Eastgate Vendors Market to check out Galactic Crunch Co., the new popcorn business my sister and brother-in-law started. \n\null disclosure: they're family. 🍿\n\n📍 Eastgate Vendors Market, 4555 Eastgate Blvd, Cincinnati, OH 45245 Check with the market for current hours and vendors.\n\nSupport local! Like, comment and follow for more local spots around Cincinnati and beyond.\n\n#HatzReviews #HatzCrew #Cincinnati #EastgateOhio #SupportLocal #Popcorn",
+    "place": "eastgate-vendors-market",
+    "status": "mapped",
+    "by": "hatz",
+    "suggest": [
+      "eastgate-vendors-market"
+    ]
+  },
+  {
+    "id": "9tXCpkiGfyw",
+    "title": "Christmas Is Already Out at Lowe's! (Shop With Me)",
+    "published": "2026-10-07T23:40:57Z",
+    "desc": "A POV shop-along at the Beechmont Lowe's in Cincinnati: the Rudolph crew, Halloween clowns, mini trash cans and the light section.\nMusic: 'The Supermarket Theme' by Christian Larssen on #Uppbeat https://uppbeat.io/c/christian-larssen\nLicense code: ANPRN3VT2OETFLTV",
+    "place": null,
+    "status": "pending",
+    "by": null,
+    "suggest": [],
+    "tag": null
+  },
+  {
     "id": "UQ9cNSZi-cs",
     "title": "Kings Island Patty Melt: Worth It? #hatz",
     "published": "2026-10-06T23:00:21Z",
@@ -47,8 +70,8 @@
     "title": "🍿🚀 My sister and brother-in-law started Galactic Crunch Co. at the Eastgate Vendors Market!",
     "published": "2026-09-12T18:42:36+00:00",
     "desc": "🍿🚀 My sister and brother-in-law started Galactic Crunch Co. at the Eastgate Vendors Market! We grabbed some Strawberry popcorn 🍓 and had to put it to the Hatz test!\n\n#Hatz #GalacticCrunchCo #Eastgate #CincinnatiFood #ShopLocal",
-    "place": "eastgate-vendors-market",
-    "status": "mapped",
+    "place": null,
+    "status": "skip",
     "by": "hatz",
     "suggest": []
   },
