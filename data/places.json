@@ -1745,5 +1745,19 @@
     "aliases": [
       "Tokyo Grill Sushi & Hibachi Buffet"
     ]
+  },
+  {
+    "slug": "schoolhouse-restaurant",
+    "name": "Schoolhouse Restaurant",
+    "area": "8031 Glendale Milford Rd0",
+    "address": "8031 Glendale Milford Rd0",
+    "cat": "eats",
+    "trip": false,
+    "lat": 39.199204492930406,
+    "lng": -84.28995121105434,
+    "precision": "exact",
+    "aliases": [
+      "Schoolhouse Restaurant"
+    ]
   }
 ]

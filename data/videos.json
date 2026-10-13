@@ -1,12 +1,24 @@
 [
   {
+    "id": "66vV6psErDg",
+    "title": "Kings Island Sweet Spot Hooked Cake: Worth It?",
+    "published": "2026-10-12T23:00:39Z",
+    "desc": "Trying the Hooked cake from the Sweet Spot at Kings Island Halloween Haunt, with salted caramel and a coin on top.",
+    "place": "kings-island",
+    "status": "mapped",
+    "by": "auto",
+    "suggest": [
+      "kings-island"
+    ]
+  },
+  {
     "id": "9tWDcFoVLFo",
     "title": "A Day at Waynesville Fall Fest With the Kids (POV) #hatz #cincinnati",
     "published": "2026-10-11T16:00:00Z",
     "desc": "Pedal karts, foot golf, goats, a mini horse, and a donkey at Waynesville Fall Fest. A family POV day trip.\n\nHatz Media Works: short, honest videos from Cincinnati's east side.\nhatzmedia.com \n\n#fallfest #pov",
     "place": "waynesville-fall-fest",
     "status": "mapped",
-    "by": "auto",
+    "by": "hatz",
     "suggest": [
       "waynesville-fall-fest"
     ]
@@ -18,7 +30,7 @@
     "desc": "A POV night at Kings Island Halloween\r\nHaunt: the fire show, the fog, the gift shop, a Purple People Eater drink and the stage show.",
     "place": "kings-island",
     "status": "mapped",
-    "by": "auto",
+    "by": "hatz",
     "suggest": [
       "kings-island"
     ]
@@ -30,7 +42,7 @@
     "desc": "A windy round of foot golf with the boys at Waynesville Fall Fest.\n\nHatz Media Works: short, honest videos from Cincinnati's east side. hatzmedia.com \n\n#footgolf #fallfest",
     "place": "waynesville-fall-fest",
     "status": "mapped",
-    "by": "auto",
+    "by": "hatz",
     "suggest": [
       "waynesville-fall-fest"
     ]
@@ -40,9 +52,9 @@
     "title": "Dinner Inside an 1800s Schoolhouse | Camp Dennison, OH #hatz #foodreview #cincinnati",
     "published": "2026-10-08T23:51:18Z",
     "desc": "Family-style dinner at The Schoolhouse Restaurant in Camp Dennison, Ohio, with RonnieDoe and Sarah. \n\nServing food since 1962, and featured on Diners, Drive-Ins and Dives. \n\nMore local spots on the map: hatzmedia.com",
-    "place": null,
-    "status": "pending",
-    "by": null,
+    "place": "schoolhouse-restaurant",
+    "status": "mapped",
+    "by": "hatz",
     "suggest": [],
     "tag": null
   },
@@ -64,8 +76,8 @@
     "published": "2026-10-07T23:40:57Z",
     "desc": "A POV shop-along at the Beechmont Lowe's in Cincinnati: the Rudolph crew, Halloween clowns, mini trash cans and the light section.\nMusic: 'The Supermarket Theme' by Christian Larssen on #Uppbeat https://uppbeat.io/c/christian-larssen\nLicense code: ANPRN3VT2OETFLTV",
     "place": null,
-    "status": "pending",
-    "by": null,
+    "status": "skip",
+    "by": "hatz",
     "suggest": [],
     "tag": null
   },
@@ -76,7 +88,7 @@
     "desc": "Trying the patty melt and onion rings at Kings Island in Mason, Ohio, with RonnieDoe. Filmed July 2026, so the menu may have changed. \n\nMore local spots on the map: hatzmedia.com",
     "place": "kings-island",
     "status": "mapped",
-    "by": "auto",
+    "by": "hatz",
     "suggest": [
       "kings-island"
     ]
