@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 tools/update.py --offline)",
+      "Bash(python tools/update.py --offline)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)"
+    ],
+    "deny": [
+      "Bash(python3 tools/update.py --notify:*)",
+      "Bash(python tools/update.py --notify:*)",
+      "Bash(git push origin main:*)"
+    ]
+  }
+}
