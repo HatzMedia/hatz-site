@@ -1,5 +1,39 @@
 [
   {
+    "id": "I2itAFUWQ60",
+    "title": "Bacon That Tastes Like Candy? (Twin Peaks, West Chester)",
+    "published": "2026-11-08T05:00:20Z",
+    "desc": "Sophie picked the restaurant, so we tried Twin Peaks in West Chester, Ohio: bacon that tastes like candy, a Philly cheesesteak and a margarita.\nBeen to Twin Peaks? Tell me your order.\n\nHatz Media Works: short, honest videos from Cincinnati's east side. hatzmedia.com\n\n#TwinPeaks #Bacon #Shorts",
+    "place": null,
+    "status": "pending",
+    "by": null,
+    "suggest": [],
+    "tag": null
+  },
+  {
+    "id": "t6_UhJQ1gr8",
+    "title": "Jamaican Jerk on Cajun Fries | Fry Haven, Cincinnati",
+    "published": "2026-11-07T16:49:58Z",
+    "desc": "Jamaican Jerk on Cajun fries from Fry Haven, RonnieDoe's Founders Choice, and a half gallon of blueberry lemonade. I'm full, but I can't stop eating. What's your go-to at Fry Haven?\n\nHatz Media Works: short, honest videos from Cincinnati's east side. hatzmedia.com\n\n#FryHaven #CincinnatiFood #Shorts",
+    "place": null,
+    "status": "pending",
+    "by": null,
+    "suggest": [],
+    "tag": null
+  },
+  {
+    "id": "tiajryGJuf4",
+    "title": "Have You Seen the Wall of Rice? | Jungle Jim's Eastgate",
+    "published": "2026-11-07T00:00:33Z",
+    "desc": "The International Wall of Rice at Jungle Jim's Eastgate, then the freezers: kimchi, sherbet mochi, fish ice cream and a corn fish. \n\nWhat should I try next time?\n\nHatz Media Works: short, honest videos from Cincinnati's east side. hatzmedia.com\n\n#JungleJims #Cincinnati #Shorts",
+    "place": "jungle-jims-eastgate",
+    "status": "mapped",
+    "by": "auto",
+    "suggest": [
+      "jungle-jims-eastgate"
+    ]
+  },
+  {
     "id": "RKHN5tV0A3s",
     "title": "Philly Cheesesteak With Queso? (Stone House Tavern)",
     "published": "2026-11-06T00:00:24Z",
